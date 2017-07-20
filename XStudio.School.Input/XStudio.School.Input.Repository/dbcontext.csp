@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+    <propertySets>	
+      <propertySet name="schoolDbContext" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\SchoolContext.cs" template="..\..\support\codegenerator\cst\service\template\dbcontext.cst">
+          <property name="SourceDatabase">
+            <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+            <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+          </property>
+          <property name="Namespace">XStudio.School.Input</property>
+    </propertySet>
+  </propertySets>
+</codeSmith>

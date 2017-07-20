@@ -1,0 +1,150 @@
+﻿<%-- 
+Name:           entity.cst
+Author:         hbxia
+Description:    
+--%>
+
+<%@ Template Language="C#" TargetLanguage="C#" ResponseEncoding="UTF-8" %>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<!-- #include file="../../../infrastructure.cst" -->
+
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Description="目标数据表" Category="Context" %>
+<%@ Property Name="Namespace" Type="System.String" Default="" Category="Context" %>
+<%@ Property Name="TablePrefix" Type="System.String" Optional="True" Default="" Category="Context" %>
+
+/************************************************************************************************************************************************
+ * FileName:       <%=GetClassName(SourceTable) %>Repository.cs
+ * Author:         hbxia
+ * Description:    this is auto genetated, don't change!
+*************************************************************************************************************************************************/
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Data.Entity;
+using <%=Namespace %>.Domain.PO.<%=GetDbName(SourceTable.Database) %>;
+using <%=Namespace %>.Repository.DbContext;
+
+namespace <%=Namespace %>.Repository.<%=GetDbName(SourceTable.Database) %>
+{
+    /// <summary>
+    /// <%=SourceTable.Description %>
+    /// </summary>
+    public partial class <%=GetClassName(SourceTable) %>Repository
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static <%=GetClassName(SourceTable) %>PO GetItem(int id) 
+        {
+			var ids = new List<int> {id};
+            var items = GetItems(ids);
+            if (items.Count > 0)
+            {
+                return items.First();
+            }
+            return null;
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="ids"></param>
+        /// <returns></returns>
+        public static List<<%=GetClassName(SourceTable) %>PO> GetItems(List<int> ids)
+        {
+            using (var context = new <%=GetDbName(SourceTable.Database) %>Context())
+            {
+                return context.<%=GetClassName(SourceTable) %>s.Where(p => ids.Contains(p.Id)).ToList();
+            }
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static <%=GetClassName(SourceTable) %>PO GetDataForSave(int id)
+        {
+			<%=GetClassName(SourceTable) %>PO item;
+            if (id == 0)
+            {
+                item = new <%=GetClassName(SourceTable) %>PO()
+                {
+                    <% foreach (ColumnSchema column in SourceTable.Columns) { %>
+                    <%if(!column.IsPrimaryKeyMember) { %>
+    				<%=FirstLetterToPascal(column.Name) %> = <%=GetColumnDefault(column)%>,
+    				<% }} %>
+                };
+            }
+            else
+            {
+                item = GetItem(id);
+            }
+            return item;
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public static bool Save(<%=GetClassName(SourceTable) %>PO item) 
+        {
+			using (var context = new <%=GetDbName(SourceTable.Database) %>Context())
+            {
+                if (item.Id == 0)
+                {
+                    context.<%=GetClassName(SourceTable) %>s.Add(item);
+                }
+                else
+                {
+                    context.Entry(item).State = EntityState.Modified;
+                }
+                context.SaveChanges();
+            }
+            return true;
+        } 
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static List<<%=GetClassName(SourceTable) %>PO> GetList()
+        {
+			return new List<<%=GetClassName(SourceTable) %>PO>();
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public static bool Delete(int id)
+        {
+            var item = new <%=GetClassName(SourceTable) %>PO {Id = id};
+            return Delete(item);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
+        public static bool Delete(<%=GetClassName(SourceTable) %>PO item)
+        {
+            using (var context = new <%=GetDbName(SourceTable.Database) %>Context())
+            {
+                context.<%=GetClassName(SourceTable) %>s.Attach(item);
+                context.<%=GetClassName(SourceTable) %>s.Remove(item);
+                context.SaveChanges();
+            }
+            return true;
+        }
+    }
+}

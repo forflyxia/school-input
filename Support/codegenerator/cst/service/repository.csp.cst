@@ -1,0 +1,37 @@
+﻿<%-- 
+Name:           repository.csp.cst
+Author:         hbxia
+Description:    数据库实体模板
+--%>
+
+<%@ Template Language="C#" TargetLanguage="Java" ResponseEncoding="UTF-8" %>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<!-- #include file="../../infrastructure.cst" -->
+
+<%@ Property Name="SourceDatabase" Type="SchemaExplorer.DatabaseSchema" Description="目标数据库" Category="Context" %>
+<%@ Property Name="Namespace" Type="System.String" Default="com.xstudio.schoolcorp" Category="Context" %>
+<%@ Property Name="TablePrefix" Type="System.String" Default="" Optional="True" Category="Context" %>
+<%@ Property Name="SpecifyTableName" Type="System.String" Default="" Optional="True" Category="Context" %>
+<%@ Property Name="BaseDir" Type="System.String" Default="" Category="Context" %>
+<?xml version="1.0" encoding="utf-8"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+    <propertySets>	
+     <% foreach(SchemaExplorer.TableSchema SourceTable in SourceDatabase.Tables) { %>
+        <% if(CanGenerated(SourceTable, TablePrefix, SpecifyTableName)) { %>
+          <propertySet name="<%=SourceTable.Name%>" output="<%=BaseDir %>\<%=Namespace %>.Repository\<%=GetFolderName(SourceTable, "Repository") %><%=GetClassName(SourceTable) %>Repository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+              <property name="Namespace"><%=Namespace %></property>
+              <property name="SourceTable">
+                <connectionString><%=SourceTable.Database.ConnectionString%></connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name><%=SourceTable.Name%></name>
+                </table>
+              </property>
+        </propertySet>
+    <% } } %>
+  </propertySets>
+</codeSmith>

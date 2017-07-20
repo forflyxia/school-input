@@ -1,0 +1,56 @@
+﻿<%-- 
+Name:           dbcontext.cst
+Author:         hbxia
+Description:    
+--%>
+
+<%@ Template Language="C#" TargetLanguage="C#" ResponseEncoding="UTF-8" %>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<!-- #include file="../../../infrastructure.cst" -->
+
+<%@ Property Name="SourceDatabase" Type="SchemaExplorer.DatabaseSchema" Description="目标数据库" Category="Context" %>
+<%@ Property Name="Namespace" Type="System.String" Default="" Category="Context" %>
+
+
+/************************************************************************************************************************************************
+ * FileName:       DbContext.cs
+ * Author:         hbxia
+ * Description:    this is auto genetated, don't change!
+*************************************************************************************************************************************************/
+
+using System.Collections.Generic;
+using System.Data.Common;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+using MySql.Data.Entity;
+using <%=Namespace %>.Domain.PO.<%=GetDbName(SourceDatabase) %>;
+
+namespace <%=Namespace %>.Repository.DbContext
+{
+    /// <summary>
+    /// <%=FirstLetterToPascal(SourceDatabase.Name) %>Context
+    /// </summary>
+    [DbConfigurationType(typeof(MySqlEFConfiguration))]
+    public class <%=FirstLetterToPascal(SourceDatabase.Name) %>Context : System.Data.Entity.DbContext
+    {    
+        /// <summary>
+        /// <%=FirstLetterToPascal(SourceDatabase.Name) %>Context
+        /// </summary>
+        public <%=FirstLetterToPascal(SourceDatabase.Name) %>Context() : base("<%=FirstLetterToPascal(SourceDatabase.Name) %>Context")
+        {
+
+        }
+    
+        <%foreach(TableSchema table in SourceDatabase.Tables) { %>        
+        /// <summary>
+        /// <%=table.Description %>
+        /// </summary>
+        public DbSet<<%=GetClassName(table) %>PO> <%=GetClassName(table) %>s { get; set; }
+        
+        <%} %>
+    }
+}

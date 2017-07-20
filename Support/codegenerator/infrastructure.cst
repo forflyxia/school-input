@@ -1,0 +1,232 @@
+﻿<%-- 
+Name:
+Author: 
+Description: 
+--%>
+<%@ Template Language="C#" TargetLanguage="Text" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Import Namespace="System.Collections.Generic" %>
+
+<script runat="template">
+
+public Dictionary<string, string> moudlesMap = new Dictionary<string, string>
+{
+    {"merchant", "Merchant"},
+    {"user", "User"},
+    {"order", "Order"},
+    {"school", "School"},
+    {"product", "Product"},
+	{"config", "Config"}
+};
+
+public Dictionary<string, string> keywordsMap = new Dictionary<string, string>
+{
+    {"id", "Id"},
+};
+
+public string GetCSharpVariableType(ColumnSchema column)
+{
+    if (column.Name.EndsWith("TypeCode")) return column.Name;
+    
+    switch (column.DataType)
+    {
+        case DbType.AnsiString: return "string";
+        case DbType.AnsiStringFixedLength: return "string";
+        case DbType.Binary: return "byte[]";
+        case DbType.Boolean: return "bool";
+        case DbType.Byte: return "byte";
+        case DbType.Currency: return "decimal";
+        case DbType.Date: return "DateTime";
+        case DbType.DateTime: return "DateTime";
+        case DbType.Decimal: return "decimal";
+        case DbType.Double: return "double";
+        case DbType.Guid: return "Guid";
+        case DbType.Int16: return "short";
+        case DbType.Int32: return "int";
+        case DbType.Int64: return "long";
+        case DbType.Object: return "object";
+        case DbType.SByte: return "sbyte";
+        case DbType.Single: return "float";
+        case DbType.String: return "string";
+        case DbType.StringFixedLength: return "string";
+        case DbType.Time: return "TimeSpan";
+        case DbType.UInt16: return "ushort";
+        case DbType.UInt32: return "uint";
+        case DbType.UInt64: return "ulong";
+        case DbType.VarNumeric: return "decimal";
+        default:
+        {
+            return "__UNKNOWN__" + column.NativeType;
+        }
+    }
+}
+
+
+
+public string GetClassName(TableSchema sourceTable)
+{
+	return GetClassName(sourceTable.Name);
+}
+
+public string GetClassName(string tableName)
+{
+    string str1 = tableName;
+	string str2 = str1.Substring(str1.IndexOf('_') + 1);
+	string str3 = "";
+	int index = 0;
+	while (true)
+	{
+		if (index < str2.Split(new char[1] {'_'}).Length)
+		{
+			str3 = str3 + str2.Split(new char[1] {'_'})[index].Substring(0, 1).ToUpper() + str2.Split(new char[1] {'_'})[index].Substring(1).ToLower();
+			++index;
+		}
+		else
+		{ 
+			break;
+		}
+	}
+	return str3;
+}
+
+public string GetTablePrefix(TableSchema sourceTable)
+{
+    string tableName = sourceTable.Name;
+    int index = tableName.IndexOf("_");
+    if (index > 0)
+    {
+         return tableName.Substring(0, index);
+    }
+    return string.Empty;
+}
+
+public string GetFolderName(TableSchema sourceTable, string defaultForlderName)
+{
+    string tablePrefix = GetTablePrefix(sourceTable);
+    if(!string.IsNullOrEmpty(tablePrefix))
+    {
+        if (moudlesMap.ContainsKey(tablePrefix))
+    	{
+            return string.Format(@"{0}\{1}\{2}\", defaultForlderName, FirstLetterToPascal(sourceTable.Database.Name), moudlesMap[tablePrefix]);
+    	}
+    }
+    return defaultForlderName;
+}
+
+public string GetDbName(DatabaseSchema db)
+{
+    return FirstLetterToPascal(db.Name);
+}
+
+public string GetColumnDefault(ColumnSchema column)
+{
+    switch (column.DataType)
+	{
+        case DbType.AnsiString: return "\"\"";
+        case DbType.AnsiStringFixedLength: return "\"\"";
+        case DbType.String: return "\"\"";
+        case DbType.StringFixedLength: return "\"\"";
+            
+        case DbType.Boolean: return "false";
+        case DbType.Byte: return "false";
+        case DbType.SByte: return "false";
+            
+        case DbType.Currency: return "0";        
+        case DbType.Decimal: return "0";
+        case DbType.Double: return "0";        
+        case DbType.Int16: return "0";
+        case DbType.Int32: return "0";
+        case DbType.Int64: return "0";
+        case DbType.Single: return "0";        
+        case DbType.UInt16: return "0";
+        case DbType.UInt32: return "0";
+        case DbType.UInt64: return "0";
+        case DbType.VarNumeric: return "0";
+            
+        case DbType.Date: return "DateTime.Now";
+        case DbType.DateTime: return "DateTime.Now";
+        case DbType.Time: return "DateTime.Now";
+            
+        case DbType.Guid: return "Guid.NewGuid()";
+       
+        default:
+        {
+            return "__UNKNOWN__" + column.NativeType;
+        }
+	}
+}
+
+public TableSchema GetForigenKeyTableSchema(ColumnSchema column)
+{
+    if (IsForeignKey(column))
+	{
+		string tableName = column.Name.Replace("Id", "");
+        foreach (var entry in moudlesMap)
+    	{
+    		string fullTableName = string.Format("{0}_{1}", entry.Key, tableName);
+            if (column.Database.Tables.Contains(fullTableName))
+        	{
+                return column.Database.Tables[fullTableName];
+        	}
+    	}
+	}
+    return null;
+}
+
+public string FirstLetterToPascal(string s)
+{
+    string str = s.Substring(0, 1).ToUpper() + s.Substring(1);
+    return KeyWordsReplace(str);
+}
+
+public string FirstLetterToCamel(string s)
+{
+    return s.Substring(0, 1).ToLower() + s.Substring(1);
+}
+
+public string KeyWordsReplace(string s)
+{
+    string str = s;
+    foreach(var entry in keywordsMap)
+	{
+        if (str.Contains(entry.Key))
+    	{
+    		 str = str.Replace(entry.Key, entry.Value);
+    	}		
+	}
+    return str;
+}
+
+public bool CanGenerated(TableSchema sourceTable, string requestTablePrefix, string specifyTableName) 
+{
+    if (!string.IsNullOrWhiteSpace(specifyTableName))
+	{
+	    return string.Equals(sourceTable.Name, specifyTableName, StringComparison.OrdinalIgnoreCase);
+	}
+    
+    if (!string.IsNullOrWhiteSpace(requestTablePrefix))
+	{
+        string tablePrefix = GetTablePrefix(sourceTable);
+        return string.Equals(tablePrefix, requestTablePrefix, StringComparison.OrdinalIgnoreCase);
+	}
+    return true;    
+}
+
+public bool IsForeignKey(ColumnSchema column) 
+{
+    string columnName = column.Name;
+    if (!columnName.Contains("Id"))
+	{
+		 return false;
+	}
+    string tableName = columnName.Replace("Id", "");
+    if (!column.Database.Tables.Contains(tableName))
+	{
+		 return false;
+	}
+    return true;
+}
+
+</script>

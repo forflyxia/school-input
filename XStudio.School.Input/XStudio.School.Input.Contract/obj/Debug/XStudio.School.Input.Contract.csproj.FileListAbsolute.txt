@@ -1,0 +1,4 @@
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Contract\bin\Debug\XStudio.School.Input.Contract.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Contract\bin\Debug\XStudio.School.Input.Contract.pdb
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Contract\obj\Debug\XStudio.School.Input.Contract.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Contract\obj\Debug\XStudio.School.Input.Contract.pdb

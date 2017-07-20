@@ -1,0 +1,5 @@
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Contract\bin\Debug\XStudio.School.Input.Model.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Contract\bin\Debug\XStudio.School.Input.Model.pdb
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Contract\obj\Debug\XStudio.School.Input.Model.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Contract\obj\Debug\XStudio.School.Input.Model.pdb
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Contract\obj\Debug\XStudio.School.Input.Model.csprojResolveAssemblyReference.cache

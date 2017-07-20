@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+  <variables>
+    <add key="ConnectionString1" value="Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;" />
+	<add key="BaseDir" value="D:\xstudio\code\school\input\source\XStudio.School.Input" />
+	<add key="Namespace" value="XStudio.School.Input" />
+	<add key="TablePrefix" value="" />
+	<add key="SpecifyTableName" value="" />
+  </variables>
+  <propertySets>
+    <propertySet name="entity" output="$(BaseDir)\\$(Namespace).Domain\entity.csp" template="cst\service\entity.csp.cst">
+      <property name="SourceDatabase">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+      </property>
+      <property name="BaseDir">$(BaseDir)</property>
+	  <property name="Namespace">$(Namespace)</property>
+	  <property name="TablePrefix">$(TablePrefix)</property>
+	  <property name="SpecifyTableName">$(SpecifyTableName)</property>
+    </propertySet>
+	<propertySet name="repository" output="$(BaseDir)\\$(Namespace).Repository\repository.csp" template="cst\service\repository.csp.cst">
+      <property name="SourceDatabase">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+      </property>
+      <property name="BaseDir">$(BaseDir)</property>
+	  <property name="Namespace">$(Namespace)</property>
+	  <property name="TablePrefix">$(TablePrefix)</property>
+	  <property name="SpecifyTableName">$(SpecifyTableName)</property>
+    </propertySet>
+	<propertySet name="dbcontext" output="$(BaseDir)\$(Namespace).Repository\dbcontext.csp" template="cst\service\dbcontext.csp.cst">
+      <property name="SourceDatabase">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+      </property>
+      <property name="BaseDir">$(BaseDir)</property>
+	  <property name="Namespace">$(Namespace)</property>
+	  <property name="TablePrefix">$(TablePrefix)</property>
+	  <property name="SpecifyTableName">$(SpecifyTableName)</property>
+    </propertySet>
+  </propertySets>
+</codeSmith>
