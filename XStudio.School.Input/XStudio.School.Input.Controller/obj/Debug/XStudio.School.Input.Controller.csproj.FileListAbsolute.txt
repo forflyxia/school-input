@@ -13,3 +13,11 @@ D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Co
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\obj\Debug\XStudio.School.Input.Controller.csprojResolveAssemblyReference.cache
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\obj\Debug\XStudio.School.Input.Controller.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\obj\Debug\XStudio.School.Input.Controller.pdb
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\bin\Debug\EntityFramework.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\bin\Debug\XStudio.School.Input.Infrastructure.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\bin\Debug\XStudio.School.Input.Repository.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\bin\Debug\XStudio.School.Input.Domain.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\bin\Debug\XStudio.School.Input.Infrastructure.pdb
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\bin\Debug\XStudio.School.Input.Repository.pdb
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\bin\Debug\EntityFramework.xml
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\bin\Debug\XStudio.School.Input.Domain.pdb

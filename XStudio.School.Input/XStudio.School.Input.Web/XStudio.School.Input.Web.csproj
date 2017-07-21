@@ -6760,8 +6760,10 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="json.txt" />
-    <Content Include="pages\b.html" />
-    <Content Include="pages\a.html" />
+    <Content Include="edit.html" />
+    <Content Include="pages\partial\b.html" />
+    <Content Include="pages\partial\a.html" />
+    <Content Include="pages\partial\edita.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="bower_components\bootstrap-colorpicker\.bower.json" />
@@ -7372,7 +7374,6 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="starter.html" />
-    <Content Include="test.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

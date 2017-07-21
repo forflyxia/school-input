@@ -156,11 +156,11 @@ namespace XStudio.School.Input.Model.Paging
         /// <summary>
         /// 字段名称
         /// </summary>
-        public string FieldName { get; set; }
+        public string Name { get; set; }
 
         /// <summary>
         /// 字段值
         /// </summary>
-        public string FieldValue{ get; set; }
+        public string Value{ get; set; }
     }
 }

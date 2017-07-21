@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -61,6 +64,14 @@
     <ProjectReference Include="..\XStudio.School.Input.Contract\XStudio.School.Input.Model.csproj">
       <Project>{b82d0f5f-45de-45a6-8de1-3ccff393ecd1}</Project>
       <Name>XStudio.School.Input.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XStudio.School.Input.Infrastructure\XStudio.School.Input.Infrastructure.csproj">
+      <Project>{293364e0-58e7-424b-896a-862a231352ba}</Project>
+      <Name>XStudio.School.Input.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XStudio.School.Input.Repository\XStudio.School.Input.Repository.csproj">
+      <Project>{5e490b32-b5ba-4cb6-b9ac-a311e6642906}</Project>
+      <Name>XStudio.School.Input.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

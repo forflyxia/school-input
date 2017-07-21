@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using XStudio.School.Input.Model;
 using XStudio.School.Input.Model.Paging;
 using XStudio.School.Input.Model.Product;
+using XStudio.School.Input.Repository.DbContext;
 
 namespace XStudio.School.Input.Controller.Areas.Product.Controllers
 {
@@ -16,6 +17,7 @@ namespace XStudio.School.Input.Controller.Areas.Product.Controllers
         // GET: /Product/Products/
         public JsonResult Index(DataTablesPaging request)
         {
+            SchoolContext context = new SchoolContext();
             var view = new DatatablesView<ProductModel>(request.Draw, 17, 17);
             view.data.Add(new ProductModel {ProductID = 1, Name = "test1"});
             view.data.Add(new ProductModel { ProductID = 2, Name = "test2" });

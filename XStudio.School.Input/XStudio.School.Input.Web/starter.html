@@ -337,8 +337,8 @@
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">MAIN NAVIGATION</li>
                     
-                    <li class="active"><a href="javascript:void(0);" src="pages/a.html" class="subtab-navigator-link"><i class="fa fa-link"></i> <span>Link</span></a></li>
-                    <li><a href="javascript:void(0);" src="pages/b.html" class="subtab-navigator-link"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
+                    <li class="active"><a href="javascript:void(0);" src="pages/partial/a.html" class="my-subtab-navigator"><i class="fa fa-link"></i> <span>Link</span></a></li>
+                    <li><a href="javascript:void(0);" src="pages/partial/b.html" class="my-subtab-navigator"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
                     <li class="treeview">
                         <a href="#">
                             <i class="fa fa-link"></i> <span>Multilevel</span>
@@ -347,8 +347,8 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="javascript:void(0);" class="subtab-navigator-link">Link in level 2</a></li>
-                            <li><a href="javascript:void(0);" class="subtab-navigator-link">Link in level 2</a></li>
+                            <li><a href="javascript:void(0);" class="my-subtab-navigator">Link in level 2</a></li>
+                            <li><a href="javascript:void(0);" class="my-subtab-navigator">Link in level 2</a></li>
                         </ul>
                     </li>
                     
@@ -386,9 +386,9 @@
                                 <div id="example2_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
 
                                     <div class="row">
-                                        <div class="col-sm-12" id="main-content">
+                                        <div class="col-sm-12" id="my-main-content">
                                             <!--------------------------
-                                            | My Data List |
+                                            | My Data Here |
                                             -------------------------->
                                         </div>
                                     </div>
@@ -646,8 +646,17 @@
     <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
     <script src="datatables.extend.custom.js"></script>
-<script src="home.navigation.custom.js"></script>
 <!-- page script -->
-
+<script>
+    $(function () {
+        $(".my-subtab-navigator").click(function () {
+            var url = $(this).attr("src");
+            var response = $.ajax({
+                url: url, async: false, cache:false
+        });
+            $("#my-main-content").html(response.responseText);
+        });
+    });
+</script>
 </body>
 </html>
