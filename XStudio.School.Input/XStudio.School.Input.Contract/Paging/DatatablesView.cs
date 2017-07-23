@@ -8,12 +8,12 @@ namespace XStudio.School.Input.Model.Paging
 {
     public class DatatablesView<T> 
     {
-        public DatatablesView(int draw, int recordsTotal, int recordsFiltered)
+        public DatatablesView(int draw, int recordsTotal, int recordsFiltered, List<T> data)
         {
-            this.data = new List<T>();
+            this.draw = draw;
             this.recordsTotal = recordsTotal;
             this.recordsFiltered = recordsFiltered;
-            this.draw = draw;
+            this.data = data;
         }
 
         public List<T> data { get; set; }

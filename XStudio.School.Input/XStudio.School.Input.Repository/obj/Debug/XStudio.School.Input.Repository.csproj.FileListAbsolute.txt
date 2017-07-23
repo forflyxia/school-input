@@ -3,10 +3,13 @@ D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Re
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\bin\Debug\XStudio.School.Input.Repository.pdb
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\bin\Debug\EntityFramework.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\bin\Debug\EntityFramework.SqlServer.dll
-D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\bin\Debug\MySql.Data.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\bin\Debug\MySql.Data.Entity.EF6.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\bin\Debug\XStudio.School.Input.Domain.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\bin\Debug\XStudio.School.Input.Infrastructure.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\bin\Debug\XStudio.School.Input.Model.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\bin\Debug\XStudio.School.Input.Model.pdb
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\bin\Debug\XStudio.School.Input.Domain.pdb
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\bin\Debug\XStudio.School.Input.Infrastructure.pdb
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\bin\Debug\EntityFramework.xml
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\bin\Debug\EntityFramework.SqlServer.xml
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\obj\Debug\XStudio.School.Input.Repository.csprojResolveAssemblyReference.cache

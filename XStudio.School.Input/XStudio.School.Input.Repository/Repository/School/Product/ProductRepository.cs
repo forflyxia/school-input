@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using XStudio.School.Input.Domain.PO.School;
 using XStudio.School.Input.Repository.DbContext;
+using XStudio.School.Input.Infrastructure;
+using XStudio.School.Input.Model.Paging;
 
 namespace XStudio.School.Input.Repository.School
 {
@@ -102,9 +104,35 @@ namespace XStudio.School.Input.Repository.School
         /// 
         /// </summary>
         /// <returns></returns>
+        public static List<ProductPO> GetListPaging(DataTablesPaging paging, out int total)
+        {
+            var filterParameters = new Dictionary<string, string>();
+            foreach (var filterItem in paging.CustomFilterParameters)
+            {
+                if (!string.IsNullOrWhiteSpace(filterItem.Value))
+                {
+                    filterParameters.Add(filterItem.Name, filterItem.Value);
+                }
+            }
+            using (var context = new SchoolContext())
+            {
+                var items = context.Products.Filter(filterParameters);
+                total = items.Count();
+                var datas = items.OrderBy(p => p.Id).Skip(paging.Start * paging.Length).Take(paging.Length).ToList();
+                return datas;
+            }
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static List<ProductPO> GetList()
         {
-			return new List<ProductPO>();
+			using (var context = new SchoolContext())
+            {
+                return context.Products.ToList();
+            }
         }
         
         /// <summary>

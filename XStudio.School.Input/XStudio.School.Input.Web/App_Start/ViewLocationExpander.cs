@@ -13,7 +13,7 @@ namespace XStudio.School.Input.Web.App_Start
         /// </summary>
         private static List<string> ExpandLocations = new List<string>
         {
-            "~/Views/product/{1}/{0}.cshtml",
+            "~/Views/School/{1}/{0}.cshtml",
         };
 
         /// <summary>

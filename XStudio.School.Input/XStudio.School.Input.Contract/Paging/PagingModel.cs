@@ -43,7 +43,7 @@ namespace XStudio.School.Input.Model.Paging
         /// </summary>
         public DataTablesSearch Search { get; set; }
 
-        public List<CustomSearchParameters> CustomSearchParameters { get; set; }
+        public List<CustomFilterParameters> CustomFilterParameters { get; set; }
 
         /// <summary>
         ///排序字段
@@ -151,7 +151,7 @@ namespace XStudio.School.Input.Model.Paging
         public bool Regex { get; set; }
     }
 
-    public class CustomSearchParameters
+    public class CustomFilterParameters
     {
         /// <summary>
         /// 字段名称

@@ -27,6 +27,8 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using <%=Namespace %>.Domain.PO.<%=GetDbName(SourceTable.Database) %>;
 using <%=Namespace %>.Repository.DbContext;
+using <%=Namespace %>.Infrastructure;
+using <%=Namespace %>.Model.Paging;
 
 namespace <%=Namespace %>.Repository.<%=GetDbName(SourceTable.Database) %>
 {
@@ -115,9 +117,35 @@ namespace <%=Namespace %>.Repository.<%=GetDbName(SourceTable.Database) %>
         /// 
         /// </summary>
         /// <returns></returns>
+        public static List<<%=GetClassName(SourceTable) %>PO> GetListPaging(DataTablesPaging paging, out int total)
+        {
+            var filterParameters = new Dictionary<string, string>();
+            foreach (var filterItem in paging.CustomFilterParameters)
+            {
+                if (!string.IsNullOrWhiteSpace(filterItem.Value))
+                {
+                    filterParameters.Add(filterItem.Name, filterItem.Value);
+                }
+            }
+            using (var context = new <%=GetDbName(SourceTable.Database) %>Context())
+            {
+                var items = context.<%=GetClassName(SourceTable) %>s.Filter(filterParameters);
+                total = items.Count();
+                var datas = items.OrderBy(p => p.<%=FirstLetterToPascal(SourceTable.PrimaryKey.MemberColumns[0].Column.Name) %>).Skip(paging.Start * paging.Length).Take(paging.Length).ToList();
+                return datas;
+            }
+        }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         public static List<<%=GetClassName(SourceTable) %>PO> GetList()
         {
-			return new List<<%=GetClassName(SourceTable) %>PO>();
+			using (var context = new <%=GetDbName(SourceTable.Database) %>Context())
+            {
+                return context.<%=GetClassName(SourceTable) %>s.ToList();
+            }
         }
         
         /// <summary>

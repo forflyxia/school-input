@@ -17,7 +17,6 @@ D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.We
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\Microsoft.Owin.Security.OAuth.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\Microsoft.Owin.Security.Twitter.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\Microsoft.Web.Infrastructure.dll
-D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\MySql.Data.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\MySql.Data.Entity.EF6.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\Newtonsoft.Json.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\Owin.dll
@@ -31,6 +30,10 @@ D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.We
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\WebGrease.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Controller.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Model.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Service.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Domain.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Repository.dll
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Infrastructure.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Controller.pdb
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\System.Web.Helpers.xml
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\System.Web.Mvc.xml
@@ -56,10 +59,10 @@ D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.We
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\Microsoft.Owin.Security.Twitter.xml
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Model.pdb
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Service.pdb
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Domain.pdb
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Repository.pdb
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Infrastructure.pdb
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\obj\Debug\XStudio.School.Input.Web.csprojResolveAssemblyReference.cache
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\obj\Debug\XStudio.School.Input.Web.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\obj\Debug\XStudio.School.Input.Web.pdb
-D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Repository.dll
-D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Domain.dll
-D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Repository.pdb
-D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Domain.pdb

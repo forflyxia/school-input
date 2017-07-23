@@ -55,7 +55,7 @@
   <ItemGroup>
     <Compile Include="Areas\Merchant\Controllers\MerchantsController.cs" />
     <Compile Include="Areas\Merchant\MerchantAreaRegistration.cs" />
-    <Compile Include="Areas\Product\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\Product\Controllers\ProductController.cs" />
     <Compile Include="Areas\Product\ProductAreaRegistration.cs" />
     <Compile Include="BaseController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -65,13 +65,9 @@
       <Project>{b82d0f5f-45de-45a6-8de1-3ccff393ecd1}</Project>
       <Name>XStudio.School.Input.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\XStudio.School.Input.Infrastructure\XStudio.School.Input.Infrastructure.csproj">
-      <Project>{293364e0-58e7-424b-896a-862a231352ba}</Project>
-      <Name>XStudio.School.Input.Infrastructure</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\XStudio.School.Input.Repository\XStudio.School.Input.Repository.csproj">
-      <Project>{5e490b32-b5ba-4cb6-b9ac-a311e6642906}</Project>
-      <Name>XStudio.School.Input.Repository</Name>
+    <ProjectReference Include="..\XStudio.School.Input.Service\XStudio.School.Input.Service.csproj">
+      <Project>{7a2baa2a-2d70-4371-9f32-cb3b71541651}</Project>
+      <Name>XStudio.School.Input.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -16,20 +16,46 @@ namespace XStudio.School.Input.Infrastructure
         /// 
         /// </summary>
         /// <typeparam name="T"></typeparam>
-        /// <param name="q"></param>
-        /// <param name="direction"></param>
-        /// <param name="fieldName"></param>
+        /// <param name="source"></param>
+        /// <param name="searchParameters"></param>
         /// <returns></returns>
-        public static IQueryable<T> OrderByEx<T>(this IQueryable<T> q, string direction, string fieldName)
+        public static IQueryable<T> Filter<T>(this IQueryable<T> query, Dictionary<string, string> searchParameters)
         {
-            var param = Expression.Parameter(typeof(T), "p");
-            var prop = Expression.Property(param, fieldName);
-            var exp = Expression.Lambda(prop, param);
-            
-            string method = direction.ToLower() == "asc" ? "OrderBy" : "OrderByDescending";
-            Type[] types = new Type[] { q.ElementType, exp.Body.Type };
-            var mce = Expression.Call(typeof(Queryable), method, types, q.Expression, exp);
-            return q.Provider.CreateQuery<T>(mce);
-        }  
+            ParameterExpression parameter = Expression.Parameter(typeof(T), "p");
+            Expression where = null;
+            foreach (var entry in searchParameters)
+            {
+                var property = typeof(T).GetProperty(entry.Key);
+                var constant = Expression.Constant(entry.Value);
+
+                Expression left = Expression.Property(parameter, property);
+                Expression expression;
+                if (property.PropertyType.Name == "Int32")
+                {
+                    int value = int.Parse(entry.Value);
+                    Expression right = Expression.Constant(value);
+                    expression = Expression.Equal(left, right);
+                }
+                else
+                {
+                    Expression right = Expression.Constant(entry.Value);
+                    expression = Expression.Call(left, typeof(string).GetMethod("Contains", new Type[] { typeof(string) }), right);
+                }
+                if (where == null)
+                {
+                    where = expression;
+                }
+                else
+                {
+                    where = Expression.And(where, expression);
+                }
+            }
+            if (where != null)
+            {
+                Func<T, bool> f = (Func<T, bool>)Expression.Lambda(where, parameter).Compile();
+                return query.Where(f).AsQueryable();
+            }
+            return query;
+        }
     }
 }
