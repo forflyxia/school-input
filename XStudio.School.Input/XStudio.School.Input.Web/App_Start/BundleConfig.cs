@@ -9,7 +9,10 @@ namespace XStudio.School.Input.Web
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js", "~/Scripts/dataTables.bootstrap.min.js", "~/Scripts/my.datatables.extend.js"));
+                "~/Scripts/jquery-{version}.js", 
+                "~/Scripts/jquery.dataTables.min.js", 
+                "~/Scripts/dataTables.bootstrap.min.js", 
+                "~/Scripts/my.datatables.extend.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));

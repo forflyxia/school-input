@@ -25,7 +25,7 @@
         $(function () {
             var tables = $('#example2').DataTable({
                 ajax: {
-                    url: $.fn.dataTable.defaults.virtualDir + "product/product/products",
+                    url: $.fn.dataTable.defaults.virtualDir + "product/product/ProductsByPaging",
                     data: function (data) {
                         data.CustomFilterParameters = $("#my-form-search").serializeArray();
                         var json = JSON.stringify(data);

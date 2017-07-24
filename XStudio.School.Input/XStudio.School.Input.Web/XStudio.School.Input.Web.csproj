@@ -15,7 +15,7 @@
     <AssemblyName>XStudio.School.Input.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -185,6 +185,8 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery.dataTables.js" />
+    <Content Include="Scripts\jquery.dataTables.min.js" />
     <Content Include="ui\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.css" />
     <Content Include="ui\bower_components\bootstrap-colorpicker\dist\css\bootstrap-colorpicker.min.css" />
     <Content Include="ui\bower_components\bootstrap-colorpicker\dist\img\bootstrap-colorpicker\alpha-horizontal.png" />
@@ -5734,8 +5736,8 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\School\Product\View.cshtml" />
-    <Content Include="Views\School\Product\Products.cshtml" />
+    <Content Include="Views\Product\View.cshtml" />
+    <Content Include="Views\Product\Index.cshtml" />
     <Content Include="ui\dist\css\adminlte.css.map" />
     <Content Include="ui\dist\css\adminlte.min.css.map" />
     <Content Include="ui\bower_components\bootstrap-colorpicker\.bower.json" />
@@ -6037,6 +6039,7 @@
     <Content Include="ui\bower_components\jquery\external\sizzle\dist\sizzle.min.map" />
     <Content Include="ui\bower_components\jquery\README.md" />
     <Content Include="ui\bower_components\jquery\src\.eslintrc.json" />
+    <Content Include="Views\Product\_ProductsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -6068,7 +6071,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>60219</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:7628/</IISUrl>
+          <IISUrl>http://localhost/XStudio.School.Input.Web</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

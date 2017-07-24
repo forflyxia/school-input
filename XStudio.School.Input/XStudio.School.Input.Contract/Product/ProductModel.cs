@@ -11,7 +11,7 @@ namespace XStudio.School.Input.Model.Product
         /// <summary>
         /// 
         /// </summary>
-        public int ProductID { get; set; }
+        public int Id { get; set; }
 
         /// <summary>
         /// 

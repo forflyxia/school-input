@@ -20,17 +20,17 @@ namespace XStudio.School.Input.Controller.Areas.Product.Controllers
             return View();
         }
 
-        public ActionResult Products(DataTablesPaging request)
+        public JsonResult Products(DataTablesPaging request)
         {
             var view = new ProductService().GetProductsByPaging(request);
             return Json(view, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult View(int productId)
+        public ActionResult View(int id)
         {
-            if (productId > 0)
+            if (id > 0)
             {
-                var model = new ProductService().GetProduct(productId);
+                var model = new ProductService().GetProduct(id);
                 return View(model);
             }
             return View();

@@ -18,7 +18,7 @@ namespace XStudio.School.Input.Service.Converter
             }
             return new ProductModel
             {
-                ProductID = product.Id,
+                Id = product.Id,
                 Name = product.Name,
                 CategoryId = product.CategoryId,
                 Logo = product.Logo,
@@ -36,7 +36,7 @@ namespace XStudio.School.Input.Service.Converter
             }
             return new ProductPO
             {
-                Id = product.ProductID,
+                Id = product.Id,
                 Name = product.Name,
                 CategoryId = product.CategoryId,
                 Logo = product.Logo,
