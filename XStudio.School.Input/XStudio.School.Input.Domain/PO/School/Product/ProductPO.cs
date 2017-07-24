@@ -19,51 +19,51 @@ namespace XStudio.School.Input.Domain.PO.School
     [Table("product_product")]
     public partial class ProductPO
     {
-        
 		/// <summary>
 		/// 
 		/// </summary>
 		[Key]
-		public int Id { get; set; }        
+		public int Id { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Name { get; set; }        
+		public string Name { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Logo { get; set; }        
+		public string Logo { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int CategoryId { get; set; }        
+		public int CategoryId { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Introduction { get; set; }        
+		public string Introduction { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int MerchantId { get; set; }        
+		public int MerchantId { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int Status { get; set; }        
+		public int Status { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime Createtime { get; set; }        
+		public DateTime Createtime { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime Updatetime { get; set; }        
+		public DateTime Updatetime { get; set; }
+        
     }
 }

@@ -1,0 +1,67 @@
+﻿<%-- 
+Name:           controller.cst
+Author:         hbxia
+Description:    
+--%>
+
+<%@ Template Language="C#" TargetLanguage="C#" ResponseEncoding="UTF-8" %>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<!-- #include file="../../../infrastructure.cst" -->
+
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Description="目标数据表" Category="Context" %>
+<%@ Property Name="Namespace" Type="System.String" Default="" Category="Context" %>
+<%@ Property Name="TablePrefix" Type="System.String" Optional="True" Default="" Category="Context" %>
+
+/************************************************************************************************************************************************
+ * FileName:       <%=GetClassName(SourceTable) %>Controller.cs
+ * Author:         hbxia
+ * Description:    this is auto genetated, don't change!
+*************************************************************************************************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.UI.WebControls;
+using XStudio.School.Input;
+using XStudio.School.Input.Model.Paging;
+using XStudio.School.Input.Model.<%=GetTablePrefix(SourceTable, true) %>;
+using XStudio.School.Input.Service.<%=GetTablePrefix(SourceTable, true) %>;
+
+namespace <%=Namespace %>.Controller.Areas.<%=GetTablePrefix(SourceTable, true) %>.Controllers
+{
+    public partial class <%=GetClassName(SourceTable) %>Controller : BaseController
+    {
+        public ActionResult <%=GetClassName(SourceTable) %>Index()
+        {
+            return View();
+        }
+
+        public JsonResult <%=GetClassName(SourceTable) %>s(DataTablesPaging request)
+        {
+            var view = new <%=GetClassName(SourceTable) %>Service().Get<%=GetClassName(SourceTable) %>sByPaging(request);
+            return Json(view, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult View<%=GetClassName(SourceTable) %>(int id)
+        {
+            if (id > 0)
+            {
+                var model = new <%=GetClassName(SourceTable) %>Service().Get<%=GetClassName(SourceTable) %>(id);
+                return View(model);
+            }
+            return View();
+            
+        }
+
+        [HttpPost]
+        public bool Save(<%=GetClassName(SourceTable) %>Model model)
+        {
+            return new <%=GetClassName(SourceTable) %>Service().Save(model);
+        }
+	}
+}

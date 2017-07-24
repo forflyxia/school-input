@@ -19,36 +19,36 @@ namespace XStudio.School.Input.Domain.PO.School
     [Table("product_product_price")]
     public partial class ProductPricePO
     {
-        
 		/// <summary>
 		/// 
 		/// </summary>
 		[Key]
-		public int Id { get; set; }        
+		public int Id { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int ProductId { get; set; }        
+		public int ProductId { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal Unitprice { get; set; }        
+		public decimal Unitprice { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int Status { get; set; }        
+		public int Status { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime Createtime { get; set; }        
+		public DateTime Createtime { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime Updatetime { get; set; }        
+		public DateTime Updatetime { get; set; }
+        
     }
 }

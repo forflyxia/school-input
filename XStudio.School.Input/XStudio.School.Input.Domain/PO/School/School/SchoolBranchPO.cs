@@ -19,71 +19,71 @@ namespace XStudio.School.Input.Domain.PO.School
     [Table("school_school_branch")]
     public partial class SchoolBranchPO
     {
-        
 		/// <summary>
 		/// 
 		/// </summary>
 		[Key]
-		public int Id { get; set; }        
+		public int Id { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Name { get; set; }        
+		public string Name { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Shortname { get; set; }        
+		public string Shortname { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Logo { get; set; }        
+		public string Logo { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Introduction { get; set; }        
+		public string Introduction { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int SchoolId { get; set; }        
+		public int SchoolId { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int CityId { get; set; }        
+		public int CityId { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Address { get; set; }        
+		public string Address { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal Longitude { get; set; }        
+		public decimal Longitude { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal Latitude { get; set; }        
+		public decimal Latitude { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int Status { get; set; }        
+		public int Status { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime Createtime { get; set; }        
+		public DateTime Createtime { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime Updatetime { get; set; }        
+		public DateTime Updatetime { get; set; }
+        
     }
 }

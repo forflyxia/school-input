@@ -17,7 +17,7 @@ namespace XStudio.School.Input.Controller.Areas.Product
             context.MapRoute(
                 "Product_default",
                 "Product/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "ProductIndex", id = UrlParameter.Optional }
             );
         }
     }

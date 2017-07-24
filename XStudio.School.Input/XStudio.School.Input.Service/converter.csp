@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+    <propertySets>	
+          <propertySet name="config_city" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Service\Converter\Config\CityConverter.cs" template="..\..\support\codegenerator\cst\service\template\converter.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>config_city</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="config_country" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Service\Converter\Config\CountryConverter.cs" template="..\..\support\codegenerator\cst\service\template\converter.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>config_country</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="config_province" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Service\Converter\Config\ProvinceConverter.cs" template="..\..\support\codegenerator\cst\service\template\converter.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>config_province</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="merchant_merchant" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Service\Converter\Merchant\MerchantConverter.cs" template="..\..\support\codegenerator\cst\service\template\converter.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>merchant_merchant</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="order_order" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Service\Converter\Order\OrderConverter.cs" template="..\..\support\codegenerator\cst\service\template\converter.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>order_order</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="order_order_detail" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Service\Converter\Order\OrderDetailConverter.cs" template="..\..\support\codegenerator\cst\service\template\converter.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>order_order_detail</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="product_product" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Service\Converter\Product\ProductConverter.cs" template="..\..\support\codegenerator\cst\service\template\converter.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>product_product</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="product_product_category" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Service\Converter\Product\ProductCategoryConverter.cs" template="..\..\support\codegenerator\cst\service\template\converter.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>product_product_category</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="product_product_description" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Service\Converter\Product\ProductDescriptionConverter.cs" template="..\..\support\codegenerator\cst\service\template\converter.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>product_product_description</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="product_product_price" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Service\Converter\Product\ProductPriceConverter.cs" template="..\..\support\codegenerator\cst\service\template\converter.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>product_product_price</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="school_school" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Service\Converter\School\SchoolConverter.cs" template="..\..\support\codegenerator\cst\service\template\converter.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>school_school</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="school_school_branch" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Service\Converter\School\SchoolBranchConverter.cs" template="..\..\support\codegenerator\cst\service\template\converter.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>school_school_branch</name>
+                </table>
+              </property>
+        </propertySet>
+  </propertySets>
+</codeSmith>

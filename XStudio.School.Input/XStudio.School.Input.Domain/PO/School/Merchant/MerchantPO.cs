@@ -19,96 +19,96 @@ namespace XStudio.School.Input.Domain.PO.School
     [Table("merchant_merchant")]
     public partial class MerchantPO
     {
-        
 		/// <summary>
 		/// 
 		/// </summary>
 		[Key]
-		public int Id { get; set; }        
+		public int Id { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Name { get; set; }        
+		public string Name { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Shortname { get; set; }        
+		public string Shortname { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Branch { get; set; }        
+		public string Branch { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Logo { get; set; }        
+		public string Logo { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Introduction { get; set; }        
+		public string Introduction { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Contact { get; set; }        
+		public string Contact { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Telphone { get; set; }        
+		public string Telphone { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Mobliephone { get; set; }        
+		public string Mobliephone { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Businesslicence { get; set; }        
+		public string Businesslicence { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Legalperson { get; set; }        
+		public string Legalperson { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int CityId { get; set; }        
+		public int CityId { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Address { get; set; }        
+		public string Address { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal Longitude { get; set; }        
+		public decimal Longitude { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal Latitude { get; set; }        
+		public decimal Latitude { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int Status { get; set; }        
+		public int Status { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime Createtime { get; set; }        
+		public DateTime Createtime { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime Updatetime { get; set; }        
+		public DateTime Updatetime { get; set; }
+        
     }
 }

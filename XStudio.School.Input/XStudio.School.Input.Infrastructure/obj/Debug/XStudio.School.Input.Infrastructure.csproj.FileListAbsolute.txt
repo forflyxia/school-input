@@ -1,5 +1,4 @@
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Infrastructure\bin\Debug\XStudio.School.Input.Infrastructure.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Infrastructure\bin\Debug\XStudio.School.Input.Infrastructure.pdb
-D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Infrastructure\obj\Debug\XStudio.School.Input.Infrastructure.csprojResolveAssemblyReference.cache
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Infrastructure\obj\Debug\XStudio.School.Input.Infrastructure.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Infrastructure\obj\Debug\XStudio.School.Input.Infrastructure.pdb

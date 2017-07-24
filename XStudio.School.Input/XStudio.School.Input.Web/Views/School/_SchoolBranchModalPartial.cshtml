@@ -1,0 +1,111 @@
+﻿
+<!--/************************************************************************************************************************************************
+ * FileName:       DbContext.cs
+ * Author:         hbxia
+ * Description:    this is auto genetated, don't change!
+*************************************************************************************************************************************************/-->
+
+<form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
+    <div class="form-group">
+        <label class="sr-only" for="Id">名称</label>
+        <input type="text" class="form-control" name="Id" placeholder="请输入Id">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Name">名称</label>
+        <input type="text" class="form-control" name="Name" placeholder="请输入Name">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Shortname">名称</label>
+        <input type="text" class="form-control" name="Shortname" placeholder="请输入Shortname">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Logo">名称</label>
+        <input type="text" class="form-control" name="Logo" placeholder="请输入Logo">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Introduction">名称</label>
+        <input type="text" class="form-control" name="Introduction" placeholder="请输入Introduction">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="SchoolId">名称</label>
+        <input type="text" class="form-control" name="SchoolId" placeholder="请输入SchoolId">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="CityId">名称</label>
+        <input type="text" class="form-control" name="CityId" placeholder="请输入CityId">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Address">名称</label>
+        <input type="text" class="form-control" name="Address" placeholder="请输入Address">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Longitude">名称</label>
+        <input type="text" class="form-control" name="Longitude" placeholder="请输入Longitude">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Latitude">名称</label>
+        <input type="text" class="form-control" name="Latitude" placeholder="请输入Latitude">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Status">名称</label>
+        <input type="text" class="form-control" name="Status" placeholder="请输入Status">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Createtime">名称</label>
+        <input type="text" class="form-control" name="Createtime" placeholder="请输入Createtime">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Updatetime">名称</label>
+        <input type="text" class="form-control" name="Updatetime" placeholder="请输入Updatetime">
+    </div>
+    <button type="submit" class="btn btn-default my-btn-search">查询</button>
+</form>
+
+<table id="tableSchoolBranch" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+    <thead>
+    <tr role="row">
+        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Id</th>
+        <th class="sorting_asc" data-data="Name" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Name</th>
+        <th class="sorting_asc" data-data="Shortname" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Shortname</th>
+        <th class="sorting_asc" data-data="Logo" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Logo</th>
+        <th class="sorting_asc" data-data="Introduction" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Introduction</th>
+        <th class="sorting_asc" data-data="SchoolId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">SchoolId</th>
+        <th class="sorting_asc" data-data="CityId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">CityId</th>
+        <th class="sorting_asc" data-data="Address" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Address</th>
+        <th class="sorting_asc" data-data="Longitude" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Longitude</th>
+        <th class="sorting_asc" data-data="Latitude" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Latitude</th>
+        <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Status</th>
+        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Createtime</th>
+        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Updatetime</th>
+        <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">操作</th>
+    </tr>
+    </thead>
+</table>
+
+<script>
+    $(function () {
+        var tables = $('#tableSchoolBranch').DataTable({
+            ajax: {
+                url: $.fn.dataTable.defaults.virtualDir + 'school/SchoolBranch/SchoolBranchs',
+                data: function (data) {
+                    data.CustomFilterParameters = $("#my-form-search").serializeArray();
+                    var json = JSON.stringify(data);
+                    return json;
+                }
+            },
+            columnDefs: [
+            {
+                targets: -1,
+                width: "100px",
+                render: function (data, type, full, meta) {
+                    var json = JSON.stringify(full);
+                    var url = $.fn.dataTable.defaults.virtualDir + 'school/SchoolBranch/ViewSchoolBranch?id=' + full.Id;
+                    return '<a class="btn btn-default" href="' + url + '" target="_blank" role="button">选择</a>';
+                }
+            }]
+        });
+        $(".my-btn-search").on("click", function () {
+            tables.draw();
+        });
+    });
+</script>

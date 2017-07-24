@@ -91,13 +91,19 @@ public string GetClassName(string tableName)
 	return str3;
 }
 
-public string GetTablePrefix(TableSchema sourceTable)
+public string GetTablePrefix(TableSchema sourceTable, bool firstToUpper = false)
 {
     string tableName = sourceTable.Name;
     int index = tableName.IndexOf("_");
     if (index > 0)
     {
-         return tableName.Substring(0, index);
+        string prefix = tableName.Substring(0, index);
+        if(firstToUpper)
+        {
+            return FirstLetterToPascal(prefix);
+        }
+        return prefix;
+        
     }
     return string.Empty;
 }

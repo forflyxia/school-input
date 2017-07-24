@@ -15,7 +15,7 @@
     <AssemblyName>XStudio.School.Input.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>false</UseIISExpress>
+    <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -5737,7 +5737,6 @@
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Product\View.cshtml" />
-    <Content Include="Views\Product\Index.cshtml" />
     <Content Include="ui\dist\css\adminlte.css.map" />
     <Content Include="ui\dist\css\adminlte.min.css.map" />
     <Content Include="ui\bower_components\bootstrap-colorpicker\.bower.json" />
@@ -6040,6 +6039,58 @@
     <Content Include="ui\bower_components\jquery\README.md" />
     <Content Include="ui\bower_components\jquery\src\.eslintrc.json" />
     <Content Include="Views\Product\_ProductsPartial.cshtml" />
+    <Content Include="Views\Product\_ProductCategoryModalPartial.cshtml" />
+    <Content Include="Views\Product\_ProductCategoryPartial.cshtml" />
+    <Content Include="Views\Product\_ProductDescriptionModalPartial.cshtml" />
+    <Content Include="Views\Product\_ProductDescriptionPartial.cshtml" />
+    <Content Include="Views\Product\_ProductModalPartial.cshtml" />
+    <Content Include="Views\Product\_ProductPartial.cshtml" />
+    <Content Include="Views\Product\_ProductPriceModalPartial.cshtml" />
+    <Content Include="Views\Product\_ProductPricePartial.cshtml" />
+    <Content Include="Views\Product\ProductCategoryIndex.cshtml" />
+    <Content Include="Views\Product\ProductCategoryView.cshtml" />
+    <Content Include="Views\Product\ProductDescriptionIndex.cshtml" />
+    <Content Include="Views\Product\ProductDescriptionView.cshtml" />
+    <Content Include="Views\Product\ProductIndex.cshtml" />
+    <Content Include="Views\Product\ProductPriceIndex.cshtml" />
+    <Content Include="Views\Product\ProductPriceView.cshtml" />
+    <Content Include="Views\Product\ProductView.cshtml" />
+    <Content Include="Views\School\SchoolBranchIndex.cshtml" />
+    <Content Include="Views\School\SchoolBranchView.cshtml" />
+    <Content Include="Views\School\SchoolIndex.cshtml" />
+    <Content Include="Views\School\SchoolView.cshtml" />
+    <Content Include="Views\School\_SchoolBranchModalPartial.cshtml" />
+    <Content Include="Views\School\_SchoolBranchPartial.cshtml" />
+    <Content Include="Views\School\_SchoolModalPartial.cshtml" />
+    <Content Include="Views\School\_SchoolPartial.cshtml" />
+    <Content Include="Views\Order\OrderDetailIndex.cshtml" />
+    <Content Include="Views\Order\OrderDetailView.cshtml" />
+    <Content Include="Views\Order\OrderIndex.cshtml" />
+    <Content Include="Views\Order\OrderView.cshtml" />
+    <Content Include="Views\Order\_OrderDetailModalPartial.cshtml" />
+    <Content Include="Views\Order\_OrderDetailPartial.cshtml" />
+    <Content Include="Views\Order\_OrderModalPartial.cshtml" />
+    <Content Include="Views\Order\_OrderPartial.cshtml" />
+    <Content Include="Views\Merchant\MerchantIndex.cshtml" />
+    <Content Include="Views\Merchant\MerchantView.cshtml" />
+    <Content Include="Views\Merchant\_MerchantModalPartial.cshtml" />
+    <Content Include="Views\Merchant\_MerchantPartial.cshtml" />
+    <Content Include="Views\Config\CityIndex.cshtml" />
+    <Content Include="Views\Config\CityView.cshtml" />
+    <Content Include="Views\Config\CountryIndex.cshtml" />
+    <Content Include="Views\Config\CountryView.cshtml" />
+    <Content Include="Views\Config\ProvinceIndex.cshtml" />
+    <Content Include="Views\Config\ProvinceView.cshtml" />
+    <Content Include="Views\Config\_CityModalPartial.cshtml" />
+    <Content Include="Views\Config\_CityPartial.cshtml" />
+    <Content Include="Views\Config\_CountryModalPartial.cshtml" />
+    <Content Include="Views\Config\_CountryPartial.cshtml" />
+    <Content Include="Views\Config\_ProvinceModalPartial.cshtml" />
+    <Content Include="Views\Config\_ProvincePartial.cshtml" />
+    <Content Include="Views\Product\ViewProduct.cshtml" />
+    <Content Include="Views\Product\ViewProductCategory.cshtml" />
+    <Content Include="Views\Product\ViewProductDescription.cshtml" />
+    <Content Include="Views\Product\ViewProductPrice.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -6051,6 +6102,26 @@
     <ProjectReference Include="..\XStudio.School.Input.Controller\XStudio.School.Input.Controller.csproj">
       <Project>{832891c9-213d-4140-8097-01f6e3a9313b}</Project>
       <Name>XStudio.School.Input.Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XStudio.School.Input.Domain\XStudio.School.Input.Domain.csproj">
+      <Project>{17f316bf-98da-489c-a51e-fba487ade21b}</Project>
+      <Name>XStudio.School.Input.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XStudio.School.Input.Infrastructure\XStudio.School.Input.Infrastructure.csproj">
+      <Project>{293364e0-58e7-424b-896a-862a231352ba}</Project>
+      <Name>XStudio.School.Input.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XStudio.School.Input.Model\XStudio.School.Input.Model.csproj">
+      <Project>{637dd406-19c7-49f0-8f33-31772b90750d}</Project>
+      <Name>XStudio.School.Input.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XStudio.School.Input.Repository\XStudio.School.Input.Repository.csproj">
+      <Project>{5e490b32-b5ba-4cb6-b9ac-a311e6642906}</Project>
+      <Name>XStudio.School.Input.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XStudio.School.Input.Service\XStudio.School.Input.Service.csproj">
+      <Project>{7a2baa2a-2d70-4371-9f32-cb3b71541651}</Project>
+      <Name>XStudio.School.Input.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
@@ -6071,7 +6142,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>60219</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/XStudio.School.Input.Web</IISUrl>
+          <IISUrl>http://localhost:7628/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

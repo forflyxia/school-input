@@ -39,15 +39,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Config\CityService.cs" />
+    <Compile Include="Config\CountryService.cs" />
+    <Compile Include="Config\ProvinceService.cs" />
+    <Compile Include="Converter\Config\CityConverter.cs" />
+    <Compile Include="Converter\Config\CountryConverter.cs" />
+    <Compile Include="Converter\Config\ProvinceConverter.cs" />
+    <Compile Include="Converter\Merchant\MerchantConverter.cs" />
+    <Compile Include="Converter\Order\OrderConverter.cs" />
+    <Compile Include="Converter\Order\OrderDetailConverter.cs" />
     <Compile Include="Converter\ProductConverter.cs" />
+    <Compile Include="Converter\Product\ProductCategoryConverter.cs" />
+    <Compile Include="Converter\Product\ProductConverter.cs" />
+    <Compile Include="Converter\Product\ProductDescriptionConverter.cs" />
+    <Compile Include="Converter\Product\ProductPriceConverter.cs" />
+    <Compile Include="Converter\School\SchoolBranchConverter.cs" />
+    <Compile Include="Converter\School\SchoolConverter.cs" />
+    <Compile Include="Merchant\MerchantService.cs" />
+    <Compile Include="Order\OrderDetailService.cs" />
+    <Compile Include="Order\OrderService.cs" />
+    <Compile Include="Product\ProductCategoryService.cs" />
+    <Compile Include="Product\ProductDescriptionService.cs" />
+    <Compile Include="Product\ProductPriceService.cs" />
     <Compile Include="Product\ProductService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="School\SchoolBranchService.cs" />
+    <Compile Include="School\SchoolService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XStudio.School.Input.Contract\XStudio.School.Input.Model.csproj">
-      <Project>{b82d0f5f-45de-45a6-8de1-3ccff393ecd1}</Project>
-      <Name>XStudio.School.Input.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\XStudio.School.Input.Domain\XStudio.School.Input.Domain.csproj">
       <Project>{17f316bf-98da-489c-a51e-fba487ade21b}</Project>
       <Name>XStudio.School.Input.Domain</Name>
@@ -55,6 +74,10 @@
     <ProjectReference Include="..\XStudio.School.Input.Infrastructure\XStudio.School.Input.Infrastructure.csproj">
       <Project>{293364e0-58e7-424b-896a-862a231352ba}</Project>
       <Name>XStudio.School.Input.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XStudio.School.Input.Model\XStudio.School.Input.Model.csproj">
+      <Project>{637dd406-19c7-49f0-8f33-31772b90750d}</Project>
+      <Name>XStudio.School.Input.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\XStudio.School.Input.Repository\XStudio.School.Input.Repository.csproj">
       <Project>{5e490b32-b5ba-4cb6-b9ac-a311e6642906}</Project>

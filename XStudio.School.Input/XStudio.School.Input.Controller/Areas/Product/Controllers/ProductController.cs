@@ -1,4 +1,10 @@
-﻿using System;
+﻿/************************************************************************************************************************************************
+ * FileName:       ProductController.cs
+ * Author:         hbxia
+ * Description:    this is auto genetated, don't change!
+*************************************************************************************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,11 +17,9 @@ using XStudio.School.Input.Service.Product;
 
 namespace XStudio.School.Input.Controller.Areas.Product.Controllers
 {
-    public class ProductController : BaseController
+    public partial class ProductController : BaseController
     {
-        //
-        // GET: /Product/Products/
-        public ActionResult Index()
+        public ActionResult ProductIndex()
         {
             return View();
         }
@@ -26,7 +30,7 @@ namespace XStudio.School.Input.Controller.Areas.Product.Controllers
             return Json(view, JsonRequestBehavior.AllowGet);
         }
 
-        public ActionResult View(int id)
+        public ActionResult ViewProduct(int id)
         {
             if (id > 0)
             {

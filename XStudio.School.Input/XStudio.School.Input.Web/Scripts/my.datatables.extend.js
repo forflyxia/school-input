@@ -9,7 +9,7 @@
 		"type": "POST",
 		"contentType": "application/json; charset=utf-8"
 	},
-	"virtualDir": "http://localhost/XStudio.School.Input.Web/",
+	"virtualDir": "http://localhost:7628/",
 	"language": {
 		"processing": "加载中...",
 		"lengthMenu": "每页显示 _MENU_ 条数据",

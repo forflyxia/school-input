@@ -1,16 +1,22 @@
-﻿using System;
+﻿/************************************************************************************************************************************************
+ * FileName:       ProductController.cs
+ * Author:         hbxia
+ * Description:    this is auto genetated, don't change!
+*************************************************************************************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using XStudio.School.Input.Model.Paging;
 using XStudio.School.Input.Model.Product;
-using XStudio.School.Input.Repository.School;
-using XStudio.School.Input.Service.Converter;
+using XStudio.School.Input.Repository.School.Product;
+using XStudio.School.Input.Service.Converter.Product;
 
 namespace XStudio.School.Input.Service.Product
 {
-    public class ProductService
+    public partial class ProductService
     {
         /// <summary>
         /// 
@@ -20,31 +26,31 @@ namespace XStudio.School.Input.Service.Product
         public DatatablesView<ProductModel> GetProductsByPaging(DataTablesPaging request)
         {
             int total = 0;
-            var products = ProductRepository.GetListPaging(request, out total);
+            var pagingItems = ProductRepository.GetListPaging(request, out total);
             var items = new List<ProductModel>();
-            foreach (var product in products)
+            foreach (var pagingItem in pagingItems)
             {
-                var item = product.ToModel();
+                var item = pagingItem.ToModel();
                 items.Add(item);
             }
-            return new DatatablesView<ProductModel>(request.Draw, total, products.Count, items);
+            return new DatatablesView<ProductModel>(request.Draw, total, pagingItems.Count, items);
         }
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="productId"></param>
+        /// <param name="id"></param>
         /// <returns></returns>
-        public ProductModel GetProduct(int productId)
+        public ProductModel GetProduct(int id)
         {
-            var product = ProductRepository.GetItem(productId);
-            return product.ToModel();
+            var item = ProductRepository.GetItem(id);
+            return item.ToModel();
         }
 
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="productId"></param>
+        /// <param name="model"></param>
         /// <returns></returns>
         public bool Save(ProductModel model)
         {

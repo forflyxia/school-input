@@ -60,7 +60,7 @@ Description:
                 width: "100px",
                 render: function (data, type, full, meta) {
                     var json = JSON.stringify(full);
-                    var url = $.fn.dataTable.defaults.virtualDir + '<%=GetTablePrefix(SourceTable) %>/<%=GetClassName(SourceTable) %>/view?id=' + full.<%=FirstLetterToPascal(SourceTable.PrimaryKey.MemberColumns[0].Column.Name) %>;
+                    var url = $.fn.dataTable.defaults.virtualDir + '<%=GetTablePrefix(SourceTable) %>/<%=GetClassName(SourceTable) %>/View<%=GetClassName(SourceTable) %>?id=' + full.<%=FirstLetterToPascal(SourceTable.PrimaryKey.MemberColumns[0].Column.Name) %>;
                     return '<a class="btn btn-default" href="' + url + '" target="_blank" role="button">选择</a>';
                 }
             }]

@@ -19,91 +19,91 @@ namespace XStudio.School.Input.Domain.PO.School
     [Table("order_order")]
     public partial class OrderPO
     {
-        
 		/// <summary>
 		/// 
 		/// </summary>
 		[Key]
-		public int Id { get; set; }        
+		public int Id { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int UserId { get; set; }        
+		public int UserId { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Contact { get; set; }        
+		public string Contact { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Telphone { get; set; }        
+		public string Telphone { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Mobliephone { get; set; }        
+		public string Mobliephone { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal Totalamount { get; set; }        
+		public decimal Totalamount { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal Reduction { get; set; }        
+		public decimal Reduction { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public decimal AmountpaId { get; set; }        
+		public decimal AmountpaId { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Couponcode { get; set; }        
+		public string Couponcode { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int DeliverycityId { get; set; }        
+		public int DeliverycityId { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int DeliveryschoolId { get; set; }        
+		public int DeliveryschoolId { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int DeliveryschoolbranchId { get; set; }        
+		public int DeliveryschoolbranchId { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Deliveryaddress { get; set; }        
+		public string Deliveryaddress { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Remark { get; set; }        
+		public string Remark { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int Status { get; set; }        
+		public int Status { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime Createtime { get; set; }        
+		public DateTime Createtime { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public DateTime Updatetime { get; set; }        
+		public DateTime Updatetime { get; set; }
+        
     }
 }

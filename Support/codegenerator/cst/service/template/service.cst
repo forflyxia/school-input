@@ -1,0 +1,77 @@
+﻿<%-- 
+Name:           controller.cst
+Author:         hbxia
+Description:    
+--%>
+
+<%@ Template Language="C#" TargetLanguage="C#" ResponseEncoding="UTF-8" %>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<!-- #include file="../../../infrastructure.cst" -->
+
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Description="目标数据表" Category="Context" %>
+<%@ Property Name="Namespace" Type="System.String" Default="" Category="Context" %>
+<%@ Property Name="TablePrefix" Type="System.String" Optional="True" Default="" Category="Context" %>
+
+/************************************************************************************************************************************************
+ * FileName:       <%=GetClassName(SourceTable) %>Controller.cs
+ * Author:         hbxia
+ * Description:    this is auto genetated, don't change!
+*************************************************************************************************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using XStudio.School.Input.Model.Paging;
+using XStudio.School.Input.Model.<%=GetTablePrefix(SourceTable, true) %>;
+using XStudio.School.Input.Repository.<%=GetDbName(SourceTable.Database) %>.<%=GetTablePrefix(SourceTable, true) %>;
+using XStudio.School.Input.Service.Converter.<%=GetTablePrefix(SourceTable, true) %>;
+
+namespace <%=Namespace %>.Service.<%=GetTablePrefix(SourceTable, true) %>
+{
+    public partial class <%=GetClassName(SourceTable) %>Service
+    {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public DatatablesView<<%=GetClassName(SourceTable) %>Model> Get<%=GetClassName(SourceTable) %>sByPaging(DataTablesPaging request)
+        {
+            int total = 0;
+            var pagingItems = <%=GetClassName(SourceTable) %>Repository.GetListPaging(request, out total);
+            var items = new List<<%=GetClassName(SourceTable) %>Model>();
+            foreach (var pagingItem in pagingItems)
+            {
+                var item = pagingItem.ToModel();
+                items.Add(item);
+            }
+            return new DatatablesView<<%=GetClassName(SourceTable) %>Model>(request.Draw, total, pagingItems.Count, items);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public <%=GetClassName(SourceTable) %>Model Get<%=GetClassName(SourceTable) %>(int id)
+        {
+            var item = <%=GetClassName(SourceTable) %>Repository.GetItem(id);
+            return item.ToModel();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool Save(<%=GetClassName(SourceTable) %>Model model)
+        {
+            return <%=GetClassName(SourceTable) %>Repository.Save(model.ToPO());
+        }
+    }
+}

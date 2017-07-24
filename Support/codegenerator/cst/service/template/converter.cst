@@ -1,0 +1,64 @@
+﻿<%-- 
+Name:           entity.cst
+Author:         hbxia
+Description:    
+--%>
+
+<%@ Template Language="C#" TargetLanguage="C#" ResponseEncoding="UTF-8" %>
+
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="CodeSmith.BaseTemplates" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<!-- #include file="../../../infrastructure.cst" -->
+
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Description="目标数据表" Category="Context" %>
+<%@ Property Name="Namespace" Type="System.String" Default="" Category="Context" %>
+<%@ Property Name="TablePrefix" Type="System.String" Optional="True" Default="" Category="Context" %>
+
+/************************************************************************************************************************************************
+ * FileName:       <%=GetClassName(SourceTable) %>PO.cs
+ * Author:         hbxia
+ * Description:    this is auto genetated, don't change!
+*************************************************************************************************************************************************/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using <%=Namespace %>.Domain.PO.<%=GetDbName(SourceTable.Database) %>;
+using <%=Namespace %>.Model.<%=GetTablePrefix(SourceTable, true) %>;
+
+namespace <%=Namespace %>.Service.Converter.<%=GetTablePrefix(SourceTable, true) %>
+{
+    public static class <%=GetClassName(SourceTable) %>Converter
+    {
+        public static <%=GetClassName(SourceTable) %>Model ToModel(this <%=GetClassName(SourceTable) %>PO item)
+        {
+            if (item == null)
+            {
+                return null;
+            }
+            return new <%=GetClassName(SourceTable) %>Model
+            {
+                <%foreach(ColumnSchema column in SourceTable.Columns) { %>
+                <%=FirstLetterToPascal(column.Name) %> = item.<%=FirstLetterToPascal(column.Name) %>,
+                <% } %>
+            };
+        }
+
+        public static <%=GetClassName(SourceTable) %>PO ToPO(this <%=GetClassName(SourceTable) %>Model item)
+        {
+            if (item == null)
+            {
+                return null;
+            }
+            return new <%=GetClassName(SourceTable) %>PO
+            {
+                <%foreach(ColumnSchema column in SourceTable.Columns) { %>
+                <%=FirstLetterToPascal(column.Name) %> = item.<%=FirstLetterToPascal(column.Name) %>,
+                <% } %>
+            };
+        }
+    }
+}

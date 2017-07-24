@@ -30,7 +30,7 @@ using <%=Namespace %>.Repository.DbContext;
 using <%=Namespace %>.Infrastructure;
 using <%=Namespace %>.Model.Paging;
 
-namespace <%=Namespace %>.Repository.<%=GetDbName(SourceTable.Database) %>
+namespace <%=Namespace %>.Repository.<%=GetDbName(SourceTable.Database) %>.<%=GetTablePrefix(SourceTable, true) %>
 {
     /// <summary>
     /// <%=SourceTable.Description %>

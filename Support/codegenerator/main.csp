@@ -2,10 +2,10 @@
 <codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
   <variables>
     <add key="ConnectionString1" value="Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;" />
-	<add key="BaseDir" value="D:\xstudio\code\school\input\source\XStudio.School.Input" />
-	<add key="Namespace" value="XStudio.School.Input" />
-	<add key="TablePrefix" value="" />
-	<add key="SpecifyTableName" value="" />
+    <add key="BaseDir" value="D:\xstudio\code\school\input\source\XStudio.School.Input" />
+    <add key="Namespace" value="XStudio.School.Input" />
+    <add key="TablePrefix" value="" />
+    <add key="SpecifyTableName" value="" />
   </variables>
   <propertySets>
     <propertySet name="entity" output="$(BaseDir)\\$(Namespace).Domain\entity.csp" template="cst\service\entity.csp.cst">
@@ -14,29 +14,120 @@
         <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
       </property>
       <property name="BaseDir">$(BaseDir)</property>
-	  <property name="Namespace">$(Namespace)</property>
-	  <property name="TablePrefix">$(TablePrefix)</property>
-	  <property name="SpecifyTableName">$(SpecifyTableName)</property>
+      <property name="Namespace">$(Namespace)</property>
+      <property name="TablePrefix">$(TablePrefix)</property>
+      <property name="SpecifyTableName">$(SpecifyTableName)</property>
     </propertySet>
-	<propertySet name="repository" output="$(BaseDir)\\$(Namespace).Repository\repository.csp" template="cst\service\repository.csp.cst">
+
+    <propertySet name="model" output="$(BaseDir)\\$(Namespace).Model\model.csp" template="cst\service\model.csp.cst">
       <property name="SourceDatabase">
         <connectionString>$(ConnectionString1)</connectionString>
         <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
       </property>
       <property name="BaseDir">$(BaseDir)</property>
-	  <property name="Namespace">$(Namespace)</property>
-	  <property name="TablePrefix">$(TablePrefix)</property>
-	  <property name="SpecifyTableName">$(SpecifyTableName)</property>
+      <property name="Namespace">$(Namespace)</property>
+      <property name="TablePrefix">$(TablePrefix)</property>
+      <property name="SpecifyTableName">$(SpecifyTableName)</property>
     </propertySet>
-	<propertySet name="dbcontext" output="$(BaseDir)\$(Namespace).Repository\dbcontext.csp" template="cst\service\dbcontext.csp.cst">
+
+    <propertySet name="repository" output="$(BaseDir)\\$(Namespace).Repository\repository.csp" template="cst\service\repository.csp.cst">
       <property name="SourceDatabase">
         <connectionString>$(ConnectionString1)</connectionString>
         <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
       </property>
       <property name="BaseDir">$(BaseDir)</property>
-	  <property name="Namespace">$(Namespace)</property>
-	  <property name="TablePrefix">$(TablePrefix)</property>
-	  <property name="SpecifyTableName">$(SpecifyTableName)</property>
+      <property name="Namespace">$(Namespace)</property>
+      <property name="TablePrefix">$(TablePrefix)</property>
+      <property name="SpecifyTableName">$(SpecifyTableName)</property>
     </propertySet>
+
+    <propertySet name="dbcontext" output="$(BaseDir)\$(Namespace).Repository\dbcontext.csp" template="cst\service\dbcontext.csp.cst">
+      <property name="SourceDatabase">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+      </property>
+      <property name="BaseDir">$(BaseDir)</property>
+      <property name="Namespace">$(Namespace)</property>
+      <property name="TablePrefix">$(TablePrefix)</property>
+      <property name="SpecifyTableName">$(SpecifyTableName)</property>
+    </propertySet>
+
+    <propertySet name="controller" output="$(BaseDir)\\$(Namespace).Controller\controller.csp" template="cst\service\controller.csp.cst">
+      <property name="SourceDatabase">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+      </property>
+      <property name="BaseDir">$(BaseDir)</property>
+      <property name="Namespace">$(Namespace)</property>
+      <property name="TablePrefix">$(TablePrefix)</property>
+      <property name="SpecifyTableName">$(SpecifyTableName)</property>
+    </propertySet>
+
+    <propertySet name="service" output="$(BaseDir)\\$(Namespace).Service\service.csp" template="cst\service\service.csp.cst">
+      <property name="SourceDatabase">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+      </property>
+      <property name="BaseDir">$(BaseDir)</property>
+      <property name="Namespace">$(Namespace)</property>
+      <property name="TablePrefix">$(TablePrefix)</property>
+      <property name="SpecifyTableName">$(SpecifyTableName)</property>
+    </propertySet>
+
+    <propertySet name="converter" output="$(BaseDir)\\$(Namespace).Service\converter.csp" template="cst\service\converter.csp.cst">
+      <property name="SourceDatabase">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+      </property>
+      <property name="BaseDir">$(BaseDir)</property>
+      <property name="Namespace">$(Namespace)</property>
+      <property name="TablePrefix">$(TablePrefix)</property>
+      <property name="SpecifyTableName">$(SpecifyTableName)</property>
+    </propertySet>
+
+    <propertySet name="ui.index" output="$(BaseDir)\$(Namespace).Web\ui.index.csp" template="cst\ui\index.csp.cst">
+      <property name="SourceDatabase">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+      </property>
+      <property name="BaseDir">$(BaseDir)</property>
+      <property name="Namespace">$(Namespace)</property>
+      <property name="TablePrefix">$(TablePrefix)</property>
+      <property name="SpecifyTableName">$(SpecifyTableName)</property>
+    </propertySet>
+
+    <propertySet name="ui.list.partial" output="$(BaseDir)\$(Namespace).Web\ui.list.partial.csp" template="cst\ui\list.partial.csp.cst">
+      <property name="SourceDatabase">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+      </property>
+      <property name="BaseDir">$(BaseDir)</property>
+      <property name="Namespace">$(Namespace)</property>
+      <property name="TablePrefix">$(TablePrefix)</property>
+      <property name="SpecifyTableName">$(SpecifyTableName)</property>
+    </propertySet>
+
+    <propertySet name="ui.list.modal" output="$(BaseDir)\$(Namespace).Web\ui.list.modal.csp" template="cst\ui\list.modal.csp.cst">
+      <property name="SourceDatabase">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+      </property>
+      <property name="BaseDir">$(BaseDir)</property>
+      <property name="Namespace">$(Namespace)</property>
+      <property name="TablePrefix">$(TablePrefix)</property>
+      <property name="SpecifyTableName">$(SpecifyTableName)</property>
+    </propertySet>
+
+    <propertySet name="ui.view" output="$(BaseDir)\$(Namespace).Web\ui.view.csp" template="cst\ui\view.csp.cst">
+      <property name="SourceDatabase">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+      </property>
+      <property name="BaseDir">$(BaseDir)</property>
+      <property name="Namespace">$(Namespace)</property>
+      <property name="TablePrefix">$(TablePrefix)</property>
+      <property name="SpecifyTableName">$(SpecifyTableName)</property>
+    </propertySet>
+
   </propertySets>
 </codeSmith>

@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
+    <propertySets>	
+          <propertySet name="config_city" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Config\_CityModalPartial.cshtml" template="..\..\support\codegenerator\cst\ui\template\list.modal.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>config_city</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="config_country" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Config\_CountryModalPartial.cshtml" template="..\..\support\codegenerator\cst\ui\template\list.modal.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>config_country</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="config_province" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Config\_ProvinceModalPartial.cshtml" template="..\..\support\codegenerator\cst\ui\template\list.modal.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>config_province</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="merchant_merchant" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Merchant\_MerchantModalPartial.cshtml" template="..\..\support\codegenerator\cst\ui\template\list.modal.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>merchant_merchant</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="order_order" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Order\_OrderModalPartial.cshtml" template="..\..\support\codegenerator\cst\ui\template\list.modal.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>order_order</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="order_order_detail" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Order\_OrderDetailModalPartial.cshtml" template="..\..\support\codegenerator\cst\ui\template\list.modal.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>order_order_detail</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="product_product" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Product\_ProductModalPartial.cshtml" template="..\..\support\codegenerator\cst\ui\template\list.modal.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>product_product</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="product_product_category" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Product\_ProductCategoryModalPartial.cshtml" template="..\..\support\codegenerator\cst\ui\template\list.modal.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>product_product_category</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="product_product_description" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Product\_ProductDescriptionModalPartial.cshtml" template="..\..\support\codegenerator\cst\ui\template\list.modal.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>product_product_description</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="product_product_price" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Product\_ProductPriceModalPartial.cshtml" template="..\..\support\codegenerator\cst\ui\template\list.modal.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>product_product_price</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="school_school" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\School\_SchoolModalPartial.cshtml" template="..\..\support\codegenerator\cst\ui\template\list.modal.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>school_school</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="school_school_branch" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\School\_SchoolBranchModalPartial.cshtml" template="..\..\support\codegenerator\cst\ui\template\list.modal.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>school_school_branch</name>
+                </table>
+              </property>
+        </propertySet>
+  </propertySets>
+</codeSmith>

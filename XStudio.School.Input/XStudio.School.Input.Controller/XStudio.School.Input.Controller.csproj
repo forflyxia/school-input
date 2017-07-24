@@ -53,16 +53,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\Config\Controllers\CityController.cs" />
+    <Compile Include="Areas\Config\Controllers\CountryController.cs" />
+    <Compile Include="Areas\Config\Controllers\ProvinceController.cs" />
+    <Compile Include="Areas\Merchant\Controllers\MerchantController.cs" />
     <Compile Include="Areas\Merchant\Controllers\MerchantsController.cs" />
     <Compile Include="Areas\Merchant\MerchantAreaRegistration.cs" />
+    <Compile Include="Areas\Order\Controllers\OrderController.cs" />
+    <Compile Include="Areas\Order\Controllers\OrderDetailController.cs" />
+    <Compile Include="Areas\Product\Controllers\ProductCategoryController.cs" />
     <Compile Include="Areas\Product\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Product\Controllers\ProductDescriptionController.cs" />
+    <Compile Include="Areas\Product\Controllers\ProductPriceController.cs" />
     <Compile Include="Areas\Product\ProductAreaRegistration.cs" />
+    <Compile Include="Areas\School\Controllers\SchoolBranchController.cs" />
+    <Compile Include="Areas\School\Controllers\SchoolController.cs" />
     <Compile Include="BaseController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XStudio.School.Input.Contract\XStudio.School.Input.Model.csproj">
-      <Project>{b82d0f5f-45de-45a6-8de1-3ccff393ecd1}</Project>
+    <ProjectReference Include="..\XStudio.School.Input.Model\XStudio.School.Input.Model.csproj">
+      <Project>{637dd406-19c7-49f0-8f33-31772b90750d}</Project>
       <Name>XStudio.School.Input.Model</Name>
     </ProjectReference>
     <ProjectReference Include="..\XStudio.School.Input.Service\XStudio.School.Input.Service.csproj">
@@ -70,6 +81,7 @@
       <Name>XStudio.School.Input.Service</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

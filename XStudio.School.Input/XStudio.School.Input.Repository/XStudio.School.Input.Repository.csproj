@@ -56,6 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\School\Config\CityRepository.cs" />
+    <Compile Include="Repository\School\Config\CountryRepository.cs" />
+    <Compile Include="Repository\School\Config\ProvinceRepository.cs" />
     <Compile Include="Repository\School\Merchant\MerchantRepository.cs" />
     <Compile Include="Repository\School\Order\OrderDetailRepository.cs" />
     <Compile Include="Repository\School\Order\OrderRepository.cs" />
@@ -63,14 +66,11 @@
     <Compile Include="Repository\School\Product\ProductDescriptionRepository.cs" />
     <Compile Include="Repository\School\Product\ProductPriceRepository.cs" />
     <Compile Include="Repository\School\Product\ProductRepository.cs" />
+    <Compile Include="Repository\School\School\SchoolBranchRepository.cs" />
     <Compile Include="Repository\School\School\SchoolRepository.cs" />
     <Compile Include="SchoolContext.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\XStudio.School.Input.Contract\XStudio.School.Input.Model.csproj">
-      <Project>{b82d0f5f-45de-45a6-8de1-3ccff393ecd1}</Project>
-      <Name>XStudio.School.Input.Model</Name>
-    </ProjectReference>
     <ProjectReference Include="..\XStudio.School.Input.Domain\XStudio.School.Input.Domain.csproj">
       <Project>{17f316bf-98da-489c-a51e-fba487ade21b}</Project>
       <Name>XStudio.School.Input.Domain</Name>
@@ -78,6 +78,10 @@
     <ProjectReference Include="..\XStudio.School.Input.Infrastructure\XStudio.School.Input.Infrastructure.csproj">
       <Project>{293364e0-58e7-424b-896a-862a231352ba}</Project>
       <Name>XStudio.School.Input.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XStudio.School.Input.Model\XStudio.School.Input.Model.csproj">
+      <Project>{637dd406-19c7-49f0-8f33-31772b90750d}</Project>
+      <Name>XStudio.School.Input.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
