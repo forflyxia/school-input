@@ -18,6 +18,22 @@ namespace XStudio.School.Input.Service.Config
 {
     public partial class CityService
     {
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public List<CityModel> GetCitys()
+        {
+            var items = CityRepository.GetAll();
+            if (items != null)
+            {
+                return items.Select(p => p.ToModel()).ToList();
+            }
+            return new List<CityModel>();
+        }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -26,7 +42,7 @@ namespace XStudio.School.Input.Service.Config
         public DatatablesView<CityModel> GetCitysByPaging(DataTablesPaging request)
         {
             int total = 0;
-            var pagingItems = CityRepository.GetListPaging(request, out total);
+            var pagingItems = CityRepository.GetItemsByPaging(request, out total);
             var items = new List<CityModel>();
             foreach (var pagingItem in pagingItems)
             {

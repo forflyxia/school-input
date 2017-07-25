@@ -23,8 +23,14 @@ namespace XStudio.School.Input.Controller.Areas.Config.Controllers
         {
             return View();
         }
+        
+        public JsonResult Countrys()
+        {
+            var items = new CountryService().GetCountrys();
+            return Json(items, JsonRequestBehavior.AllowGet);
+        }
 
-        public JsonResult Countrys(DataTablesPaging request)
+        public JsonResult CountrysByPaging(DataTablesPaging request)
         {
             var view = new CountryService().GetCountrysByPaging(request);
             return Json(view, JsonRequestBehavior.AllowGet);

@@ -40,15 +40,15 @@
     </div>
     <div class="form-group">
         <label class="sr-only" for="Createtime">名称</label>
-        <input type="text" class="form-control" name="Createtime" placeholder="请输入Createtime">
+        <input type="text" class="form-control my-datepicker" name="Createtime" placeholder="请输入Createtime">
     </div>
     <div class="form-group">
         <label class="sr-only" for="Updatetime">名称</label>
-        <input type="text" class="form-control" name="Updatetime" placeholder="请输入Updatetime">
+        <input type="text" class="form-control my-datepicker" name="Updatetime" placeholder="请输入Updatetime">
     </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
-
+<a class="btn btn-primary" href="/config/City/ViewCity?id=0" target="_blank" role="button">新增</a>
 <table id="tableCity" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
     <thead>
     <tr role="row">
@@ -71,7 +71,7 @@
     $(function () {
         var tables = $('#tableCity').DataTable({
             ajax: {
-                url: $.fn.dataTable.defaults.virtualDir + 'config/City/Citys',
+                url: $.fn.dataTable.defaults.virtualDir + 'config/City/CitysByPaging',
                 data: function (data) {
                     data.CustomFilterParameters = $("#my-form-search").serializeArray();
                     var json = JSON.stringify(data);

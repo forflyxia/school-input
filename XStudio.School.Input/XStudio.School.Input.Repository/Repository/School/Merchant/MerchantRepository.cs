@@ -113,7 +113,7 @@ namespace XStudio.School.Input.Repository.School.Merchant
         /// 
         /// </summary>
         /// <returns></returns>
-        public static List<MerchantPO> GetListPaging(DataTablesPaging paging, out int total)
+        public static List<MerchantPO> GetItemsByPaging(DataTablesPaging paging, out int total)
         {
             var filterParameters = new Dictionary<string, string>();
             foreach (var filterItem in paging.CustomFilterParameters)
@@ -136,7 +136,7 @@ namespace XStudio.School.Input.Repository.School.Merchant
         /// 
         /// </summary>
         /// <returns></returns>
-        public static List<MerchantPO> GetList()
+        public static List<MerchantPO> GetAll()
         {
 			using (var context = new SchoolContext())
             {

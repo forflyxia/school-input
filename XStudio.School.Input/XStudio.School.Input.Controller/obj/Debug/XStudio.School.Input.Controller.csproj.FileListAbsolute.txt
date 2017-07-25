@@ -1,4 +1,3 @@
-D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\obj\Debug\XStudio.School.Input.Controller.csprojResolveAssemblyReference.cache
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\bin\Debug\XStudio.School.Input.Controller.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\bin\Debug\XStudio.School.Input.Controller.pdb
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\bin\Debug\EntityFramework.dll
@@ -21,5 +20,6 @@ D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Co
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\bin\Debug\System.Web.WebPages.xml
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\bin\Debug\XStudio.School.Input.Infrastructure.pdb
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\obj\Debug\XStudio.School.Input.Controller.csprojResolveAssemblyReference.cache
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\obj\Debug\XStudio.School.Input.Controller.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Controller\obj\Debug\XStudio.School.Input.Controller.pdb

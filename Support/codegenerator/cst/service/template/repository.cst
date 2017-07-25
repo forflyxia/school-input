@@ -117,7 +117,7 @@ namespace <%=Namespace %>.Repository.<%=GetDbName(SourceTable.Database) %>.<%=Ge
         /// 
         /// </summary>
         /// <returns></returns>
-        public static List<<%=GetClassName(SourceTable) %>PO> GetListPaging(DataTablesPaging paging, out int total)
+        public static List<<%=GetClassName(SourceTable) %>PO> GetItemsByPaging(DataTablesPaging paging, out int total)
         {
             var filterParameters = new Dictionary<string, string>();
             foreach (var filterItem in paging.CustomFilterParameters)
@@ -140,7 +140,7 @@ namespace <%=Namespace %>.Repository.<%=GetDbName(SourceTable.Database) %>.<%=Ge
         /// 
         /// </summary>
         /// <returns></returns>
-        public static List<<%=GetClassName(SourceTable) %>PO> GetList()
+        public static List<<%=GetClassName(SourceTable) %>PO> GetAll()
         {
 			using (var context = new <%=GetDbName(SourceTable.Database) %>Context())
             {

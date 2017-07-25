@@ -23,8 +23,14 @@ namespace XStudio.School.Input.Controller.Areas.School.Controllers
         {
             return View();
         }
+        
+        public JsonResult SchoolBranchs()
+        {
+            var items = new SchoolBranchService().GetSchoolBranchs();
+            return Json(items, JsonRequestBehavior.AllowGet);
+        }
 
-        public JsonResult SchoolBranchs(DataTablesPaging request)
+        public JsonResult SchoolBranchsByPaging(DataTablesPaging request)
         {
             var view = new SchoolBranchService().GetSchoolBranchsByPaging(request);
             return Json(view, JsonRequestBehavior.AllowGet);

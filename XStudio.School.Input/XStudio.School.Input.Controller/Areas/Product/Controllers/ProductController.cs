@@ -23,8 +23,14 @@ namespace XStudio.School.Input.Controller.Areas.Product.Controllers
         {
             return View();
         }
+        
+        public JsonResult Products()
+        {
+            var items = new ProductService().GetProducts();
+            return Json(items, JsonRequestBehavior.AllowGet);
+        }
 
-        public JsonResult Products(DataTablesPaging request)
+        public JsonResult ProductsByPaging(DataTablesPaging request)
         {
             var view = new ProductService().GetProductsByPaging(request);
             return Json(view, JsonRequestBehavior.AllowGet);

@@ -35,6 +35,22 @@ namespace <%=Namespace %>.Service.<%=GetTablePrefix(SourceTable, true) %>
 {
     public partial class <%=GetClassName(SourceTable) %>Service
     {
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public List<<%=GetClassName(SourceTable) %>Model> Get<%=GetClassName(SourceTable) %>s()
+        {
+            var items = <%=GetClassName(SourceTable) %>Repository.GetAll();
+            if (items != null)
+            {
+                return items.Select(p => p.ToModel()).ToList();
+            }
+            return new List<<%=GetClassName(SourceTable) %>Model>();
+        }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -43,7 +59,7 @@ namespace <%=Namespace %>.Service.<%=GetTablePrefix(SourceTable, true) %>
         public DatatablesView<<%=GetClassName(SourceTable) %>Model> Get<%=GetClassName(SourceTable) %>sByPaging(DataTablesPaging request)
         {
             int total = 0;
-            var pagingItems = <%=GetClassName(SourceTable) %>Repository.GetListPaging(request, out total);
+            var pagingItems = <%=GetClassName(SourceTable) %>Repository.GetItemsByPaging(request, out total);
             var items = new List<<%=GetClassName(SourceTable) %>Model>();
             foreach (var pagingItem in pagingItems)
             {

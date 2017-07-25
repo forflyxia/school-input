@@ -23,8 +23,14 @@ namespace XStudio.School.Input.Controller.Areas.Merchant.Controllers
         {
             return View();
         }
+        
+        public JsonResult Merchants()
+        {
+            var items = new MerchantService().GetMerchants();
+            return Json(items, JsonRequestBehavior.AllowGet);
+        }
 
-        public JsonResult Merchants(DataTablesPaging request)
+        public JsonResult MerchantsByPaging(DataTablesPaging request)
         {
             var view = new MerchantService().GetMerchantsByPaging(request);
             return Json(view, JsonRequestBehavior.AllowGet);

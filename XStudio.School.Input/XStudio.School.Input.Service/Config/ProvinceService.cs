@@ -18,6 +18,22 @@ namespace XStudio.School.Input.Service.Config
 {
     public partial class ProvinceService
     {
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public List<ProvinceModel> GetProvinces()
+        {
+            var items = ProvinceRepository.GetAll();
+            if (items != null)
+            {
+                return items.Select(p => p.ToModel()).ToList();
+            }
+            return new List<ProvinceModel>();
+        }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -26,7 +42,7 @@ namespace XStudio.School.Input.Service.Config
         public DatatablesView<ProvinceModel> GetProvincesByPaging(DataTablesPaging request)
         {
             int total = 0;
-            var pagingItems = ProvinceRepository.GetListPaging(request, out total);
+            var pagingItems = ProvinceRepository.GetItemsByPaging(request, out total);
             var items = new List<ProvinceModel>();
             foreach (var pagingItem in pagingItems)
             {

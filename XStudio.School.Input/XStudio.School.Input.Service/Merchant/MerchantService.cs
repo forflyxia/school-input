@@ -18,6 +18,22 @@ namespace XStudio.School.Input.Service.Merchant
 {
     public partial class MerchantService
     {
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public List<MerchantModel> GetMerchants()
+        {
+            var items = MerchantRepository.GetAll();
+            if (items != null)
+            {
+                return items.Select(p => p.ToModel()).ToList();
+            }
+            return new List<MerchantModel>();
+        }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -26,7 +42,7 @@ namespace XStudio.School.Input.Service.Merchant
         public DatatablesView<MerchantModel> GetMerchantsByPaging(DataTablesPaging request)
         {
             int total = 0;
-            var pagingItems = MerchantRepository.GetListPaging(request, out total);
+            var pagingItems = MerchantRepository.GetItemsByPaging(request, out total);
             var items = new List<MerchantModel>();
             foreach (var pagingItem in pagingItems)
             {

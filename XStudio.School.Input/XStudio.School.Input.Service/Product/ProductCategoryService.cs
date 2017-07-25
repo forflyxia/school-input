@@ -18,6 +18,22 @@ namespace XStudio.School.Input.Service.Product
 {
     public partial class ProductCategoryService
     {
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public List<ProductCategoryModel> GetProductCategorys()
+        {
+            var items = ProductCategoryRepository.GetAll();
+            if (items != null)
+            {
+                return items.Select(p => p.ToModel()).ToList();
+            }
+            return new List<ProductCategoryModel>();
+        }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -26,7 +42,7 @@ namespace XStudio.School.Input.Service.Product
         public DatatablesView<ProductCategoryModel> GetProductCategorysByPaging(DataTablesPaging request)
         {
             int total = 0;
-            var pagingItems = ProductCategoryRepository.GetListPaging(request, out total);
+            var pagingItems = ProductCategoryRepository.GetItemsByPaging(request, out total);
             var items = new List<ProductCategoryModel>();
             foreach (var pagingItem in pagingItems)
             {

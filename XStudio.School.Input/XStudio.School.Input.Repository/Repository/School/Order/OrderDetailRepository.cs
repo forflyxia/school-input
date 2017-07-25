@@ -103,7 +103,7 @@ namespace XStudio.School.Input.Repository.School.Order
         /// 
         /// </summary>
         /// <returns></returns>
-        public static List<OrderDetailPO> GetListPaging(DataTablesPaging paging, out int total)
+        public static List<OrderDetailPO> GetItemsByPaging(DataTablesPaging paging, out int total)
         {
             var filterParameters = new Dictionary<string, string>();
             foreach (var filterItem in paging.CustomFilterParameters)
@@ -126,7 +126,7 @@ namespace XStudio.School.Input.Repository.School.Order
         /// 
         /// </summary>
         /// <returns></returns>
-        public static List<OrderDetailPO> GetList()
+        public static List<OrderDetailPO> GetAll()
         {
 			using (var context = new SchoolContext())
             {

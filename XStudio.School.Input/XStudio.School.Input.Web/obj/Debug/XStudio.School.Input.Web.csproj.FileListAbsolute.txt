@@ -1,4 +1,3 @@
-D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\obj\Debug\XStudio.School.Input.Web.csprojResolveAssemblyReference.cache
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Web.dll.config
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Web.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\XStudio.School.Input.Web.pdb
@@ -64,5 +63,6 @@ D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.We
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\Microsoft.Owin.Security.Google.xml
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\Microsoft.Owin.Security.Twitter.xml
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\obj\Debug\XStudio.School.Input.Web.csprojResolveAssemblyReference.cache
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\obj\Debug\XStudio.School.Input.Web.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\obj\Debug\XStudio.School.Input.Web.pdb

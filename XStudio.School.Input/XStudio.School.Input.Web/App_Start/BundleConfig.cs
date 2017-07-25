@@ -11,7 +11,7 @@ namespace XStudio.School.Input.Web
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                 "~/Scripts/jquery-{version}.js", 
                 "~/Scripts/jquery.dataTables.min.js", 
-                "~/Scripts/dataTables.bootstrap.min.js", 
+                "~/Scripts/dataTables.bootstrap.min.js",
                 "~/Scripts/my.datatables.extend.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
@@ -24,11 +24,16 @@ namespace XStudio.School.Input.Web
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                      "~/Scripts/bootstrap-datepicker.min.js",
                       "~/Scripts/respond.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/my").Include("~/Scripts/my.app.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css", "~/Content/dataTables.bootstrap.min.css"));
+                      "~/Content/my.app.css", 
+                      "~/Content/bootstrap-datepicker.min.css",
+                      "~/Content/dataTables.bootstrap.min.css"));
         }
     }
 }

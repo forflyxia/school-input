@@ -36,7 +36,7 @@ Description:
                 @Html.ValidationSummary(true)
                 <%foreach(ColumnSchema column in SourceTable.Columns) { %>  
                 <%if(column.IsPrimaryKeyMember) { %>
-                <div class="form-group">
+                <div class="form-group hidden">
                     @Html.LabelFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "form-control" })
@@ -46,7 +46,7 @@ Description:
                 <div class="form-group">
                     @Html.LabelFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "form-control" })
+                        @Html.TextBoxFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "form-control<%=GetCSharpVariableType(column) == "DateTime" ? " my-datepicker" : "" %>" })
                     </div>
                 </div>
                 <% }} %>

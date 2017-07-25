@@ -23,8 +23,14 @@ namespace XStudio.School.Input.Controller.Areas.Order.Controllers
         {
             return View();
         }
+        
+        public JsonResult OrderDetails()
+        {
+            var items = new OrderDetailService().GetOrderDetails();
+            return Json(items, JsonRequestBehavior.AllowGet);
+        }
 
-        public JsonResult OrderDetails(DataTablesPaging request)
+        public JsonResult OrderDetailsByPaging(DataTablesPaging request)
         {
             var view = new OrderDetailService().GetOrderDetailsByPaging(request);
             return Json(view, JsonRequestBehavior.AllowGet);

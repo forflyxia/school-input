@@ -18,6 +18,22 @@ namespace XStudio.School.Input.Service.Product
 {
     public partial class ProductService
     {
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public List<ProductModel> GetProducts()
+        {
+            var items = ProductRepository.GetAll();
+            if (items != null)
+            {
+                return items.Select(p => p.ToModel()).ToList();
+            }
+            return new List<ProductModel>();
+        }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -26,7 +42,7 @@ namespace XStudio.School.Input.Service.Product
         public DatatablesView<ProductModel> GetProductsByPaging(DataTablesPaging request)
         {
             int total = 0;
-            var pagingItems = ProductRepository.GetListPaging(request, out total);
+            var pagingItems = ProductRepository.GetItemsByPaging(request, out total);
             var items = new List<ProductModel>();
             foreach (var pagingItem in pagingItems)
             {

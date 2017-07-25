@@ -18,6 +18,22 @@ namespace XStudio.School.Input.Service.School
 {
     public partial class SchoolBranchService
     {
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public List<SchoolBranchModel> GetSchoolBranchs()
+        {
+            var items = SchoolBranchRepository.GetAll();
+            if (items != null)
+            {
+                return items.Select(p => p.ToModel()).ToList();
+            }
+            return new List<SchoolBranchModel>();
+        }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -26,7 +42,7 @@ namespace XStudio.School.Input.Service.School
         public DatatablesView<SchoolBranchModel> GetSchoolBranchsByPaging(DataTablesPaging request)
         {
             int total = 0;
-            var pagingItems = SchoolBranchRepository.GetListPaging(request, out total);
+            var pagingItems = SchoolBranchRepository.GetItemsByPaging(request, out total);
             var items = new List<SchoolBranchModel>();
             foreach (var pagingItem in pagingItems)
             {

@@ -101,7 +101,7 @@ namespace XStudio.School.Input.Repository.School.Product
         /// 
         /// </summary>
         /// <returns></returns>
-        public static List<ProductDescriptionPO> GetListPaging(DataTablesPaging paging, out int total)
+        public static List<ProductDescriptionPO> GetItemsByPaging(DataTablesPaging paging, out int total)
         {
             var filterParameters = new Dictionary<string, string>();
             foreach (var filterItem in paging.CustomFilterParameters)
@@ -124,7 +124,7 @@ namespace XStudio.School.Input.Repository.School.Product
         /// 
         /// </summary>
         /// <returns></returns>
-        public static List<ProductDescriptionPO> GetList()
+        public static List<ProductDescriptionPO> GetAll()
         {
 			using (var context = new SchoolContext())
             {

@@ -40,8 +40,14 @@ namespace <%=Namespace %>.Controller.Areas.<%=GetTablePrefix(SourceTable, true) 
         {
             return View();
         }
+        
+        public JsonResult <%=GetClassName(SourceTable) %>s()
+        {
+            var items = new <%=GetClassName(SourceTable) %>Service().Get<%=GetClassName(SourceTable) %>s();
+            return Json(items, JsonRequestBehavior.AllowGet);
+        }
 
-        public JsonResult <%=GetClassName(SourceTable) %>s(DataTablesPaging request)
+        public JsonResult <%=GetClassName(SourceTable) %>sByPaging(DataTablesPaging request)
         {
             var view = new <%=GetClassName(SourceTable) %>Service().Get<%=GetClassName(SourceTable) %>sByPaging(request);
             return Json(view, JsonRequestBehavior.AllowGet);

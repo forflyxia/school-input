@@ -18,6 +18,22 @@ namespace XStudio.School.Input.Service.Config
 {
     public partial class CountryService
     {
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public List<CountryModel> GetCountrys()
+        {
+            var items = CountryRepository.GetAll();
+            if (items != null)
+            {
+                return items.Select(p => p.ToModel()).ToList();
+            }
+            return new List<CountryModel>();
+        }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -26,7 +42,7 @@ namespace XStudio.School.Input.Service.Config
         public DatatablesView<CountryModel> GetCountrysByPaging(DataTablesPaging request)
         {
             int total = 0;
-            var pagingItems = CountryRepository.GetListPaging(request, out total);
+            var pagingItems = CountryRepository.GetItemsByPaging(request, out total);
             var items = new List<CountryModel>();
             foreach (var pagingItem in pagingItems)
             {

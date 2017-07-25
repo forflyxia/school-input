@@ -18,6 +18,22 @@ namespace XStudio.School.Input.Service.Order
 {
     public partial class OrderService
     {
+    
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        public List<OrderModel> GetOrders()
+        {
+            var items = OrderRepository.GetAll();
+            if (items != null)
+            {
+                return items.Select(p => p.ToModel()).ToList();
+            }
+            return new List<OrderModel>();
+        }
+    
         /// <summary>
         /// 
         /// </summary>
@@ -26,7 +42,7 @@ namespace XStudio.School.Input.Service.Order
         public DatatablesView<OrderModel> GetOrdersByPaging(DataTablesPaging request)
         {
             int total = 0;
-            var pagingItems = OrderRepository.GetListPaging(request, out total);
+            var pagingItems = OrderRepository.GetItemsByPaging(request, out total);
             var items = new List<OrderModel>();
             foreach (var pagingItem in pagingItems)
             {
