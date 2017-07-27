@@ -30,11 +30,11 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Effectdate, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Effectdate, new { @class = "form-control my-input-datepicker", placeholder = "请输入Effectdate" })
+        @Html.TextBoxFor(m => m.Effectdate, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入Effectdate" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Expiredate, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Expiredate, new { @class = "form-control my-input-datepicker", placeholder = "请输入Expiredate" })
+        @Html.TextBoxFor(m => m.Expiredate, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入Expiredate" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.MerchantId, new { @class = "sr-only" })
@@ -54,15 +54,17 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-datepicker", placeholder = "请输入Createtime" })
+        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入Createtime" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-datepicker", placeholder = "请输入Updatetime" })
+        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入Updatetime" })
     </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
+
 <a class="btn btn-primary" href="/promotion/Promotion/ViewPromotion?id=0" target="_blank" role="button">新增</a>
+
 <table id="tablePromotion" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
     <thead>
     <tr role="row">
@@ -86,7 +88,7 @@
 
 <script>
     $(function () {
-        $.clearSearchCondition(".my-btn-searchcondition");
+        $.clearSearchCondition(".my-input-searchcondition");
         var tables = $('#tablePromotion').DataTable({
             ajax: {
                 url: $.fn.dataTable.defaults.virtualDir + 'promotion/Promotion/PromotionsByPaging',
@@ -102,10 +104,23 @@
                 width: "100px",
                 render: function (data, type, full, meta) {
                     var json = JSON.stringify(full);
+                    var html = '';
                     var url = $.fn.dataTable.defaults.virtualDir + 'promotion/Promotion/ViewPromotion?id=' + full.Id;
-                    return '<a class="btn btn-default" href="' + url + '" target="_blank" role="button">查看</a>';
+                    html = '<a class="btn btn-default" href="' + url + '" target="_blank" role="button">查看</a>';
+                    
+                    return html;
                 }
-            }]
+            }
+            ,{
+                targets: 7,
+                width: "100px",
+                render: function (data, type, full, meta) {
+                    var json = JSON.stringify(full);
+                    var url = $.fn.dataTable.defaults.virtualDir + 'merchant/Merchant/MerchantIndex?id=' + data;
+                    return '<a href="' + url + '" target="_blank" role="button">'+ data +'</a>';
+                }
+            }
+            ]
         });
         $(".my-btn-search").on("click", function () {
             tables.draw();

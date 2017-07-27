@@ -8,6 +8,7 @@
     @Scripts.Render("~/bundles/modernizr")
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    
 
 </head>
 <body>
@@ -23,9 +24,12 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("产品列表", "ProductIndex", "Product", new { Area = "Product" }, null)</li>
                     <li>@Html.ActionLink("商户列表", "MerchantIndex", "Merchant", new { Area = "Merchant" }, null)</li>
+                    <li>@Html.ActionLink("学校列表", "SchoolIndex", "School", new { Area = "School" }, null)</li>
+                    <li>@Html.ActionLink("产品列表", "ProductIndex", "Product", new { Area = "Product" }, null)</li>
                     <li>@Html.ActionLink("订单列表", "OrderIndex", "Order", new { Area = "Order" }, null)</li>
+                    <li>@Html.ActionLink("用户列表", "UserIndex", "User", new { Area = "User" }, null)</li>
+                    <li>@Html.ActionLink("促销列表", "PromotionIndex", "Promotion", new { Area = "Promotion" }, null)</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

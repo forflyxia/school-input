@@ -30,15 +30,15 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Totalamount, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Totalamount, new { @class = "form-control", placeholder = "请输入Totalamount" })
+        @Html.TextBoxFor(m => m.Totalamount, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Totalamount" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Reduction, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Reduction, new { @class = "form-control", placeholder = "请输入Reduction" })
+        @Html.TextBoxFor(m => m.Reduction, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Reduction" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.AmountpaId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.AmountpaId, new { @class = "form-control", placeholder = "请输入AmountpaId" })
+        @Html.TextBoxFor(m => m.AmountpaId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入AmountpaId" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.PromotionId, new { @class = "sr-only" })
@@ -66,15 +66,17 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-datepicker", placeholder = "请输入Createtime" })
+        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入Createtime" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-datepicker", placeholder = "请输入Updatetime" })
+        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入Updatetime" })
     </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
+
 <a class="btn btn-primary" href="/order/Order/ViewOrder?id=0" target="_blank" role="button">新增</a>
+
 <table id="tableOrder" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
     <thead>
     <tr role="row">
@@ -101,7 +103,7 @@
 
 <script>
     $(function () {
-        $.clearSearchCondition(".my-btn-searchcondition");
+        $.clearSearchCondition(".my-input-searchcondition");
         var tables = $('#tableOrder').DataTable({
             ajax: {
                 url: $.fn.dataTable.defaults.virtualDir + 'order/Order/OrdersByPaging',
@@ -117,10 +119,41 @@
                 width: "100px",
                 render: function (data, type, full, meta) {
                     var json = JSON.stringify(full);
+                    var html = '';
                     var url = $.fn.dataTable.defaults.virtualDir + 'order/Order/ViewOrder?id=' + full.Id;
-                    return '<a class="btn btn-default" href="' + url + '" target="_blank" role="button">查看</a>';
+                    html = '<a class="btn btn-default" href="' + url + '" target="_blank" role="button">查看</a>';
+                    
+                    return html;
                 }
-            }]
+            }
+            ,{
+                targets: 1,
+                width: "100px",
+                render: function (data, type, full, meta) {
+                    var json = JSON.stringify(full);
+                    var url = $.fn.dataTable.defaults.virtualDir + 'user/User/UserIndex?id=' + data;
+                    return '<a href="' + url + '" target="_blank" role="button">'+ data +'</a>';
+                }
+            }
+            ,{
+                targets: 8,
+                width: "100px",
+                render: function (data, type, full, meta) {
+                    var json = JSON.stringify(full);
+                    var url = $.fn.dataTable.defaults.virtualDir + 'promotion/Promotion/PromotionIndex?id=' + data;
+                    return '<a href="' + url + '" target="_blank" role="button">'+ data +'</a>';
+                }
+            }
+            ,{
+                targets: 10,
+                width: "100px",
+                render: function (data, type, full, meta) {
+                    var json = JSON.stringify(full);
+                    var url = $.fn.dataTable.defaults.virtualDir + 'school/School/SchoolIndex?id=' + data;
+                    return '<a href="' + url + '" target="_blank" role="button">'+ data +'</a>';
+                }
+            }
+            ]
         });
         $(".my-btn-search").on("click", function () {
             tables.draw();

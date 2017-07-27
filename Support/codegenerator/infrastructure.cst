@@ -11,7 +11,7 @@ Description:
 
 <script runat="template">
 
-public Dictionary<string, string> moudlesMap = new Dictionary<string, string>
+public Dictionary<string, string> moudlesConfigMap = new Dictionary<string, string>
 {
     {"merchant", "Merchant"},
     {"user", "User"},
@@ -23,7 +23,7 @@ public Dictionary<string, string> moudlesMap = new Dictionary<string, string>
     {"promotion", "Promotion"},
 };
 
-public Dictionary<string, string> keywordsMap = new Dictionary<string, string>
+public Dictionary<string, string> keywordsReplaceConfigMap = new Dictionary<string, string>
 {
     {"id", "Id"},
 };
@@ -64,8 +64,6 @@ public string GetCSharpVariableType(ColumnSchema column)
         }
     }
 }
-
-
 
 public string GetClassName(TableSchema sourceTable)
 {
@@ -115,9 +113,9 @@ public string GetFolderName(TableSchema sourceTable, string defaultForlderName)
     string tablePrefix = GetTablePrefix(sourceTable);
     if(!string.IsNullOrEmpty(tablePrefix))
     {
-        if (moudlesMap.ContainsKey(tablePrefix))
+        if (moudlesConfigMap.ContainsKey(tablePrefix))
     	{
-            return string.Format(@"{0}\{1}\{2}\", defaultForlderName, FirstLetterToPascal(sourceTable.Database.Name), moudlesMap[tablePrefix]);
+            return string.Format(@"{0}\{1}\{2}\", defaultForlderName, FirstLetterToPascal(sourceTable.Database.Name), moudlesConfigMap[tablePrefix]);
     	}
     }
     return defaultForlderName;
@@ -171,7 +169,7 @@ public TableSchema GetForigenKeyTableSchema(ColumnSchema column)
     if (IsForeignKey(column))
 	{
 		string tableName = column.Name.Replace("Id", "");
-        foreach (var entry in moudlesMap)
+        foreach (var entry in moudlesConfigMap)
     	{
     		string fullTableName = string.Format("{0}_{1}", entry.Key, tableName);
             if (column.Database.Tables.Contains(fullTableName))
@@ -199,9 +197,9 @@ public string GetSearchInputCssName(ColumnSchema column)
     string csharpType = GetCSharpVariableType(column);
     if (csharpType == "DateTime" )
 	{
-		 return " my-input-datepicker";
+		 return " my-input-searchcondition my-input-datepicker";
 	}
-    if (csharpType == "int")
+    if (csharpType == "int" || csharpType == "decimal" || csharpType == "double" || csharpType == "long" || csharpType == "short")
 	{
 		 return " my-input-searchcondition";
 	}
@@ -225,7 +223,7 @@ public string GetEditInputCssName(ColumnSchema column)
 public string KeyWordsReplace(string s)
 {
     string str = s;
-    foreach(var entry in keywordsMap)
+    foreach(var entry in keywordsReplaceConfigMap)
 	{
         if (str.Contains(entry.Key))
     	{

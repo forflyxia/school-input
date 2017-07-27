@@ -1,0 +1,71 @@
+﻿<%-- 
+Name:
+Author: 
+Description: 
+--%>
+<%@ Template Language="C#" TargetLanguage="Text" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Import Namespace="System.Collections.Generic" %>
+
+<script runat="template">
+
+public class TableRelationEntity
+{
+    public string Title { get; set; }
+    
+    public string RelationTable { get; set; }
+    
+    public int Model { get; set; }
+}
+
+/// <summary>
+/// 外键配置
+/// </summary>
+public Dictionary<string, string> foreignKeyTableConfigMap = new Dictionary<string, string>
+{
+    {"merchantid", "merchant_merchant"},
+    {"schoolid", "school_school"},
+    {"productid", "product_product"},
+    {"userid", "user_user"},
+    {"promotionid", "promotion_promotion"},
+};
+
+/// <summary>
+/// 表关系配置
+/// </summary>
+public Dictionary<string, List<TableRelationEntity>> tableRelationConfigMap = new Dictionary<string, List<TableRelationEntity>>
+{
+    {"merchant_merchant", new List<TableRelationEntity> { new TableRelationEntity { Title="商户产品", RelationTable = "product_product", Model = 2 }}},
+};
+
+/// <summary>
+/// 获取外键对应的表名称
+/// </summary>
+/// <param name="foreignKey"></param>
+/// <returns></returns>
+public string GetTableNameByForeignKey(string foreignKey)
+{
+    if (foreignKeyTableConfigMap.ContainsKey(foreignKey))
+    {
+        return foreignKeyTableConfigMap[foreignKey];
+    }
+    return "";
+}
+
+/// <summary>
+/// 获取源表关联的对应表名称
+/// </summary>
+/// <param name="tableName"></param>
+/// <returns></returns>
+public List<TableRelationEntity> GetRelationTables(string tableName)
+{
+    if (tableRelationConfigMap.ContainsKey(tableName))
+    {
+        return tableRelationConfigMap[tableName];
+    }
+    return new List<TableRelationEntity>();
+}
+
+</script>

@@ -3,7 +3,6 @@ D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Do
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Domain\bin\Debug\XStudio.School.Input.Domain.pdb
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Domain\bin\Debug\EntityFramework.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Domain\bin\Debug\EntityFramework.SqlServer.dll
-D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Domain\bin\Debug\MySql.Data.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Domain\bin\Debug\MySql.Data.Entity.EF6.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Domain\bin\Debug\EntityFramework.xml
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Domain\bin\Debug\EntityFramework.SqlServer.xml
