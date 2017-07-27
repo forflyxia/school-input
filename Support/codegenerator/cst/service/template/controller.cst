@@ -38,7 +38,13 @@ namespace <%=Namespace %>.Controller.Areas.<%=GetTablePrefix(SourceTable, true) 
     {
         public ActionResult <%=GetClassName(SourceTable) %>Index()
         {
-            return View();
+            var model = new <%=GetClassName(SourceTable) %>Model
+            {
+                 <%foreach(ColumnSchema column in SourceTable.Columns) { %>
+                 <%=FirstLetterToPascal(column.Name) %> = GetParams<<%=GetCSharpVariableType(column) %>>("<%=column.Name %>"),
+                 <%} %>
+            };
+            return View(model);
         }
         
         public JsonResult <%=GetClassName(SourceTable) %>s()

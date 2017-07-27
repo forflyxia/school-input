@@ -18,7 +18,9 @@ public Dictionary<string, string> moudlesMap = new Dictionary<string, string>
     {"order", "Order"},
     {"school", "School"},
     {"product", "Product"},
-	{"config", "Config"}
+	{"basic", "Basic"},
+    {"image", "Image"},
+    {"promotion", "Promotion"},
 };
 
 public Dictionary<string, string> keywordsMap = new Dictionary<string, string>
@@ -190,6 +192,34 @@ public string FirstLetterToPascal(string s)
 public string FirstLetterToCamel(string s)
 {
     return s.Substring(0, 1).ToLower() + s.Substring(1);
+}
+
+public string GetSearchInputCssName(ColumnSchema column)
+{
+    string csharpType = GetCSharpVariableType(column);
+    if (csharpType == "DateTime" )
+	{
+		 return " my-input-datepicker";
+	}
+    if (csharpType == "int")
+	{
+		 return " my-input-searchcondition";
+	}
+    return "";
+}
+
+public string GetEditInputCssName(ColumnSchema column)
+{
+    string csharpType = GetCSharpVariableType(column);
+    if (csharpType == "DateTime" )
+	{
+		 return " my-input-datepicker";
+	}
+    if (csharpType == "int")
+	{
+		 return " my-input-edit";
+	}
+    return "";
 }
 
 public string KeyWordsReplace(string s)

@@ -4,10 +4,12 @@
  * Description:    this is auto genetated, don't change!
 *************************************************************************************************************************************************/-->
 
+@model XStudio.School.Input.Model.Product.ProductDescriptionModel
+
 @{
     ViewBag.Title = "ProductDescription列表";
 }
 
 <h2>@ViewBag.Title.</h2>
 
-@Html.Partial("_ProductDescriptionPartial")
+@Html.Partial("_ProductDescriptionPartial", Model)

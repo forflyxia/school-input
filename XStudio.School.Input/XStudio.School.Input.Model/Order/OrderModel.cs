@@ -59,22 +59,17 @@ namespace XStudio.School.Input.Model.Order
 		/// <summary>
 		/// 
 		/// </summary>
-		public string Couponcode { get; set; }
+		public string PromotionId { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int DeliverycityId { get; set; }
+		public string PromotionladderId { get; set; }
         
 		/// <summary>
 		/// 
 		/// </summary>
-		public int DeliveryschoolId { get; set; }
-        
-		/// <summary>
-		/// 
-		/// </summary>
-		public int DeliveryschoolbranchId { get; set; }
+		public int SchoolId { get; set; }
         
 		/// <summary>
 		/// 

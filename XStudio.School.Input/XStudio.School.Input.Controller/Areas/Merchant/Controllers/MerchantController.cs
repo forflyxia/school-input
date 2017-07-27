@@ -21,7 +21,30 @@ namespace XStudio.School.Input.Controller.Areas.Merchant.Controllers
     {
         public ActionResult MerchantIndex()
         {
-            return View();
+            var model = new MerchantModel
+            {
+                 Id = GetParams<int>("id"),
+                 Name = GetParams<string>("name"),
+                 Shortname = GetParams<string>("shortname"),
+                 Branch = GetParams<string>("branch"),
+                 Logo = GetParams<string>("logo"),
+                 Introduction = GetParams<string>("introduction"),
+                 Contact = GetParams<string>("contact"),
+                 Telphone = GetParams<string>("telphone"),
+                 Mobliephone = GetParams<string>("mobliephone"),
+                 Businesslicence = GetParams<string>("businesslicence"),
+                 Legalperson = GetParams<string>("legalperson"),
+                 DistrictId = GetParams<int>("districtid"),
+                 Address = GetParams<string>("address"),
+                 Longitude = GetParams<decimal>("longitude"),
+                 Latitude = GetParams<decimal>("latitude"),
+                 Cash = GetParams<decimal>("cash"),
+                 Point = GetParams<decimal>("point"),
+                 Status = GetParams<int>("status"),
+                 Createtime = GetParams<DateTime>("createtime"),
+                 Updatetime = GetParams<DateTime>("updatetime"),
+            };
+            return View(model);
         }
         
         public JsonResult Merchants()

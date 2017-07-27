@@ -34,6 +34,11 @@ namespace XStudio.School.Input.Model.Order
 		/// <summary>
 		/// 
 		/// </summary>
+		public int ProductsizeId { get; set; }
+        
+		/// <summary>
+		/// 
+		/// </summary>
 		public decimal Unitprice { get; set; }
         
 		/// <summary>

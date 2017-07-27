@@ -5,54 +5,60 @@
  * Description:    this is auto genetated, don't change!
 *************************************************************************************************************************************************/-->
 
+@model XStudio.School.Input.Model.School.SchoolModel
+
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
     <div class="form-group">
-        <label class="sr-only" for="Id">名称</label>
-        <input type="text" class="form-control" name="Id" placeholder="请输入Id">
+        @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Id" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Name">名称</label>
-        <input type="text" class="form-control" name="Name" placeholder="请输入Name">
+        @Html.LabelFor(m => m.Name, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "请输入Name" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Shortname">名称</label>
-        <input type="text" class="form-control" name="Shortname" placeholder="请输入Shortname">
+        @Html.LabelFor(m => m.Shortname, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Shortname, new { @class = "form-control", placeholder = "请输入Shortname" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Logo">名称</label>
-        <input type="text" class="form-control" name="Logo" placeholder="请输入Logo">
+        @Html.LabelFor(m => m.Branchname, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Branchname, new { @class = "form-control", placeholder = "请输入Branchname" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Introduction">名称</label>
-        <input type="text" class="form-control" name="Introduction" placeholder="请输入Introduction">
+        @Html.LabelFor(m => m.Logo, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Logo, new { @class = "form-control", placeholder = "请输入Logo" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="CityId">名称</label>
-        <input type="text" class="form-control" name="CityId" placeholder="请输入CityId">
+        @Html.LabelFor(m => m.Introduction, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Introduction, new { @class = "form-control", placeholder = "请输入Introduction" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Address">名称</label>
-        <input type="text" class="form-control" name="Address" placeholder="请输入Address">
+        @Html.LabelFor(m => m.DistrictId, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.DistrictId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入DistrictId" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Longitude">名称</label>
-        <input type="text" class="form-control" name="Longitude" placeholder="请输入Longitude">
+        @Html.LabelFor(m => m.Address, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Address, new { @class = "form-control", placeholder = "请输入Address" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Latitude">名称</label>
-        <input type="text" class="form-control" name="Latitude" placeholder="请输入Latitude">
+        @Html.LabelFor(m => m.Longitude, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Longitude, new { @class = "form-control", placeholder = "请输入Longitude" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Status">名称</label>
-        <input type="text" class="form-control" name="Status" placeholder="请输入Status">
+        @Html.LabelFor(m => m.Latitude, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Latitude, new { @class = "form-control", placeholder = "请输入Latitude" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Createtime">名称</label>
-        <input type="text" class="form-control my-datepicker" name="Createtime" placeholder="请输入Createtime">
+        @Html.LabelFor(m => m.Status, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Status" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Updatetime">名称</label>
-        <input type="text" class="form-control my-datepicker" name="Updatetime" placeholder="请输入Updatetime">
+        @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-datepicker", placeholder = "请输入Createtime" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-datepicker", placeholder = "请输入Updatetime" })
     </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
@@ -63,9 +69,10 @@
         <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Id</th>
         <th class="sorting_asc" data-data="Name" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Name</th>
         <th class="sorting_asc" data-data="Shortname" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Shortname</th>
+        <th class="sorting_asc" data-data="Branchname" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Branchname</th>
         <th class="sorting_asc" data-data="Logo" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Logo</th>
         <th class="sorting_asc" data-data="Introduction" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Introduction</th>
-        <th class="sorting_asc" data-data="CityId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">CityId</th>
+        <th class="sorting_asc" data-data="DistrictId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">DistrictId</th>
         <th class="sorting_asc" data-data="Address" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Address</th>
         <th class="sorting_asc" data-data="Longitude" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Longitude</th>
         <th class="sorting_asc" data-data="Latitude" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Latitude</th>
@@ -79,6 +86,7 @@
 
 <script>
     $(function () {
+        $.clearSearchCondition(".my-btn-searchcondition");
         var tables = $('#tableSchool').DataTable({
             ajax: {
                 url: $.fn.dataTable.defaults.virtualDir + 'school/School/SchoolsByPaging',

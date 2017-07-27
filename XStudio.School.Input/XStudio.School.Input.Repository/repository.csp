@@ -1,36 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
     <propertySets>	
-          <propertySet name="config_city" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Config\CityRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+          <propertySet name="basic_city" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Basic\CityRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
                 <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
                 <table>
                   <owner/>
-                  <name>config_city</name>
+                  <name>basic_city</name>
                 </table>
               </property>
         </propertySet>
-          <propertySet name="config_country" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Config\CountryRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+          <propertySet name="basic_country" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Basic\CountryRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
                 <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
                 <table>
                   <owner/>
-                  <name>config_country</name>
+                  <name>basic_country</name>
                 </table>
               </property>
         </propertySet>
-          <propertySet name="config_province" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Config\ProvinceRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+          <propertySet name="basic_district" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Basic\DistrictRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
                 <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
                 <table>
                   <owner/>
-                  <name>config_province</name>
+                  <name>basic_district</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="basic_province" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Basic\ProvinceRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>basic_province</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="image_image" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Image\ImageRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>image_image</name>
                 </table>
               </property>
         </propertySet>
@@ -42,6 +64,39 @@
                 <table>
                   <owner/>
                   <name>merchant_merchant</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="merchant_merchant_custom_category" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Merchant\MerchantCustomCategoryRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>merchant_merchant_custom_category</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="merchant_merchant_image" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Merchant\MerchantImageRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>merchant_merchant_image</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="merchant_merchant_message" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Merchant\MerchantMessageRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>merchant_merchant_message</name>
                 </table>
               </property>
         </propertySet>
@@ -100,14 +155,47 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="product_product_price" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Product\ProductPriceRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+          <propertySet name="product_product_image" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Product\ProductImageRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
                 <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
                 <table>
                   <owner/>
-                  <name>product_product_price</name>
+                  <name>product_product_image</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="product_product_size" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Product\ProductSizeRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>product_product_size</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="promotion_promotion" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Promotion\PromotionRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>promotion_promotion</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="promotion_promotion_ladder" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\Promotion\PromotionLadderRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>promotion_promotion_ladder</name>
                 </table>
               </property>
         </propertySet>
@@ -122,14 +210,58 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="school_school_branch" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\School\SchoolBranchRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+          <propertySet name="school_school_business" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\School\SchoolBusinessRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
                 <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
                 <table>
                   <owner/>
-                  <name>school_school_branch</name>
+                  <name>school_school_business</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="school_school_news" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\School\SchoolNewsRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>school_school_news</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="user_user" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\User\UserRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>user_user</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="user_user_message" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\User\UserMessageRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>user_user_message</name>
+                </table>
+              </property>
+        </propertySet>
+          <propertySet name="user_user_task" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Repository\Repository\School\User\UserTaskRepository.cs" template="..\..\support\codegenerator\cst\service\template\repository.cst">
+              <property name="Namespace">XStudio.School.Input</property>
+              <property name="SourceTable">
+                <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
+                <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+                <table>
+                  <owner/>
+                  <name>user_user_task</name>
                 </table>
               </property>
         </propertySet>

@@ -5,30 +5,32 @@
  * Description:    this is auto genetated, don't change!
 *************************************************************************************************************************************************/-->
 
+@model XStudio.School.Input.Model.Product.ProductDescriptionModel
+
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
     <div class="form-group">
-        <label class="sr-only" for="Id">名称</label>
-        <input type="text" class="form-control" name="Id" placeholder="请输入Id">
+        @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Id" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="ProductId">名称</label>
-        <input type="text" class="form-control" name="ProductId" placeholder="请输入ProductId">
+        @Html.LabelFor(m => m.ProductId, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.ProductId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入ProductId" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Description">名称</label>
-        <input type="text" class="form-control" name="Description" placeholder="请输入Description">
+        @Html.LabelFor(m => m.Description, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Description, new { @class = "form-control", placeholder = "请输入Description" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Status">名称</label>
-        <input type="text" class="form-control" name="Status" placeholder="请输入Status">
+        @Html.LabelFor(m => m.Status, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Status" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Createtime">名称</label>
-        <input type="text" class="form-control my-datepicker" name="Createtime" placeholder="请输入Createtime">
+        @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-datepicker", placeholder = "请输入Createtime" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Updatetime">名称</label>
-        <input type="text" class="form-control my-datepicker" name="Updatetime" placeholder="请输入Updatetime">
+        @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-datepicker", placeholder = "请输入Updatetime" })
     </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
@@ -49,6 +51,7 @@
 
 <script>
     $(function () {
+        $.clearSearchCondition(".my-btn-searchcondition");
         var tables = $('#tableProductDescription').DataTable({
             ajax: {
                 url: $.fn.dataTable.defaults.virtualDir + 'product/ProductDescription/ProductDescriptionsByPaging',

@@ -38,6 +38,11 @@ namespace XStudio.School.Input.Domain.PO.School
 		/// <summary>
 		/// 
 		/// </summary>
+		public string Branchname { get; set; }
+        
+		/// <summary>
+		/// 
+		/// </summary>
 		public string Logo { get; set; }
         
 		/// <summary>
@@ -48,7 +53,7 @@ namespace XStudio.School.Input.Domain.PO.School
 		/// <summary>
 		/// 
 		/// </summary>
-		public int CityId { get; set; }
+		public int DistrictId { get; set; }
         
 		/// <summary>
 		/// 

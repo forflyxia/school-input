@@ -63,9 +63,11 @@ namespace XStudio.School.Input.Repository.School.Product
                 {
     				Name = "",
     				Logo = "",
-    				CategoryId = 0,
+    				ProductcategoryId = 0,
+    				MerchantcustomcategoryId = 0,
     				Introduction = "",
     				MerchantId = 0,
+    				SchoolId = 0,
     				Status = 0,
     				Createtime = DateTime.Now,
     				Updatetime = DateTime.Now,

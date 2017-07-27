@@ -21,7 +21,23 @@ namespace XStudio.School.Input.Controller.Areas.School.Controllers
     {
         public ActionResult SchoolIndex()
         {
-            return View();
+            var model = new SchoolModel
+            {
+                 Id = GetParams<int>("id"),
+                 Name = GetParams<string>("name"),
+                 Shortname = GetParams<string>("shortname"),
+                 Branchname = GetParams<string>("branchname"),
+                 Logo = GetParams<string>("logo"),
+                 Introduction = GetParams<string>("introduction"),
+                 DistrictId = GetParams<int>("districtid"),
+                 Address = GetParams<string>("address"),
+                 Longitude = GetParams<decimal>("longitude"),
+                 Latitude = GetParams<decimal>("latitude"),
+                 Status = GetParams<int>("status"),
+                 Createtime = GetParams<DateTime>("createtime"),
+                 Updatetime = GetParams<DateTime>("updatetime"),
+            };
+            return View(model);
         }
         
         public JsonResult Schools()

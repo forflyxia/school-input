@@ -1,3 +1,3 @@
-﻿$('.my-datepicker').datepicker({
+﻿$('.my-input-datepicker').datepicker({
     autoclose: true
-})
+});

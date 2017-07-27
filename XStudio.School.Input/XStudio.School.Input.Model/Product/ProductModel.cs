@@ -34,7 +34,12 @@ namespace XStudio.School.Input.Model.Product
 		/// <summary>
 		/// 
 		/// </summary>
-		public int CategoryId { get; set; }
+		public int ProductcategoryId { get; set; }
+        
+		/// <summary>
+		/// 
+		/// </summary>
+		public int MerchantcustomcategoryId { get; set; }
         
 		/// <summary>
 		/// 
@@ -45,6 +50,11 @@ namespace XStudio.School.Input.Model.Product
 		/// 
 		/// </summary>
 		public int MerchantId { get; set; }
+        
+		/// <summary>
+		/// 
+		/// </summary>
+		public int SchoolId { get; set; }
         
 		/// <summary>
 		/// 

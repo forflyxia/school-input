@@ -4,10 +4,12 @@
  * Description:    this is auto genetated, don't change!
 *************************************************************************************************************************************************/-->
 
+@model XStudio.School.Input.Model.Product.ProductCategoryModel
+
 @{
     ViewBag.Title = "ProductCategory列表";
 }
 
 <h2>@ViewBag.Title.</h2>
 
-@Html.Partial("_ProductCategoryPartial")
+@Html.Partial("_ProductCategoryPartial", Model)

@@ -26,13 +26,19 @@
                 <div class="form-group">
                     @Html.LabelFor(m => m.OrderId, new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.OrderId, new { @class = "form-control" })
+                        @Html.TextBoxFor(m => m.OrderId, new { @class = "form-control my-input-edit" })
                     </div>
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(m => m.ProductId, new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.ProductId, new { @class = "form-control" })
+                        @Html.TextBoxFor(m => m.ProductId, new { @class = "form-control my-input-edit" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ProductsizeId, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.ProductsizeId, new { @class = "form-control my-input-edit" })
                     </div>
                 </div>
                 <div class="form-group">
@@ -44,25 +50,25 @@
                 <div class="form-group">
                     @Html.LabelFor(m => m.Quantity, new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control" })
+                        @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control my-input-edit" })
                     </div>
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(m => m.Status, new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Status, new { @class = "form-control" })
+                        @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-edit" })
                     </div>
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(m => m.Createtime, new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-datepicker" })
+                        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-datepicker" })
                     </div>
                 </div>
                 <div class="form-group">
                     @Html.LabelFor(m => m.Updatetime, new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-datepicker" })
+                        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-datepicker" })
                     </div>
                 </div>
                 <div class="form-group">

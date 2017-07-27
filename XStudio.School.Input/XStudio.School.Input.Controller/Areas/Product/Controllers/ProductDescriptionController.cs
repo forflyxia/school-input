@@ -21,7 +21,16 @@ namespace XStudio.School.Input.Controller.Areas.Product.Controllers
     {
         public ActionResult ProductDescriptionIndex()
         {
-            return View();
+            var model = new ProductDescriptionModel
+            {
+                 Id = GetParams<int>("id"),
+                 ProductId = GetParams<int>("productid"),
+                 Description = GetParams<string>("description"),
+                 Status = GetParams<int>("status"),
+                 Createtime = GetParams<DateTime>("createtime"),
+                 Updatetime = GetParams<DateTime>("updatetime"),
+            };
+            return View(model);
         }
         
         public JsonResult ProductDescriptions()

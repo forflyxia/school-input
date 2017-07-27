@@ -39,10 +39,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Basic\CityModel.cs" />
+    <Compile Include="Basic\CountryModel.cs" />
+    <Compile Include="Basic\DistrictModel.cs" />
+    <Compile Include="Basic\ProvinceModel.cs" />
     <Compile Include="Class1.cs" />
-    <Compile Include="Config\CityModel.cs" />
-    <Compile Include="Config\CountryModel.cs" />
-    <Compile Include="Config\ProvinceModel.cs" />
+    <Compile Include="Image\ImageModel.cs" />
+    <Compile Include="Merchant\MerchantCustomCategoryModel.cs" />
+    <Compile Include="Merchant\MerchantImageModel.cs" />
+    <Compile Include="Merchant\MerchantMessageModel.cs" />
     <Compile Include="Merchant\MerchantModel.cs" />
     <Compile Include="Order\OrderDetailModel.cs" />
     <Compile Include="Order\OrderModel.cs" />
@@ -50,11 +55,18 @@
     <Compile Include="Paging\PagingModel.cs" />
     <Compile Include="Product\ProductCategoryModel.cs" />
     <Compile Include="Product\ProductDescriptionModel.cs" />
+    <Compile Include="Product\ProductImageModel.cs" />
     <Compile Include="Product\ProductModel.cs" />
-    <Compile Include="Product\ProductPriceModel.cs" />
+    <Compile Include="Product\ProductSizeModel.cs" />
+    <Compile Include="Promotion\PromotionLadderModel.cs" />
+    <Compile Include="Promotion\PromotionModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="School\SchoolBranchModel.cs" />
+    <Compile Include="School\SchoolBusinessModel.cs" />
     <Compile Include="School\SchoolModel.cs" />
+    <Compile Include="School\SchoolNewsModel.cs" />
+    <Compile Include="User\UserMessageModel.cs" />
+    <Compile Include="User\UserModel.cs" />
+    <Compile Include="User\UserTaskModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

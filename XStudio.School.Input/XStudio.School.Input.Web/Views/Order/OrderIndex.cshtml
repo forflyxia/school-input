@@ -4,10 +4,12 @@
  * Description:    this is auto genetated, don't change!
 *************************************************************************************************************************************************/-->
 
+@model XStudio.School.Input.Model.Order.OrderModel
+
 @{
     ViewBag.Title = "Order列表";
 }
 
 <h2>@ViewBag.Title.</h2>
 
-@Html.Partial("_OrderPartial")
+@Html.Partial("_OrderPartial", Model)

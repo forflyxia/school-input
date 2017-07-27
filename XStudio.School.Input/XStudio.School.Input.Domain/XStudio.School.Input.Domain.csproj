@@ -54,18 +54,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PO\School\Config\CityPO.cs" />
-    <Compile Include="PO\School\Config\CountryPO.cs" />
-    <Compile Include="PO\School\Config\ProvincePO.cs" />
+    <Compile Include="PO\School\Basic\CityPO.cs" />
+    <Compile Include="PO\School\Basic\CountryPO.cs" />
+    <Compile Include="PO\School\Basic\DistrictPO.cs" />
+    <Compile Include="PO\School\Basic\ProvincePO.cs" />
+    <Compile Include="PO\School\Image\ImagePO.cs" />
+    <Compile Include="PO\School\Merchant\MerchantCustomCategoryPO.cs" />
+    <Compile Include="PO\School\Merchant\MerchantImagePO.cs" />
+    <Compile Include="PO\School\Merchant\MerchantMessagePO.cs" />
     <Compile Include="PO\School\Merchant\MerchantPO.cs" />
     <Compile Include="PO\School\Order\OrderDetailPO.cs" />
     <Compile Include="PO\School\Order\OrderPO.cs" />
     <Compile Include="PO\School\Product\ProductCategoryPO.cs" />
     <Compile Include="PO\School\Product\ProductDescriptionPO.cs" />
+    <Compile Include="PO\School\Product\ProductImagePO.cs" />
     <Compile Include="PO\School\Product\ProductPO.cs" />
-    <Compile Include="PO\School\Product\ProductPricePO.cs" />
-    <Compile Include="PO\School\School\SchoolBranchPO.cs" />
+    <Compile Include="PO\School\Product\ProductSizePO.cs" />
+    <Compile Include="PO\School\Promotion\PromotionLadderPO.cs" />
+    <Compile Include="PO\School\Promotion\PromotionPO.cs" />
+    <Compile Include="PO\School\School\SchoolBusinessPO.cs" />
+    <Compile Include="PO\School\School\SchoolNewsPO.cs" />
     <Compile Include="PO\School\School\SchoolPO.cs" />
+    <Compile Include="PO\School\User\UserMessagePO.cs" />
+    <Compile Include="PO\School\User\UserPO.cs" />
+    <Compile Include="PO\School\User\UserTaskPO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

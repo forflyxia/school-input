@@ -38,6 +38,11 @@ namespace XStudio.School.Input.Domain.PO.School
 		/// <summary>
 		/// 
 		/// </summary>
+		public int ProductsizeId { get; set; }
+        
+		/// <summary>
+		/// 
+		/// </summary>
 		public decimal Unitprice { get; set; }
         
 		/// <summary>

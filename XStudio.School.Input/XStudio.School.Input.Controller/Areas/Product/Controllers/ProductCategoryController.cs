@@ -21,7 +21,16 @@ namespace XStudio.School.Input.Controller.Areas.Product.Controllers
     {
         public ActionResult ProductCategoryIndex()
         {
-            return View();
+            var model = new ProductCategoryModel
+            {
+                 Id = GetParams<int>("id"),
+                 Name = GetParams<string>("name"),
+                 ParentcategoryId = GetParams<int>("parentcategoryid"),
+                 Status = GetParams<int>("status"),
+                 Createtime = GetParams<DateTime>("createtime"),
+                 Updatetime = GetParams<DateTime>("updatetime"),
+            };
+            return View(model);
         }
         
         public JsonResult ProductCategorys()

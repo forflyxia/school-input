@@ -22,11 +22,13 @@ Description:
  * Description:    this is auto genetated, don't change!
 *************************************************************************************************************************************************/-->
 
+@model <%=Namespace %>.Model.<%=GetTablePrefix(SourceTable, true) %>.<%=GetClassName(SourceTable) %>Model
+
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
     <%foreach(ColumnSchema column in SourceTable.Columns) { %>    
     <div class="form-group">
-        <label class="sr-only" for="<%=FirstLetterToPascal(column.Name) %>">名称</label>
-        <input type="text" class="form-control<%=GetCSharpVariableType(column) == "DateTime" ? " my-datepicker" : "" %>" name="<%=FirstLetterToPascal(column.Name) %>" placeholder="请输入<%=FirstLetterToPascal(column.Name) %>">
+        @Html.LabelFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "form-control<%=GetSearchInputCssName(column) %>", placeholder = "请输入<%=FirstLetterToPascal(column.Name) %>" })
     </div>
     <%} %>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
@@ -45,6 +47,7 @@ Description:
 
 <script>
     $(function () {
+        $.clearSearchCondition(".my-btn-searchcondition");
         var tables = $('#table<%=GetClassName(SourceTable) %>').DataTable({
             ajax: {
                 url: $.fn.dataTable.defaults.virtualDir + '<%=GetTablePrefix(SourceTable) %>/<%=GetClassName(SourceTable) %>/<%=GetClassName(SourceTable) %>sByPaging',

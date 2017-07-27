@@ -53,25 +53,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Areas\Config\Controllers\CityController.cs" />
-    <Compile Include="Areas\Config\Controllers\CountryController.cs" />
-    <Compile Include="Areas\Config\Controllers\ProvinceController.cs" />
+    <Compile Include="Areas\Basic\Controllers\CityController.cs" />
+    <Compile Include="Areas\Basic\Controllers\CountryController.cs" />
+    <Compile Include="Areas\Basic\Controllers\DistrictController.cs" />
+    <Compile Include="Areas\Basic\Controllers\ProvinceController.cs" />
+    <Compile Include="Areas\Basic\BasicAreaRegistration.cs" />
+    <Compile Include="Areas\Image\Controllers\ImageController.cs" />
+    <Compile Include="Areas\Image\ImageAreaRegistration.cs" />
     <Compile Include="Areas\Merchant\Controllers\MerchantController.cs" />
-    <Compile Include="Areas\Merchant\Controllers\MerchantsController.cs" />
+    <Compile Include="Areas\Merchant\Controllers\MerchantCustomCategoryController.cs" />
+    <Compile Include="Areas\Merchant\Controllers\MerchantImageController.cs" />
+    <Compile Include="Areas\Merchant\Controllers\MerchantMessageController.cs" />
     <Compile Include="Areas\Merchant\MerchantAreaRegistration.cs" />
     <Compile Include="Areas\Order\Controllers\OrderController.cs" />
     <Compile Include="Areas\Order\Controllers\OrderDetailController.cs" />
+    <Compile Include="Areas\Order\OrderAreaRegistration.cs" />
     <Compile Include="Areas\Product\Controllers\ProductCategoryController.cs" />
     <Compile Include="Areas\Product\Controllers\ProductController.cs" />
     <Compile Include="Areas\Product\Controllers\ProductDescriptionController.cs" />
-    <Compile Include="Areas\Product\Controllers\ProductPriceController.cs" />
+    <Compile Include="Areas\Product\Controllers\ProductImageController.cs" />
+    <Compile Include="Areas\Product\Controllers\ProductSizeController.cs" />
     <Compile Include="Areas\Product\ProductAreaRegistration.cs" />
-    <Compile Include="Areas\School\Controllers\SchoolBranchController.cs" />
+    <Compile Include="Areas\Promotion\Controllers\PromotionController.cs" />
+    <Compile Include="Areas\Promotion\Controllers\PromotionLadderController.cs" />
+    <Compile Include="Areas\Promotion\PromotionAreaRegistration.cs" />
+    <Compile Include="Areas\School\Controllers\SchoolBusinessController.cs" />
     <Compile Include="Areas\School\Controllers\SchoolController.cs" />
+    <Compile Include="Areas\School\Controllers\SchoolNewsController.cs" />
+    <Compile Include="Areas\School\SchoolAreaRegistration.cs" />
+    <Compile Include="Areas\User\Controllers\UserController.cs" />
+    <Compile Include="Areas\User\Controllers\UserMessageController.cs" />
+    <Compile Include="Areas\User\Controllers\UserTaskController.cs" />
+    <Compile Include="Areas\User\UserAreaRegistration.cs" />
     <Compile Include="BaseController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\XStudio.School.Input.Infrastructure\XStudio.School.Input.Infrastructure.csproj">
+      <Project>{293364e0-58e7-424b-896a-862a231352ba}</Project>
+      <Name>XStudio.School.Input.Infrastructure</Name>
+    </ProjectReference>
     <ProjectReference Include="..\XStudio.School.Input.Model\XStudio.School.Input.Model.csproj">
       <Project>{637dd406-19c7-49f0-8f33-31772b90750d}</Project>
       <Name>XStudio.School.Input.Model</Name>

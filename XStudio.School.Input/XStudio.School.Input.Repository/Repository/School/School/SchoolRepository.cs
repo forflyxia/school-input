@@ -63,9 +63,10 @@ namespace XStudio.School.Input.Repository.School.School
                 {
     				Name = "",
     				Shortname = "",
+    				Branchname = "",
     				Logo = "",
     				Introduction = "",
-    				CityId = 0,
+    				DistrictId = 0,
     				Address = "",
     				Longitude = 0,
     				Latitude = 0,

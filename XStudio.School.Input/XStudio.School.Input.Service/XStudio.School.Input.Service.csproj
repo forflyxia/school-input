@@ -39,32 +39,58 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Config\CityService.cs" />
-    <Compile Include="Config\CountryService.cs" />
-    <Compile Include="Config\ProvinceService.cs" />
-    <Compile Include="Converter\Config\CityConverter.cs" />
-    <Compile Include="Converter\Config\CountryConverter.cs" />
-    <Compile Include="Converter\Config\ProvinceConverter.cs" />
+    <Compile Include="Basic\CityService.cs" />
+    <Compile Include="Basic\CountryService.cs" />
+    <Compile Include="Basic\DistrictService.cs" />
+    <Compile Include="Basic\ProvinceService.cs" />
+    <Compile Include="Converter\Basic\CityConverter.cs" />
+    <Compile Include="Converter\Basic\CountryConverter.cs" />
+    <Compile Include="Converter\Basic\DistrictConverter.cs" />
+    <Compile Include="Converter\Basic\ProvinceConverter.cs" />
+    <Compile Include="Converter\Image\ImageConverter.cs" />
     <Compile Include="Converter\Merchant\MerchantConverter.cs" />
+    <Compile Include="Converter\Merchant\MerchantCustomCategoryConverter.cs" />
+    <Compile Include="Converter\Merchant\MerchantImageConverter.cs" />
+    <Compile Include="Converter\Merchant\MerchantMessageConverter.cs" />
     <Compile Include="Converter\Order\OrderConverter.cs" />
     <Compile Include="Converter\Order\OrderDetailConverter.cs" />
-    <Compile Include="Converter\ProductConverter.cs" />
     <Compile Include="Converter\Product\ProductCategoryConverter.cs" />
     <Compile Include="Converter\Product\ProductConverter.cs" />
     <Compile Include="Converter\Product\ProductDescriptionConverter.cs" />
-    <Compile Include="Converter\Product\ProductPriceConverter.cs" />
-    <Compile Include="Converter\School\SchoolBranchConverter.cs" />
+    <Compile Include="Converter\Product\ProductImageConverter.cs" />
+    <Compile Include="Converter\Product\ProductSizeConverter.cs" />
+    <Compile Include="Converter\Promotion\PromotionConverter.cs" />
+    <Compile Include="Converter\Promotion\PromotionLadderConverter.cs" />
+    <Compile Include="Converter\School\SchoolBusinessConverter.cs" />
     <Compile Include="Converter\School\SchoolConverter.cs" />
+    <Compile Include="Converter\School\SchoolNewsConverter.cs" />
+    <Compile Include="Converter\User\UserConverter.cs" />
+    <Compile Include="Converter\User\UserMessageConverter.cs" />
+    <Compile Include="Converter\User\UserTaskConverter.cs" />
+    <Compile Include="Image\ImageService.cs" />
+    <Compile Include="Merchant\MerchantCustomCategoryService.cs" />
+    <Compile Include="Merchant\MerchantImageService.cs" />
+    <Compile Include="Merchant\MerchantMessageService.cs" />
     <Compile Include="Merchant\MerchantService.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Order\OrderDetailService.cs" />
     <Compile Include="Order\OrderService.cs" />
     <Compile Include="Product\ProductCategoryService.cs" />
     <Compile Include="Product\ProductDescriptionService.cs" />
-    <Compile Include="Product\ProductPriceService.cs" />
+    <Compile Include="Product\ProductImageService.cs" />
     <Compile Include="Product\ProductService.cs" />
+    <Compile Include="Product\ProductSizeService.cs" />
+    <Compile Include="Promotion\PromotionLadderService.cs" />
+    <Compile Include="Promotion\PromotionService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="School\SchoolBranchService.cs" />
+    <Compile Include="School\SchoolBusinessService.cs" />
+    <Compile Include="School\SchoolNewsService.cs" />
     <Compile Include="School\SchoolService.cs" />
+    <Compile Include="User\UserMessageService.cs" />
+    <Compile Include="User\UserService.cs" />
+    <Compile Include="User\UserTaskService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XStudio.School.Input.Domain\XStudio.School.Input.Domain.csproj">
@@ -84,7 +110,16 @@
       <Name>XStudio.School.Input.Repository</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\XStudio.School.Input.Service.csprojResolveAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="obj\Debug\XStudio.School.Input.Service.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

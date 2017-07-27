@@ -63,6 +63,7 @@ namespace XStudio.School.Input.Repository.School.Order
                 {
     				OrderId = 0,
     				ProductId = 0,
+    				ProductsizeId = 0,
     				Unitprice = 0,
     				Quantity = 0,
     				Status = 0,

@@ -5,38 +5,44 @@
  * Description:    this is auto genetated, don't change!
 *************************************************************************************************************************************************/-->
 
+@model XStudio.School.Input.Model.Order.OrderDetailModel
+
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
     <div class="form-group">
-        <label class="sr-only" for="Id">名称</label>
-        <input type="text" class="form-control" name="Id" placeholder="请输入Id">
+        @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Id" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="OrderId">名称</label>
-        <input type="text" class="form-control" name="OrderId" placeholder="请输入OrderId">
+        @Html.LabelFor(m => m.OrderId, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.OrderId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入OrderId" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="ProductId">名称</label>
-        <input type="text" class="form-control" name="ProductId" placeholder="请输入ProductId">
+        @Html.LabelFor(m => m.ProductId, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.ProductId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入ProductId" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Unitprice">名称</label>
-        <input type="text" class="form-control" name="Unitprice" placeholder="请输入Unitprice">
+        @Html.LabelFor(m => m.ProductsizeId, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.ProductsizeId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入ProductsizeId" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Quantity">名称</label>
-        <input type="text" class="form-control" name="Quantity" placeholder="请输入Quantity">
+        @Html.LabelFor(m => m.Unitprice, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Unitprice, new { @class = "form-control", placeholder = "请输入Unitprice" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Status">名称</label>
-        <input type="text" class="form-control" name="Status" placeholder="请输入Status">
+        @Html.LabelFor(m => m.Quantity, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Quantity" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Createtime">名称</label>
-        <input type="text" class="form-control my-datepicker" name="Createtime" placeholder="请输入Createtime">
+        @Html.LabelFor(m => m.Status, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Status" })
     </div>
     <div class="form-group">
-        <label class="sr-only" for="Updatetime">名称</label>
-        <input type="text" class="form-control my-datepicker" name="Updatetime" placeholder="请输入Updatetime">
+        @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-datepicker", placeholder = "请输入Createtime" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-datepicker", placeholder = "请输入Updatetime" })
     </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
@@ -47,6 +53,7 @@
         <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Id</th>
         <th class="sorting_asc" data-data="OrderId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">OrderId</th>
         <th class="sorting_asc" data-data="ProductId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">ProductId</th>
+        <th class="sorting_asc" data-data="ProductsizeId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">ProductsizeId</th>
         <th class="sorting_asc" data-data="Unitprice" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Unitprice</th>
         <th class="sorting_asc" data-data="Quantity" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Quantity</th>
         <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Status</th>
@@ -59,6 +66,7 @@
 
 <script>
     $(function () {
+        $.clearSearchCondition(".my-btn-searchcondition");
         var tables = $('#tableOrderDetail').DataTable({
             ajax: {
                 url: $.fn.dataTable.defaults.virtualDir + 'order/OrderDetail/OrderDetailsByPaging',

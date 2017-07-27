@@ -1,0 +1,116 @@
+﻿
+<!--/************************************************************************************************************************************************
+ * FileName:       DbContext.cs
+ * Author:         hbxia
+ * Description:    this is auto genetated, don't change!
+*************************************************************************************************************************************************/-->
+
+<form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
+    <div class="form-group">
+        <label class="sr-only" for="Id">名称</label>
+        <input type="text" class="form-control" name="Id" placeholder="请输入Id">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Username">名称</label>
+        <input type="text" class="form-control" name="Username" placeholder="请输入Username">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Password">名称</label>
+        <input type="text" class="form-control" name="Password" placeholder="请输入Password">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Nickname">名称</label>
+        <input type="text" class="form-control" name="Nickname" placeholder="请输入Nickname">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Email">名称</label>
+        <input type="text" class="form-control" name="Email" placeholder="请输入Email">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Usertype">名称</label>
+        <input type="text" class="form-control" name="Usertype" placeholder="请输入Usertype">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Moblie">名称</label>
+        <input type="text" class="form-control" name="Moblie" placeholder="请输入Moblie">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Sex">名称</label>
+        <input type="text" class="form-control" name="Sex" placeholder="请输入Sex">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="SchoolId">名称</label>
+        <input type="text" class="form-control" name="SchoolId" placeholder="请输入SchoolId">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Cash">名称</label>
+        <input type="text" class="form-control" name="Cash" placeholder="请输入Cash">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Point">名称</label>
+        <input type="text" class="form-control" name="Point" placeholder="请输入Point">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Status">名称</label>
+        <input type="text" class="form-control" name="Status" placeholder="请输入Status">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Createtime">名称</label>
+        <input type="text" class="form-control my-datepicker" name="Createtime" placeholder="请输入Createtime">
+    </div>
+    <div class="form-group">
+        <label class="sr-only" for="Updatetime">名称</label>
+        <input type="text" class="form-control my-datepicker" name="Updatetime" placeholder="请输入Updatetime">
+    </div>
+    <button type="submit" class="btn btn-default my-btn-search">查询</button>
+</form>
+
+<table id="tableUser" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+    <thead>
+    <tr role="row">
+        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Id</th>
+        <th class="sorting_asc" data-data="Username" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Username</th>
+        <th class="sorting_asc" data-data="Password" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Password</th>
+        <th class="sorting_asc" data-data="Nickname" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Nickname</th>
+        <th class="sorting_asc" data-data="Email" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Email</th>
+        <th class="sorting_asc" data-data="Usertype" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Usertype</th>
+        <th class="sorting_asc" data-data="Moblie" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Moblie</th>
+        <th class="sorting_asc" data-data="Sex" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Sex</th>
+        <th class="sorting_asc" data-data="SchoolId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">SchoolId</th>
+        <th class="sorting_asc" data-data="Cash" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Cash</th>
+        <th class="sorting_asc" data-data="Point" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Point</th>
+        <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Status</th>
+        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Createtime</th>
+        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Updatetime</th>
+        <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">操作</th>
+    </tr>
+    </thead>
+</table>
+
+<script>
+    $(function () {
+        var tables = $('#tableUser').DataTable({
+            ajax: {
+                url: $.fn.dataTable.defaults.virtualDir + 'user/User/UsersByPaging',
+                data: function (data) {
+                    data.CustomFilterParameters = $("#my-form-search").serializeArray();
+                    var json = JSON.stringify(data);
+                    return json;
+                }
+            },
+            columnDefs: [
+            {
+                targets: -1,
+                width: "100px",
+                render: function (data, type, full, meta) {
+                    var json = JSON.stringify(full);
+                    var url = $.fn.dataTable.defaults.virtualDir + 'user/User/ViewUser?id=' + full.Id;
+                    return '<a class="btn btn-default" href="' + url + '" target="_blank" role="button">选择</a>';
+                }
+            }]
+        });
+        $(".my-btn-search").on("click", function () {
+            tables.draw();
+        });
+    });
+</script>

@@ -21,7 +21,26 @@ namespace XStudio.School.Input.Controller.Areas.Order.Controllers
     {
         public ActionResult OrderIndex()
         {
-            return View();
+            var model = new OrderModel
+            {
+                 Id = GetParams<int>("id"),
+                 UserId = GetParams<int>("userid"),
+                 Contact = GetParams<string>("contact"),
+                 Telphone = GetParams<string>("telphone"),
+                 Mobliephone = GetParams<string>("mobliephone"),
+                 Totalamount = GetParams<decimal>("totalamount"),
+                 Reduction = GetParams<decimal>("reduction"),
+                 AmountpaId = GetParams<decimal>("amountpaid"),
+                 PromotionId = GetParams<string>("promotionid"),
+                 PromotionladderId = GetParams<string>("promotionladderid"),
+                 SchoolId = GetParams<int>("schoolid"),
+                 Deliveryaddress = GetParams<string>("deliveryaddress"),
+                 Remark = GetParams<string>("remark"),
+                 Status = GetParams<int>("status"),
+                 Createtime = GetParams<DateTime>("createtime"),
+                 Updatetime = GetParams<DateTime>("updatetime"),
+            };
+            return View(model);
         }
         
         public JsonResult Orders()

@@ -21,7 +21,21 @@ namespace XStudio.School.Input.Controller.Areas.Product.Controllers
     {
         public ActionResult ProductIndex()
         {
-            return View();
+            var model = new ProductModel
+            {
+                 Id = GetParams<int>("id"),
+                 Name = GetParams<string>("name"),
+                 Logo = GetParams<string>("logo"),
+                 ProductcategoryId = GetParams<int>("productcategoryid"),
+                 MerchantcustomcategoryId = GetParams<int>("merchantcustomcategoryid"),
+                 Introduction = GetParams<string>("introduction"),
+                 MerchantId = GetParams<int>("merchantid"),
+                 SchoolId = GetParams<int>("schoolid"),
+                 Status = GetParams<int>("status"),
+                 Createtime = GetParams<DateTime>("createtime"),
+                 Updatetime = GetParams<DateTime>("updatetime"),
+            };
+            return View(model);
         }
         
         public JsonResult Products()

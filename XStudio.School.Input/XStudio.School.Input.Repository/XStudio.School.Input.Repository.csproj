@@ -56,18 +56,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repository\School\Config\CityRepository.cs" />
-    <Compile Include="Repository\School\Config\CountryRepository.cs" />
-    <Compile Include="Repository\School\Config\ProvinceRepository.cs" />
+    <Compile Include="Repository\School\Basic\CityRepository.cs" />
+    <Compile Include="Repository\School\Basic\CountryRepository.cs" />
+    <Compile Include="Repository\School\Basic\DistrictRepository.cs" />
+    <Compile Include="Repository\School\Basic\ProvinceRepository.cs" />
+    <Compile Include="Repository\School\Image\ImageRepository.cs" />
+    <Compile Include="Repository\School\Merchant\MerchantCustomCategoryRepository.cs" />
+    <Compile Include="Repository\School\Merchant\MerchantImageRepository.cs" />
+    <Compile Include="Repository\School\Merchant\MerchantMessageRepository.cs" />
     <Compile Include="Repository\School\Merchant\MerchantRepository.cs" />
     <Compile Include="Repository\School\Order\OrderDetailRepository.cs" />
     <Compile Include="Repository\School\Order\OrderRepository.cs" />
     <Compile Include="Repository\School\Product\ProductCategoryRepository.cs" />
     <Compile Include="Repository\School\Product\ProductDescriptionRepository.cs" />
-    <Compile Include="Repository\School\Product\ProductPriceRepository.cs" />
+    <Compile Include="Repository\School\Product\ProductImageRepository.cs" />
     <Compile Include="Repository\School\Product\ProductRepository.cs" />
-    <Compile Include="Repository\School\School\SchoolBranchRepository.cs" />
+    <Compile Include="Repository\School\Product\ProductSizeRepository.cs" />
+    <Compile Include="Repository\School\Promotion\PromotionLadderRepository.cs" />
+    <Compile Include="Repository\School\Promotion\PromotionRepository.cs" />
+    <Compile Include="Repository\School\School\SchoolBusinessRepository.cs" />
+    <Compile Include="Repository\School\School\SchoolNewsRepository.cs" />
     <Compile Include="Repository\School\School\SchoolRepository.cs" />
+    <Compile Include="Repository\School\User\UserMessageRepository.cs" />
+    <Compile Include="Repository\School\User\UserRepository.cs" />
+    <Compile Include="Repository\School\User\UserTaskRepository.cs" />
     <Compile Include="SchoolContext.cs" />
   </ItemGroup>
   <ItemGroup>

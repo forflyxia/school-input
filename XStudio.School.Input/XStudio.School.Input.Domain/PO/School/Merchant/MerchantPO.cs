@@ -78,7 +78,7 @@ namespace XStudio.School.Input.Domain.PO.School
 		/// <summary>
 		/// 
 		/// </summary>
-		public int CityId { get; set; }
+		public int DistrictId { get; set; }
         
 		/// <summary>
 		/// 
@@ -94,6 +94,16 @@ namespace XStudio.School.Input.Domain.PO.School
 		/// 
 		/// </summary>
 		public decimal Latitude { get; set; }
+        
+		/// <summary>
+		/// 
+		/// </summary>
+		public decimal Cash { get; set; }
+        
+		/// <summary>
+		/// 
+		/// </summary>
+		public decimal Point { get; set; }
         
 		/// <summary>
 		/// 

@@ -42,12 +42,37 @@ namespace XStudio.School.Input.Repository.DbContext
         /// <summary>
         /// 
         /// </summary>
+        public DbSet<DistrictPO> Districts { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
         public DbSet<ProvincePO> Provinces { get; set; }
         
         /// <summary>
         /// 
         /// </summary>
+        public DbSet<ImagePO> Images { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
         public DbSet<MerchantPO> Merchants { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<MerchantCustomCategoryPO> MerchantCustomCategorys { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<MerchantImagePO> MerchantImages { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<MerchantMessagePO> MerchantMessages { get; set; }
         
         /// <summary>
         /// 
@@ -77,7 +102,22 @@ namespace XStudio.School.Input.Repository.DbContext
         /// <summary>
         /// 
         /// </summary>
-        public DbSet<ProductPricePO> ProductPrices { get; set; }
+        public DbSet<ProductImagePO> ProductImages { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<ProductSizePO> ProductSizes { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<PromotionPO> Promotions { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<PromotionLadderPO> PromotionLadders { get; set; }
         
         /// <summary>
         /// 
@@ -87,7 +127,27 @@ namespace XStudio.School.Input.Repository.DbContext
         /// <summary>
         /// 
         /// </summary>
-        public DbSet<SchoolBranchPO> SchoolBranchs { get; set; }
+        public DbSet<SchoolBusinessPO> SchoolBusinesss { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<SchoolNewsPO> SchoolNewss { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<UserPO> Users { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<UserMessagePO> UserMessages { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        public DbSet<UserTaskPO> UserTasks { get; set; }
         
     }
 }

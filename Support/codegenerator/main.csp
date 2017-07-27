@@ -84,17 +84,8 @@
       <property name="TablePrefix">$(TablePrefix)</property>
       <property name="SpecifyTableName">$(SpecifyTableName)</property>
     </propertySet>
-
-    <propertySet name="ui.index" output="$(BaseDir)\$(Namespace).Web\ui.index.csp" template="cst\ui\index.csp.cst">
-      <property name="SourceDatabase">
-        <connectionString>$(ConnectionString1)</connectionString>
-        <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
-      </property>
-      <property name="BaseDir">$(BaseDir)</property>
-      <property name="Namespace">$(Namespace)</property>
-      <property name="TablePrefix">$(TablePrefix)</property>
-      <property name="SpecifyTableName">$(SpecifyTableName)</property>
-    </propertySet>
+	
+	
 
     <propertySet name="ui.list.partial" output="$(BaseDir)\$(Namespace).Web\ui.list.partial.csp" template="cst\ui\list.partial.csp.cst">
       <property name="SourceDatabase">
@@ -129,5 +120,16 @@
       <property name="SpecifyTableName">$(SpecifyTableName)</property>
     </propertySet>
 
+	<propertySet name="ui.home" output="$(BaseDir)\$(Namespace).Web\ui.home.csp" template="cst\ui\home.csp.cst">
+      <property name="SourceDatabase">
+        <connectionString>$(ConnectionString1)</connectionString>
+        <providerType>SchemaExplorer.MySQLSchemaProvider,SchemaExplorer.MySQLSchemaProvider</providerType>
+      </property>
+      <property name="BaseDir">$(BaseDir)</property>
+      <property name="Namespace">$(Namespace)</property>
+      <property name="TablePrefix">$(TablePrefix)</property>
+      <property name="SpecifyTableName">$(SpecifyTableName)</property>
+    </propertySet>
+	
   </propertySets>
 </codeSmith>
