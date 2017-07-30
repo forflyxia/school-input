@@ -1,0 +1,167 @@
+﻿
+<!--/************************************************************************************************************************************************
+ * FileName:       DbContext.cs
+ * Author:         hbxia
+ * Description:    this is auto genetated, don't change!
+*************************************************************************************************************************************************/-->
+
+@model XStudio.School.Input.Model.Merchant.MerchantModel
+
+<form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
+    <div class="form-group">
+        @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Id" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Name, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "请输入Name" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Shortname, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Shortname, new { @class = "form-control", placeholder = "请输入Shortname" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Branch, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Branch, new { @class = "form-control", placeholder = "请输入Branch" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Logo, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Logo, new { @class = "form-control", placeholder = "请输入Logo" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Introduction, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Introduction, new { @class = "form-control", placeholder = "请输入Introduction" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Contact, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Contact, new { @class = "form-control", placeholder = "请输入Contact" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Telphone, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Telphone, new { @class = "form-control", placeholder = "请输入Telphone" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Mobliephone, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Mobliephone, new { @class = "form-control", placeholder = "请输入Mobliephone" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Businesslicence, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Businesslicence, new { @class = "form-control", placeholder = "请输入Businesslicence" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Legalperson, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Legalperson, new { @class = "form-control", placeholder = "请输入Legalperson" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DistrictId, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.DistrictId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入DistrictId" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Address, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Address, new { @class = "form-control", placeholder = "请输入Address" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Longitude, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Longitude, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Longitude" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Latitude, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Latitude, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Latitude" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Cash, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Cash, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Cash" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Point, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Point, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Point" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Status, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Status" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入Createtime" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入Updatetime" })
+    </div>
+    <button type="submit" class="btn btn-default my-btn-search">查询</button>
+</form>
+
+<a class="btn btn-primary" href="/merchant/Merchant/ViewMerchant?id=0" target="_blank" role="button">新增</a>
+
+<table id="tableMerchant" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+    <thead>
+    <tr role="row">
+        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Id</th>
+        <th class="sorting_asc" data-data="Name" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Name</th>
+        <th class="sorting_asc" data-data="Shortname" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Shortname</th>
+        <th class="sorting_asc" data-data="Branch" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Branch</th>
+        <th class="sorting_asc" data-data="Logo" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Logo</th>
+        <th class="sorting_asc" data-data="Introduction" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Introduction</th>
+        <th class="sorting_asc" data-data="Contact" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Contact</th>
+        <th class="sorting_asc" data-data="Telphone" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Telphone</th>
+        <th class="sorting_asc" data-data="Mobliephone" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Mobliephone</th>
+        <th class="sorting_asc" data-data="Businesslicence" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Businesslicence</th>
+        <th class="sorting_asc" data-data="Legalperson" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Legalperson</th>
+        <th class="sorting_asc" data-data="DistrictId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">DistrictId</th>
+        <th class="sorting_asc" data-data="Address" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Address</th>
+        <th class="sorting_asc" data-data="Longitude" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Longitude</th>
+        <th class="sorting_asc" data-data="Latitude" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Latitude</th>
+        <th class="sorting_asc" data-data="Cash" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Cash</th>
+        <th class="sorting_asc" data-data="Point" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Point</th>
+        <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Status</th>
+        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Createtime</th>
+        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Updatetime</th>
+        <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">操作</th>
+    </tr>
+    </thead>
+</table>
+
+<script>
+    $(function () {
+        $.clearSearchCondition(".my-input-searchcondition");
+        var tables = $('#tableMerchant').DataTable({
+            ajax: {
+                url: $.fn.dataTable.defaults.virtualDir + 'merchant/Merchant/MerchantsByPaging',
+                data: function (data) {
+                    data.CustomFilterParameters = $("#my-form-search").serializeArray();
+                    var json = JSON.stringify(data);
+                    return json;
+                }
+            },
+            columnDefs: [
+            {
+                targets: -1,
+                width: "100px",
+                render: function (data, type, full, meta) {
+                    var json = JSON.stringify(full);
+                    var html = '';
+                    var url = $.fn.dataTable.defaults.virtualDir + 'merchant/Merchant/ViewMerchant?id=' + full.Id;
+                    html = '<a class="btn btn-default" href="' + url + '" target="_blank" role="button">查看</a>';
+                    var product_producturl = $.fn.dataTable.defaults.virtualDir + 'product/Product/ProductIndex?MerchantId=' + full.Id;
+                    html+='<a class="btn btn-default" href="' + product_producturl + '" target="_blank" role="button">商户产品</a>';
+                    var order_orderurl = $.fn.dataTable.defaults.virtualDir + 'order/Order/OrderIndex?MerchantId=' + full.Id;
+                    html+='<a class="btn btn-default" href="' + order_orderurl + '" target="_blank" role="button">商户订单</a>';
+                    var merchant_merchant_custom_categoryurl = $.fn.dataTable.defaults.virtualDir + 'merchant/MerchantCustomCategory/MerchantCustomCategoryIndex?MerchantId=' + full.Id;
+                    html+='<a class="btn btn-default" href="' + merchant_merchant_custom_categoryurl + '" target="_blank" role="button">商户类别</a>';
+                    var merchant_merchant_imageurl = $.fn.dataTable.defaults.virtualDir + 'merchant/MerchantImage/MerchantImageIndex?MerchantId=' + full.Id;
+                    html+='<a class="btn btn-default" href="' + merchant_merchant_imageurl + '" target="_blank" role="button">商户图片</a>';
+                    var promotion_promotionurl = $.fn.dataTable.defaults.virtualDir + 'promotion/Promotion/PromotionIndex?MerchantId=' + full.Id;
+                    html+='<a class="btn btn-default" href="' + promotion_promotionurl + '" target="_blank" role="button">商户促销</a>';
+                    var merchant_merchant_messageurl = $.fn.dataTable.defaults.virtualDir + 'merchant/MerchantMessage/MerchantMessageIndex?MerchantId=' + full.Id;
+                    html+='<a class="btn btn-default" href="' + merchant_merchant_messageurl + '" target="_blank" role="button">商户消息</a>';
+                    
+                    return html;
+                }
+            }
+            ]
+        });
+        $(".my-btn-search").on("click", function () {
+            tables.draw();
+        });
+    });
+</script>

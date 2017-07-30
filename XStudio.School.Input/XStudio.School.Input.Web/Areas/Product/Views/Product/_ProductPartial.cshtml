@@ -5,7 +5,7 @@
  * Description:    this is auto genetated, don't change!
 *************************************************************************************************************************************************/-->
 
-@model XStudio.School.Input.Model.School.SchoolModel
+@model XStudio.School.Input.Model.Product.ProductModel
 
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
     <div class="form-group">
@@ -17,36 +17,28 @@
         @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "请输入Name" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Shortname, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Shortname, new { @class = "form-control", placeholder = "请输入Shortname" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Branchname, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Branchname, new { @class = "form-control", placeholder = "请输入Branchname" })
-    </div>
-    <div class="form-group">
         @Html.LabelFor(m => m.Logo, new { @class = "sr-only" })
         @Html.TextBoxFor(m => m.Logo, new { @class = "form-control", placeholder = "请输入Logo" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.ProductcategoryId, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.ProductcategoryId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入ProductcategoryId" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.MerchantcustomcategoryId, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.MerchantcustomcategoryId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入MerchantcustomcategoryId" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Introduction, new { @class = "sr-only" })
         @Html.TextBoxFor(m => m.Introduction, new { @class = "form-control", placeholder = "请输入Introduction" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.DistrictId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.DistrictId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入DistrictId" })
+        @Html.LabelFor(m => m.MerchantId, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.MerchantId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入MerchantId" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Address, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Address, new { @class = "form-control", placeholder = "请输入Address" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Longitude, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Longitude, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Longitude" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Latitude, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Latitude, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Latitude" })
+        @Html.LabelFor(m => m.SchoolId, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.SchoolId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入SchoolId" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Status, new { @class = "sr-only" })
@@ -63,21 +55,19 @@
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
 
-<a class="btn btn-primary" href="/school/School/ViewSchool?id=0" target="_blank" role="button">新增</a>
+<a class="btn btn-primary" href="/product/Product/ViewProduct?id=0" target="_blank" role="button">新增</a>
 
-<table id="tableSchool" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+<table id="tableProduct" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
     <thead>
     <tr role="row">
         <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Id</th>
         <th class="sorting_asc" data-data="Name" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Name</th>
-        <th class="sorting_asc" data-data="Shortname" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Shortname</th>
-        <th class="sorting_asc" data-data="Branchname" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Branchname</th>
         <th class="sorting_asc" data-data="Logo" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Logo</th>
+        <th class="sorting_asc" data-data="ProductcategoryId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">ProductcategoryId</th>
+        <th class="sorting_asc" data-data="MerchantcustomcategoryId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">MerchantcustomcategoryId</th>
         <th class="sorting_asc" data-data="Introduction" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Introduction</th>
-        <th class="sorting_asc" data-data="DistrictId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">DistrictId</th>
-        <th class="sorting_asc" data-data="Address" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Address</th>
-        <th class="sorting_asc" data-data="Longitude" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Longitude</th>
-        <th class="sorting_asc" data-data="Latitude" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Latitude</th>
+        <th class="sorting_asc" data-data="MerchantId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">MerchantId</th>
+        <th class="sorting_asc" data-data="SchoolId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">SchoolId</th>
         <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Status</th>
         <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Createtime</th>
         <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Updatetime</th>
@@ -89,9 +79,9 @@
 <script>
     $(function () {
         $.clearSearchCondition(".my-input-searchcondition");
-        var tables = $('#tableSchool').DataTable({
+        var tables = $('#tableProduct').DataTable({
             ajax: {
-                url: $.fn.dataTable.defaults.virtualDir + 'school/School/SchoolsByPaging',
+                url: $.fn.dataTable.defaults.virtualDir + 'product/Product/ProductsByPaging',
                 data: function (data) {
                     data.CustomFilterParameters = $("#my-form-search").serializeArray();
                     var json = JSON.stringify(data);
@@ -105,10 +95,34 @@
                 render: function (data, type, full, meta) {
                     var json = JSON.stringify(full);
                     var html = '';
-                    var url = $.fn.dataTable.defaults.virtualDir + 'school/School/ViewSchool?id=' + full.Id;
+                    var url = $.fn.dataTable.defaults.virtualDir + 'product/Product/ViewProduct?id=' + full.Id;
                     html = '<a class="btn btn-default" href="' + url + '" target="_blank" role="button">查看</a>';
+                    var product_product_descriptionurl = $.fn.dataTable.defaults.virtualDir + 'product/ProductDescription/ProductDescriptionIndex?ProductId=' + full.Id;
+                    html+='<a class="btn btn-default" href="' + product_product_descriptionurl + '" target="_blank" role="button">产品描述</a>';
+                    var product_product_imageurl = $.fn.dataTable.defaults.virtualDir + 'product/ProductImage/ProductImageIndex?ProductId=' + full.Id;
+                    html+='<a class="btn btn-default" href="' + product_product_imageurl + '" target="_blank" role="button">产品图片</a>';
+                    var product_product_sizeurl = $.fn.dataTable.defaults.virtualDir + 'product/ProductSize/ProductSizeIndex?ProductId=' + full.Id;
+                    html+='<a class="btn btn-default" href="' + product_product_sizeurl + '" target="_blank" role="button">产品尺寸</a>';
                     
                     return html;
+                }
+            }
+            ,{
+                targets: 6,
+                width: "100px",
+                render: function (data, type, full, meta) {
+                    var json = JSON.stringify(full);
+                    var url = $.fn.dataTable.defaults.virtualDir + 'merchant/Merchant/MerchantIndex?id=' + data;
+                    return '<a href="' + url + '" target="_blank" role="button">'+ data +'</a>';
+                }
+            }
+            ,{
+                targets: 7,
+                width: "100px",
+                render: function (data, type, full, meta) {
+                    var json = JSON.stringify(full);
+                    var url = $.fn.dataTable.defaults.virtualDir + 'school/School/SchoolIndex?id=' + data;
+                    return '<a href="' + url + '" target="_blank" role="button">'+ data +'</a>';
                 }
             }
             ]

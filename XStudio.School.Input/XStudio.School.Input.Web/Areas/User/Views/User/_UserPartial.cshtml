@@ -5,7 +5,7 @@
  * Description:    this is auto genetated, don't change!
 *************************************************************************************************************************************************/-->
 
-@model XStudio.School.Input.Model.Product.ProductModel
+@model XStudio.School.Input.Model.User.UserModel
 
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
     <div class="form-group">
@@ -13,32 +13,44 @@
         @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Id" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Name, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "请输入Name" })
+        @Html.LabelFor(m => m.Username, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "请输入Username" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Logo, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Logo, new { @class = "form-control", placeholder = "请输入Logo" })
+        @Html.LabelFor(m => m.Password, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Password, new { @class = "form-control", placeholder = "请输入Password" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.ProductcategoryId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.ProductcategoryId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入ProductcategoryId" })
+        @Html.LabelFor(m => m.Nickname, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Nickname, new { @class = "form-control", placeholder = "请输入Nickname" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.MerchantcustomcategoryId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.MerchantcustomcategoryId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入MerchantcustomcategoryId" })
+        @Html.LabelFor(m => m.Email, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "请输入Email" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Introduction, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Introduction, new { @class = "form-control", placeholder = "请输入Introduction" })
+        @Html.LabelFor(m => m.Usertype, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Usertype, new { @class = "form-control", placeholder = "请输入Usertype" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.MerchantId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.MerchantId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入MerchantId" })
+        @Html.LabelFor(m => m.Moblie, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Moblie, new { @class = "form-control", placeholder = "请输入Moblie" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Sex, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Sex, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Sex" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.SchoolId, new { @class = "sr-only" })
         @Html.TextBoxFor(m => m.SchoolId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入SchoolId" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Cash, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Cash, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Cash" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.Point, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Point, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Point" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Status, new { @class = "sr-only" })
@@ -55,19 +67,22 @@
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
 
-<a class="btn btn-primary" href="/product/Product/ViewProduct?id=0" target="_blank" role="button">新增</a>
+<a class="btn btn-primary" href="/user/User/ViewUser?id=0" target="_blank" role="button">新增</a>
 
-<table id="tableProduct" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
+<table id="tableUser" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
     <thead>
     <tr role="row">
         <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Id</th>
-        <th class="sorting_asc" data-data="Name" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Name</th>
-        <th class="sorting_asc" data-data="Logo" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Logo</th>
-        <th class="sorting_asc" data-data="ProductcategoryId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">ProductcategoryId</th>
-        <th class="sorting_asc" data-data="MerchantcustomcategoryId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">MerchantcustomcategoryId</th>
-        <th class="sorting_asc" data-data="Introduction" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Introduction</th>
-        <th class="sorting_asc" data-data="MerchantId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">MerchantId</th>
+        <th class="sorting_asc" data-data="Username" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Username</th>
+        <th class="sorting_asc" data-data="Password" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Password</th>
+        <th class="sorting_asc" data-data="Nickname" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Nickname</th>
+        <th class="sorting_asc" data-data="Email" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Email</th>
+        <th class="sorting_asc" data-data="Usertype" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Usertype</th>
+        <th class="sorting_asc" data-data="Moblie" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Moblie</th>
+        <th class="sorting_asc" data-data="Sex" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Sex</th>
         <th class="sorting_asc" data-data="SchoolId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">SchoolId</th>
+        <th class="sorting_asc" data-data="Cash" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Cash</th>
+        <th class="sorting_asc" data-data="Point" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Point</th>
         <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Status</th>
         <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Createtime</th>
         <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Updatetime</th>
@@ -79,9 +94,9 @@
 <script>
     $(function () {
         $.clearSearchCondition(".my-input-searchcondition");
-        var tables = $('#tableProduct').DataTable({
+        var tables = $('#tableUser').DataTable({
             ajax: {
-                url: $.fn.dataTable.defaults.virtualDir + 'product/Product/ProductsByPaging',
+                url: $.fn.dataTable.defaults.virtualDir + 'user/User/UsersByPaging',
                 data: function (data) {
                     data.CustomFilterParameters = $("#my-form-search").serializeArray();
                     var json = JSON.stringify(data);
@@ -95,23 +110,20 @@
                 render: function (data, type, full, meta) {
                     var json = JSON.stringify(full);
                     var html = '';
-                    var url = $.fn.dataTable.defaults.virtualDir + 'product/Product/ViewProduct?id=' + full.Id;
+                    var url = $.fn.dataTable.defaults.virtualDir + 'user/User/ViewUser?id=' + full.Id;
                     html = '<a class="btn btn-default" href="' + url + '" target="_blank" role="button">查看</a>';
+                    var order_orderurl = $.fn.dataTable.defaults.virtualDir + 'order/Order/OrderIndex?UserId=' + full.Id;
+                    html+='<a class="btn btn-default" href="' + order_orderurl + '" target="_blank" role="button">用户订单</a>';
+                    var user_user_taskurl = $.fn.dataTable.defaults.virtualDir + 'user/UserTask/UserTaskIndex?UserId=' + full.Id;
+                    html+='<a class="btn btn-default" href="' + user_user_taskurl + '" target="_blank" role="button">用户任务</a>';
+                    var user_user_messageurl = $.fn.dataTable.defaults.virtualDir + 'user/UserMessage/UserMessageIndex?UserId=' + full.Id;
+                    html+='<a class="btn btn-default" href="' + user_user_messageurl + '" target="_blank" role="button">用户消息</a>';
                     
                     return html;
                 }
             }
             ,{
-                targets: 6,
-                width: "100px",
-                render: function (data, type, full, meta) {
-                    var json = JSON.stringify(full);
-                    var url = $.fn.dataTable.defaults.virtualDir + 'merchant/Merchant/MerchantIndex?id=' + data;
-                    return '<a href="' + url + '" target="_blank" role="button">'+ data +'</a>';
-                }
-            }
-            ,{
-                targets: 7,
+                targets: 8,
                 width: "100px",
                 render: function (data, type, full, meta) {
                     var json = JSON.stringify(full);

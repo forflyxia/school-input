@@ -21,7 +21,7 @@ Description:    数据库实体模板
     <propertySets>	
      <% foreach(SchemaExplorer.TableSchema SourceTable in SourceDatabase.Tables) { %>
         <% if(CanGenerated(SourceTable, TablePrefix, SpecifyTableName)) { %>
-          <propertySet name="<%=SourceTable.Name%>" output="<%=BaseDir %>\<%=Namespace %>.Web\Views\<%=GetTablePrefix(SourceTable, true) %>\View<%=GetClassName(SourceTable) %>.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="<%=SourceTable.Name%>" output="<%=BaseDir %>\<%=Namespace %>.Web\Areas\<%=GetTablePrefix(SourceTable, true) %>\Views\<%=GetClassName(SourceTable) %>\View<%=GetClassName(SourceTable) %>.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace"><%=Namespace %></property>
               <property name="SourceTable">
                 <connectionString><%=SourceTable.Database.ConnectionString%></connectionString>

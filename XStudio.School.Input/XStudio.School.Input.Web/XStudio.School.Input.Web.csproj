@@ -20,6 +20,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,6 +30,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -37,6 +39,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -50,17 +53,15 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Routing" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
@@ -105,6 +106,7 @@
       <Private>True</Private>
       <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml.Linq" />
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -196,6 +198,88 @@
     <Content Include="Scripts\select2.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\Basic\Views\City\CityIndex.cshtml" />
+    <Content Include="Areas\Basic\Views\City\ViewCity.cshtml" />
+    <Content Include="Areas\Basic\Views\City\_CityModalPartial.cshtml" />
+    <Content Include="Areas\Basic\Views\City\_CityPartial.cshtml" />
+    <Content Include="Areas\Basic\Views\Country\CountryIndex.cshtml" />
+    <Content Include="Areas\Basic\Views\Country\ViewCountry.cshtml" />
+    <Content Include="Areas\Basic\Views\Country\_CountryModalPartial.cshtml" />
+    <Content Include="Areas\Basic\Views\Country\_CountryPartial.cshtml" />
+    <Content Include="Areas\Basic\Views\District\DistrictIndex.cshtml" />
+    <Content Include="Areas\Basic\Views\District\ViewDistrict.cshtml" />
+    <Content Include="Areas\Basic\Views\District\_DistrictModalPartial.cshtml" />
+    <Content Include="Areas\Basic\Views\District\_DistrictPartial.cshtml" />
+    <Content Include="Areas\Basic\Views\Province\ProvinceIndex.cshtml" />
+    <Content Include="Areas\Basic\Views\Province\ViewProvince.cshtml" />
+    <Content Include="Areas\Basic\Views\Province\_ProvinceModalPartial.cshtml" />
+    <Content Include="Areas\Basic\Views\Province\_ProvincePartial.cshtml" />
+    <Content Include="Areas\Image\Views\Image\ImageIndex.cshtml" />
+    <Content Include="Areas\Image\Views\Image\ViewImage.cshtml" />
+    <Content Include="Areas\Image\Views\Image\_ImageModalPartial.cshtml" />
+    <Content Include="Areas\Image\Views\Image\_ImagePartial.cshtml" />
+    <Content Include="Areas\Merchant\Views\MerchantCustomCategory\MerchantCustomCategoryIndex.cshtml" />
+    <Content Include="Areas\Merchant\Views\MerchantCustomCategory\ViewMerchantCustomCategory.cshtml" />
+    <Content Include="Areas\Merchant\Views\MerchantCustomCategory\_MerchantCustomCategoryModalPartial.cshtml" />
+    <Content Include="Areas\Merchant\Views\MerchantCustomCategory\_MerchantCustomCategoryPartial.cshtml" />
+    <Content Include="Areas\Merchant\Views\MerchantImage\MerchantImageIndex.cshtml" />
+    <Content Include="Areas\Merchant\Views\MerchantImage\ViewMerchantImage.cshtml" />
+    <Content Include="Areas\Merchant\Views\MerchantImage\_MerchantImageModalPartial.cshtml" />
+    <Content Include="Areas\Merchant\Views\MerchantImage\_MerchantImagePartial.cshtml" />
+    <Content Include="Areas\Merchant\Views\MerchantMessage\MerchantMessageIndex.cshtml" />
+    <Content Include="Areas\Merchant\Views\MerchantMessage\ViewMerchantMessage.cshtml" />
+    <Content Include="Areas\Merchant\Views\MerchantMessage\_MerchantMessageModalPartial.cshtml" />
+    <Content Include="Areas\Merchant\Views\MerchantMessage\_MerchantMessagePartial.cshtml" />
+    <Content Include="Areas\Merchant\Views\Merchant\MerchantIndex.cshtml" />
+    <Content Include="Areas\Merchant\Views\Merchant\ViewMerchant.cshtml" />
+    <Content Include="Areas\Merchant\Views\Merchant\_MerchantModalPartial.cshtml" />
+    <Content Include="Areas\Merchant\Views\Merchant\_MerchantPartial.cshtml" />
+    <Content Include="Areas\Order\Views\OrderDetail\OrderDetailIndex.cshtml" />
+    <Content Include="Areas\Order\Views\OrderDetail\ViewOrderDetail.cshtml" />
+    <Content Include="Areas\Order\Views\OrderDetail\_OrderDetailModalPartial.cshtml" />
+    <Content Include="Areas\Order\Views\OrderDetail\_OrderDetailPartial.cshtml" />
+    <Content Include="Areas\Order\Views\Order\OrderIndex.cshtml" />
+    <Content Include="Areas\Order\Views\Order\ViewOrder.cshtml" />
+    <Content Include="Areas\Order\Views\Order\_OrderModalPartial.cshtml" />
+    <Content Include="Areas\Order\Views\Order\_OrderPartial.cshtml" />
+    <Content Include="Areas\Promotion\Views\PromotionLadder\PromotionLadderIndex.cshtml" />
+    <Content Include="Areas\Promotion\Views\PromotionLadder\ViewPromotionLadder.cshtml" />
+    <Content Include="Areas\Promotion\Views\PromotionLadder\_PromotionLadderModalPartial.cshtml" />
+    <Content Include="Areas\Promotion\Views\PromotionLadder\_PromotionLadderPartial.cshtml" />
+    <Content Include="Areas\Promotion\Views\Promotion\PromotionIndex.cshtml" />
+    <Content Include="Areas\Promotion\Views\Promotion\ViewPromotion.cshtml" />
+    <Content Include="Areas\Promotion\Views\Promotion\_PromotionModalPartial.cshtml" />
+    <Content Include="Areas\Promotion\Views\Promotion\_PromotionPartial.cshtml" />
+    <Content Include="Areas\School\Views\SchoolBusiness\SchoolBusinessIndex.cshtml" />
+    <Content Include="Areas\School\Views\SchoolBusiness\ViewSchoolBusiness.cshtml" />
+    <Content Include="Areas\School\Views\SchoolBusiness\_SchoolBusinessModalPartial.cshtml" />
+    <Content Include="Areas\School\Views\SchoolBusiness\_SchoolBusinessPartial.cshtml" />
+    <Content Include="Areas\School\Views\SchoolNews\SchoolNewsIndex.cshtml" />
+    <Content Include="Areas\School\Views\SchoolNews\ViewSchoolNews.cshtml" />
+    <Content Include="Areas\School\Views\SchoolNews\_SchoolNewsModalPartial.cshtml" />
+    <Content Include="Areas\School\Views\SchoolNews\_SchoolNewsPartial.cshtml" />
+    <Content Include="Areas\School\Views\School\SchoolIndex.cshtml" />
+    <Content Include="Areas\School\Views\School\ViewSchool.cshtml" />
+    <Content Include="Areas\School\Views\School\_SchoolModalPartial.cshtml" />
+    <Content Include="Areas\School\Views\School\_SchoolPartial.cshtml" />
+    <Content Include="Areas\User\Views\UserMessage\UserMessageIndex.cshtml" />
+    <Content Include="Areas\User\Views\UserMessage\ViewUserMessage.cshtml" />
+    <Content Include="Areas\User\Views\UserMessage\_UserMessageModalPartial.cshtml" />
+    <Content Include="Areas\User\Views\UserMessage\_UserMessagePartial.cshtml" />
+    <Content Include="Areas\User\Views\UserTask\UserTaskIndex.cshtml" />
+    <Content Include="Areas\User\Views\UserTask\ViewUserTask.cshtml" />
+    <Content Include="Areas\User\Views\UserTask\_UserTaskModalPartial.cshtml" />
+    <Content Include="Areas\User\Views\UserTask\_UserTaskPartial.cshtml" />
+    <Content Include="Areas\User\Views\User\UserIndex.cshtml" />
+    <Content Include="Areas\User\Views\User\ViewUser.cshtml" />
+    <Content Include="Areas\User\Views\User\_UserModalPartial.cshtml" />
+    <Content Include="Areas\User\Views\User\_UserPartial.cshtml" />
+    <Content Include="Areas\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Shared\_LoginPartial.cshtml" />
+    <Content Include="Areas\Shared\Error.cshtml" />
+    <Content Include="Areas\_ViewStart.cshtml" />
+    <Content Include="Areas\Web.config" />
+    <None Include="Properties\PublishProfiles\school-input.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\dataTables.bootstrap.js" />
     <Content Include="Scripts\dataTables.bootstrap.min.js" />
@@ -224,9 +308,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Account\_ChangePasswordPartial.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
@@ -238,102 +319,29 @@
     <Content Include="Views\Account\Manage.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Basic\CityIndex.cshtml" />
-    <Content Include="Views\Basic\CountryIndex.cshtml" />
-    <Content Include="Views\Basic\DistrictIndex.cshtml" />
-    <Content Include="Views\Basic\ProvinceIndex.cshtml" />
-    <Content Include="Views\Basic\ViewCity.cshtml" />
-    <Content Include="Views\Basic\ViewCountry.cshtml" />
-    <Content Include="Views\Basic\ViewDistrict.cshtml" />
-    <Content Include="Views\Basic\ViewProvince.cshtml" />
-    <Content Include="Views\Basic\_CityModalPartial.cshtml" />
-    <Content Include="Views\Basic\_CityPartial.cshtml" />
-    <Content Include="Views\Basic\_CountryModalPartial.cshtml" />
-    <Content Include="Views\Basic\_CountryPartial.cshtml" />
-    <Content Include="Views\Basic\_DistrictModalPartial.cshtml" />
-    <Content Include="Views\Basic\_DistrictPartial.cshtml" />
-    <Content Include="Views\Basic\_ProvinceModalPartial.cshtml" />
-    <Content Include="Views\Basic\_ProvincePartial.cshtml" />
-    <Content Include="Views\Image\ImageIndex.cshtml" />
-    <Content Include="Views\Image\ViewImage.cshtml" />
-    <Content Include="Views\Image\_ImageModalPartial.cshtml" />
-    <Content Include="Views\Image\_ImagePartial.cshtml" />
-    <Content Include="Views\Merchant\MerchantCustomCategoryIndex.cshtml" />
-    <Content Include="Views\Merchant\MerchantImageIndex.cshtml" />
-    <Content Include="Views\Merchant\MerchantIndex.cshtml" />
-    <Content Include="Views\Merchant\MerchantMessageIndex.cshtml" />
-    <Content Include="Views\Merchant\ViewMerchant.cshtml" />
-    <Content Include="Views\Merchant\ViewMerchantCustomCategory.cshtml" />
-    <Content Include="Views\Merchant\ViewMerchantImage.cshtml" />
-    <Content Include="Views\Merchant\ViewMerchantMessage.cshtml" />
-    <Content Include="Views\Merchant\_MerchantCustomCategoryModalPartial.cshtml" />
-    <Content Include="Views\Merchant\_MerchantCustomCategoryPartial.cshtml" />
-    <Content Include="Views\Merchant\_MerchantImageModalPartial.cshtml" />
-    <Content Include="Views\Merchant\_MerchantImagePartial.cshtml" />
-    <Content Include="Views\Merchant\_MerchantMessageModalPartial.cshtml" />
-    <Content Include="Views\Merchant\_MerchantMessagePartial.cshtml" />
-    <Content Include="Views\Merchant\_MerchantModalPartial.cshtml" />
-    <Content Include="Views\Merchant\_MerchantPartial.cshtml" />
-    <Content Include="Views\Order\OrderDetailIndex.cshtml" />
-    <Content Include="Views\Order\OrderIndex.cshtml" />
-    <Content Include="Views\Order\ViewOrder.cshtml" />
-    <Content Include="Views\Order\ViewOrderDetail.cshtml" />
-    <Content Include="Views\Order\_OrderDetailModalPartial.cshtml" />
-    <Content Include="Views\Order\_OrderDetailPartial.cshtml" />
-    <Content Include="Views\Order\_OrderModalPartial.cshtml" />
-    <Content Include="Views\Order\_OrderPartial.cshtml" />
-    <Content Include="Views\Product\ProductCategoryIndex.cshtml" />
-    <Content Include="Views\Product\ProductDescriptionIndex.cshtml" />
-    <Content Include="Views\Product\ProductImageIndex.cshtml" />
-    <Content Include="Views\Product\ProductIndex.cshtml" />
-    <Content Include="Views\Product\ProductSizeIndex.cshtml" />
-    <Content Include="Views\Product\ViewProduct.cshtml" />
-    <Content Include="Views\Product\ViewProductCategory.cshtml" />
-    <Content Include="Views\Product\ViewProductDescription.cshtml" />
-    <Content Include="Views\Product\ViewProductImage.cshtml" />
-    <Content Include="Views\Product\ViewProductSize.cshtml" />
-    <Content Include="Views\Product\_ProductCategoryModalPartial.cshtml" />
-    <Content Include="Views\Product\_ProductCategoryPartial.cshtml" />
-    <Content Include="Views\Product\_ProductDescriptionModalPartial.cshtml" />
-    <Content Include="Views\Product\_ProductDescriptionPartial.cshtml" />
-    <Content Include="Views\Product\_ProductImageModalPartial.cshtml" />
-    <Content Include="Views\Product\_ProductImagePartial.cshtml" />
-    <Content Include="Views\Product\_ProductModalPartial.cshtml" />
-    <Content Include="Views\Product\_ProductPartial.cshtml" />
-    <Content Include="Views\Product\_ProductSizeModalPartial.cshtml" />
-    <Content Include="Views\Product\_ProductSizePartial.cshtml" />
-    <Content Include="Views\Promotion\PromotionIndex.cshtml" />
-    <Content Include="Views\Promotion\PromotionLadderIndex.cshtml" />
-    <Content Include="Views\Promotion\ViewPromotion.cshtml" />
-    <Content Include="Views\Promotion\ViewPromotionLadder.cshtml" />
-    <Content Include="Views\Promotion\_PromotionLadderModalPartial.cshtml" />
-    <Content Include="Views\Promotion\_PromotionLadderPartial.cshtml" />
-    <Content Include="Views\Promotion\_PromotionModalPartial.cshtml" />
-    <Content Include="Views\Promotion\_PromotionPartial.cshtml" />
-    <Content Include="Views\School\SchoolBusinessIndex.cshtml" />
-    <Content Include="Views\School\SchoolIndex.cshtml" />
-    <Content Include="Views\School\SchoolNewsIndex.cshtml" />
-    <Content Include="Views\School\ViewSchool.cshtml" />
-    <Content Include="Views\School\ViewSchoolBusiness.cshtml" />
-    <Content Include="Views\School\ViewSchoolNews.cshtml" />
-    <Content Include="Views\School\_SchoolBusinessModalPartial.cshtml" />
-    <Content Include="Views\School\_SchoolBusinessPartial.cshtml" />
-    <Content Include="Views\School\_SchoolModalPartial.cshtml" />
-    <Content Include="Views\School\_SchoolNewsModalPartial.cshtml" />
-    <Content Include="Views\School\_SchoolNewsPartial.cshtml" />
-    <Content Include="Views\School\_SchoolPartial.cshtml" />
-    <Content Include="Views\User\UserIndex.cshtml" />
-    <Content Include="Views\User\UserMessageIndex.cshtml" />
-    <Content Include="Views\User\UserTaskIndex.cshtml" />
-    <Content Include="Views\User\ViewUser.cshtml" />
-    <Content Include="Views\User\ViewUserMessage.cshtml" />
-    <Content Include="Views\User\ViewUserTask.cshtml" />
-    <Content Include="Views\User\_UserMessageModalPartial.cshtml" />
-    <Content Include="Views\User\_UserMessagePartial.cshtml" />
-    <Content Include="Views\User\_UserModalPartial.cshtml" />
-    <Content Include="Views\User\_UserPartial.cshtml" />
-    <Content Include="Views\User\_UserTaskModalPartial.cshtml" />
-    <Content Include="Views\User\_UserTaskPartial.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Areas\Product\Views\Product\_ProductModalPartial.cshtml" />
+    <Content Include="Areas\Product\Views\Product\_ProductPartial.cshtml" />
+    <Content Include="Areas\Product\Views\Product\ProductIndex.cshtml" />
+    <Content Include="Areas\Product\Views\Product\ViewProduct.cshtml" />
+    <Content Include="Areas\Product\Views\ProductCategory\_ProductCategoryModalPartial.cshtml" />
+    <Content Include="Areas\Product\Views\ProductCategory\_ProductCategoryPartial.cshtml" />
+    <Content Include="Areas\Product\Views\ProductCategory\ProductCategoryIndex.cshtml" />
+    <Content Include="Areas\Product\Views\ProductCategory\ViewProductCategory.cshtml" />
+    <Content Include="Areas\Product\Views\ProductDescription\_ProductDescriptionModalPartial.cshtml" />
+    <Content Include="Areas\Product\Views\ProductDescription\_ProductDescriptionPartial.cshtml" />
+    <Content Include="Areas\Product\Views\ProductDescription\ProductDescriptionIndex.cshtml" />
+    <Content Include="Areas\Product\Views\ProductDescription\ViewProductDescription.cshtml" />
+    <Content Include="Areas\Product\Views\ProductImage\_ProductImageModalPartial.cshtml" />
+    <Content Include="Areas\Product\Views\ProductImage\_ProductImagePartial.cshtml" />
+    <Content Include="Areas\Product\Views\ProductImage\ProductImageIndex.cshtml" />
+    <Content Include="Areas\Product\Views\ProductImage\ViewProductImage.cshtml" />
+    <Content Include="Areas\Product\Views\ProductSize\_ProductSizeModalPartial.cshtml" />
+    <Content Include="Areas\Product\Views\ProductSize\_ProductSizePartial.cshtml" />
+    <Content Include="Areas\Product\Views\ProductSize\ProductSizeIndex.cshtml" />
+    <Content Include="Areas\Product\Views\ProductSize\ViewProductSize.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -381,7 +389,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>false</UseIIS>
+          <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>60219</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

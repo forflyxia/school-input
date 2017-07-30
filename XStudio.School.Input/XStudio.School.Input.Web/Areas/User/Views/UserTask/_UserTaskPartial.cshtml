@@ -85,6 +85,15 @@
                     return '<a href="' + url + '" target="_blank" role="button">'+ data +'</a>';
                 }
             }
+            ,{
+                targets: 2,
+                width: "100px",
+                render: function (data, type, full, meta) {
+                    var json = JSON.stringify(full);
+                    var url = $.fn.dataTable.defaults.virtualDir + 'order/Order/OrderIndex?id=' + data;
+                    return '<a href="' + url + '" target="_blank" role="button">'+ data +'</a>';
+                }
+            }
             ]
         });
         $(".my-btn-search").on("click", function () {

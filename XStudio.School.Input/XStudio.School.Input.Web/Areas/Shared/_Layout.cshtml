@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("帮帮乐", "Index", "Home", new { Area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("商户列表", "MerchantIndex", "Merchant", new { Area = "Merchant" }, null)</li>
+                    <li>@Html.ActionLink("学校列表", "SchoolIndex", "School", new { Area = "School" }, null)</li>
+                    <li>@Html.ActionLink("产品列表", "ProductIndex", "Product", new { Area = "Product" }, null)</li>
+                    <li>@Html.ActionLink("订单列表", "OrderIndex", "Order", new { Area = "Order" }, null)</li>
+                    <li>@Html.ActionLink("用户列表", "UserIndex", "User", new { Area = "User" }, null)</li>
+                    <li>@Html.ActionLink("促销列表", "PromotionIndex", "Promotion", new { Area = "Promotion" }, null)</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+<div class="container body-content">
+    @RenderBody()
+    <hr/>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
+</div>
+    @Scripts.Render("~/bundles/my")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

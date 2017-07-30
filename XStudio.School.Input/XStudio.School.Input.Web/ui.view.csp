@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <codeSmith xmlns="http://www.codesmithtools.com/schema/csp.xsd">
     <propertySets>	
-          <propertySet name="basic_city" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Basic\ViewCity.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="basic_city" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Basic\Views\City\ViewCity.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -12,7 +12,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="basic_country" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Basic\ViewCountry.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="basic_country" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Basic\Views\Country\ViewCountry.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -23,7 +23,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="basic_district" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Basic\ViewDistrict.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="basic_district" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Basic\Views\District\ViewDistrict.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -34,7 +34,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="basic_province" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Basic\ViewProvince.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="basic_province" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Basic\Views\Province\ViewProvince.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -45,7 +45,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="image_image" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Image\ViewImage.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="image_image" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Image\Views\Image\ViewImage.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -56,7 +56,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="merchant_merchant" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Merchant\ViewMerchant.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="merchant_merchant" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Merchant\Views\Merchant\ViewMerchant.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -67,7 +67,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="merchant_merchant_custom_category" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Merchant\ViewMerchantCustomCategory.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="merchant_merchant_custom_category" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Merchant\Views\MerchantCustomCategory\ViewMerchantCustomCategory.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -78,7 +78,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="merchant_merchant_image" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Merchant\ViewMerchantImage.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="merchant_merchant_image" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Merchant\Views\MerchantImage\ViewMerchantImage.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -89,7 +89,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="merchant_merchant_message" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Merchant\ViewMerchantMessage.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="merchant_merchant_message" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Merchant\Views\MerchantMessage\ViewMerchantMessage.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -100,7 +100,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="order_order" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Order\ViewOrder.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="order_order" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Order\Views\Order\ViewOrder.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -111,7 +111,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="order_order_detail" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Order\ViewOrderDetail.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="order_order_detail" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Order\Views\OrderDetail\ViewOrderDetail.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -122,7 +122,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="product_product" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Product\ViewProduct.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="product_product" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Product\Views\Product\ViewProduct.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -133,7 +133,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="product_product_category" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Product\ViewProductCategory.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="product_product_category" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Product\Views\ProductCategory\ViewProductCategory.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -144,7 +144,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="product_product_description" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Product\ViewProductDescription.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="product_product_description" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Product\Views\ProductDescription\ViewProductDescription.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -155,7 +155,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="product_product_image" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Product\ViewProductImage.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="product_product_image" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Product\Views\ProductImage\ViewProductImage.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -166,7 +166,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="product_product_size" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Product\ViewProductSize.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="product_product_size" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Product\Views\ProductSize\ViewProductSize.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -177,7 +177,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="promotion_promotion" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Promotion\ViewPromotion.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="promotion_promotion" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Promotion\Views\Promotion\ViewPromotion.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -188,7 +188,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="promotion_promotion_ladder" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\Promotion\ViewPromotionLadder.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="promotion_promotion_ladder" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\Promotion\Views\PromotionLadder\ViewPromotionLadder.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -199,7 +199,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="school_school" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\School\ViewSchool.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="school_school" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\School\Views\School\ViewSchool.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -210,7 +210,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="school_school_business" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\School\ViewSchoolBusiness.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="school_school_business" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\School\Views\SchoolBusiness\ViewSchoolBusiness.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -221,7 +221,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="school_school_news" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\School\ViewSchoolNews.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="school_school_news" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\School\Views\SchoolNews\ViewSchoolNews.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -232,7 +232,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="user_user" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\User\ViewUser.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="user_user" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\User\Views\User\ViewUser.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -243,7 +243,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="user_user_message" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\User\ViewUserMessage.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="user_user_message" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\User\Views\UserMessage\ViewUserMessage.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>
@@ -254,7 +254,7 @@
                 </table>
               </property>
         </propertySet>
-          <propertySet name="user_user_task" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Views\User\ViewUserTask.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
+          <propertySet name="user_user_task" output="D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Web\Areas\User\Views\UserTask\ViewUserTask.cshtml" template="..\..\support\codegenerator\cst\ui\template\view.cst">
               <property name="Namespace">XStudio.School.Input</property>
               <property name="SourceTable">
                 <connectionString>Server=139.196.125.208;port=3306;UID=root;password=Xiaoyuan123456;database=school;</connectionString>

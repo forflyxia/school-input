@@ -14,6 +14,13 @@ namespace XStudio.School.Input.Web.App_Start
         private static List<string> ExpandLocations = new List<string>
         {
             "~/Views/School/{1}/{0}.cshtml",
+            "~/Views/Merchant/{1}/{0}.cshtml",
+            "~/Views/User/{1}/{0}.cshtml",
+            "~/Views/Product/{1}/{0}.cshtml",
+            "~/Views/Order/{1}/{0}.cshtml",
+            "~/Views/Image/{1}/{0}.cshtml",
+            "~/Views/Promotion/{1}/{0}.cshtml",
+            "~/Views/Basic/{1}/{0}.cshtml",
         };
 
         /// <summary>

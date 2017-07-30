@@ -21,7 +21,7 @@ public class TableRelationEntity
 }
 
 /// <summary>
-/// 外键配置
+/// 外键配置(列表页超链接)
 /// </summary>
 public Dictionary<string, string> foreignKeyTableConfigMap = new Dictionary<string, string>
 {
@@ -30,14 +30,41 @@ public Dictionary<string, string> foreignKeyTableConfigMap = new Dictionary<stri
     {"productid", "product_product"},
     {"userid", "user_user"},
     {"promotionid", "promotion_promotion"},
+    {"imageid", "image_image"},
+    {"orderid", "order_order"},
 };
 
 /// <summary>
-/// 表关系配置
+/// 表关系配置(列表自定义操作按钮)
 /// </summary>
 public Dictionary<string, List<TableRelationEntity>> tableRelationConfigMap = new Dictionary<string, List<TableRelationEntity>>
 {
-    {"merchant_merchant", new List<TableRelationEntity> { new TableRelationEntity { Title="商户产品", RelationTable = "product_product", Model = 2 }}},
+    {"merchant_merchant", new List<TableRelationEntity> { 
+        new TableRelationEntity { Title="商户产品", RelationTable = "product_product", Model = 2 },
+        new TableRelationEntity { Title="商户订单", RelationTable = "order_order", Model = 2 }, 
+        new TableRelationEntity { Title="商户类别", RelationTable = "merchant_merchant_custom_category", Model = 2 },
+        new TableRelationEntity { Title="商户图片", RelationTable = "merchant_merchant_image", Model = 2 },
+        new TableRelationEntity { Title="商户促销", RelationTable = "promotion_promotion", Model = 2 },
+        new TableRelationEntity { Title="商户消息", RelationTable = "merchant_merchant_message", Model = 2 }}
+    },
+    
+    {"product_product", new List<TableRelationEntity> {
+        new TableRelationEntity { Title="产品描述", RelationTable = "product_product_description", Model = 1 },
+        new TableRelationEntity { Title="产品图片", RelationTable = "product_product_image", Model = 2 },
+        new TableRelationEntity { Title="产品尺寸", RelationTable = "product_product_size", Model = 2 }}
+    },
+    
+    {"school_school", new List<TableRelationEntity> { 
+        new TableRelationEntity { Title="用户订单", RelationTable = "order_order", Model = 2 },
+        new TableRelationEntity { Title="学校业务", RelationTable = "school_school_business", Model = 2 },
+        new TableRelationEntity { Title="学校新闻", RelationTable = "school_school_news", Model = 2 }}
+    },
+    
+    {"user_user", new List<TableRelationEntity> { 
+        new TableRelationEntity { Title="用户订单", RelationTable = "order_order", Model = 2 }, 
+        new TableRelationEntity { Title="用户任务", RelationTable = "user_user_task", Model = 2 },
+        new TableRelationEntity { Title="用户消息", RelationTable = "user_user_message", Model = 2 }}
+    },
 };
 
 /// <summary>
