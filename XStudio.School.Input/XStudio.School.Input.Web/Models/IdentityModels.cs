@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 
 namespace XStudio.School.Input.Web.Models
 {
@@ -9,8 +10,13 @@ namespace XStudio.School.Input.Web.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        static ApplicationDbContext()
+        {
+            Database.SetInitializer(new MySqlInitializer());
+        }
+
         public ApplicationDbContext()
-            : base("DefaultConnection")
+            : base("AdminContext")
         {
         }
     }

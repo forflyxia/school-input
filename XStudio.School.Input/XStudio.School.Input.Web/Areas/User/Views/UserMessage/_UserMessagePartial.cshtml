@@ -10,27 +10,27 @@
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
     <div class="form-group">
         @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Id" })
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入用户消息主键" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.UserId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.UserId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入UserId" })
+        @Html.TextBoxFor(m => m.UserId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入用户id" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Message, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Message, new { @class = "form-control", placeholder = "请输入Message" })
+        @Html.TextBoxFor(m => m.Message, new { @class = "form-control", placeholder = "请输入消息" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Status, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Status" })
+        @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-searchcondition", placeholder = "请输入状态" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入Createtime" })
+        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入Updatetime" })
+        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入" })
     </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
@@ -40,12 +40,12 @@
 <table id="tableUserMessage" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
     <thead>
     <tr role="row">
-        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Id</th>
-        <th class="sorting_asc" data-data="UserId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">UserId</th>
-        <th class="sorting_asc" data-data="Message" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Message</th>
-        <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Status</th>
-        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Createtime</th>
-        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Updatetime</th>
+        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">用户消息主键</th>
+        <th class="sorting_asc" data-data="UserId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">用户id</th>
+        <th class="sorting_asc" data-data="Message" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">消息</th>
+        <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">状态</th>
+        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"></th>
+        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"></th>
         <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">操作</th>
     </tr>
     </thead>

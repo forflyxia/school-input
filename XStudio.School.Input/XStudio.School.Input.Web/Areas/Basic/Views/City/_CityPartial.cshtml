@@ -10,43 +10,43 @@
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
     <div class="form-group">
         @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Id" })
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入城市信息主键" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Name, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "请输入Name" })
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "请输入城市名称" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Ename, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Ename, new { @class = "form-control", placeholder = "请输入Ename" })
+        @Html.TextBoxFor(m => m.Ename, new { @class = "form-control", placeholder = "请输入城市英文名称" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Citycode, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Citycode, new { @class = "form-control", placeholder = "请输入Citycode" })
+        @Html.TextBoxFor(m => m.Citycode, new { @class = "form-control", placeholder = "请输入城市三字码" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Zipcode, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Zipcode, new { @class = "form-control", placeholder = "请输入Zipcode" })
+        @Html.TextBoxFor(m => m.Zipcode, new { @class = "form-control", placeholder = "请输入邮编" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ProvinceId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.ProvinceId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入ProvinceId" })
+        @Html.TextBoxFor(m => m.ProvinceId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入所属省份id" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.CountryId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.CountryId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入CountryId" })
+        @Html.TextBoxFor(m => m.CountryId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入所属国家id" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Status, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Status" })
+        @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-searchcondition", placeholder = "请输入状态" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入Createtime" })
+        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入Updatetime" })
+        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入" })
     </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
@@ -56,16 +56,16 @@
 <table id="tableCity" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
     <thead>
     <tr role="row">
-        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Id</th>
-        <th class="sorting_asc" data-data="Name" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Name</th>
-        <th class="sorting_asc" data-data="Ename" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Ename</th>
-        <th class="sorting_asc" data-data="Citycode" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Citycode</th>
-        <th class="sorting_asc" data-data="Zipcode" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Zipcode</th>
-        <th class="sorting_asc" data-data="ProvinceId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">ProvinceId</th>
-        <th class="sorting_asc" data-data="CountryId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">CountryId</th>
-        <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Status</th>
-        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Createtime</th>
-        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Updatetime</th>
+        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">城市信息主键</th>
+        <th class="sorting_asc" data-data="Name" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">城市名称</th>
+        <th class="sorting_asc" data-data="Ename" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">城市英文名称</th>
+        <th class="sorting_asc" data-data="Citycode" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">城市三字码</th>
+        <th class="sorting_asc" data-data="Zipcode" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">邮编</th>
+        <th class="sorting_asc" data-data="ProvinceId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">所属省份id</th>
+        <th class="sorting_asc" data-data="CountryId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">所属国家id</th>
+        <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">状态</th>
+        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"></th>
+        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"></th>
         <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">操作</th>
     </tr>
     </thead>

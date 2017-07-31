@@ -18,121 +18,121 @@
             {
                 @Html.ValidationSummary(true)
                 <div class="form-group hidden">
-                    @Html.LabelFor(m => m.Id, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Id, "主键", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Id, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Name, "商户名称", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Shortname, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Shortname, "商户短名称", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Shortname, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Branch, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Branch, "商户分店", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Branch, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Logo, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Logo, "商户logo", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Logo, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Introduction, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Introduction, "简介", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Introduction, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Contact, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Contact, "联系人", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Contact, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Telphone, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Telphone, "电话", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Telphone, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Mobliephone, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Mobliephone, "手机", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Mobliephone, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Businesslicence, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Businesslicence, "营业执照", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Businesslicence, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Legalperson, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Legalperson, "法人", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Legalperson, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.DistrictId, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.DistrictId, "所属行政区", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.DistrictId, new { @class = "form-control my-input-edit" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Address, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Address, "地址", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Longitude, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Longitude, "经度", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Longitude, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Latitude, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Latitude, "纬度", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Latitude, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Cash, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Cash, "现金", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Cash, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Point, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Point, "积分", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Point, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Status, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Status, "状态", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-edit" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Createtime, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Createtime, "", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-datepicker" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Updatetime, new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Updatetime, "", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-datepicker" })
                     </div>

@@ -14,79 +14,79 @@ using System.Web;
 namespace XStudio.School.Input.Domain.PO.School
 {
     /// <summary>
-    /// 
+    /// 订单信息
     /// </summary>
     [Table("order_order")]
     public partial class OrderPO
     {
 		/// <summary>
-		/// 
+		/// 订单信息id主键
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 
+		/// 用户id
 		/// </summary>
 		public int UserId { get; set; }
         
 		/// <summary>
-		/// 
+		/// 联系人
 		/// </summary>
 		public string Contact { get; set; }
         
 		/// <summary>
-		/// 
+		/// 电话
 		/// </summary>
 		public string Telphone { get; set; }
         
 		/// <summary>
-		/// 
+		/// 手机
 		/// </summary>
 		public string Mobliephone { get; set; }
         
 		/// <summary>
-		/// 
+		/// 总金额
 		/// </summary>
 		public decimal Totalamount { get; set; }
         
 		/// <summary>
-		/// 
+		/// 减免金额
 		/// </summary>
 		public decimal Reduction { get; set; }
         
 		/// <summary>
-		/// 
+		/// 实收金额
 		/// </summary>
 		public decimal AmountpaId { get; set; }
         
 		/// <summary>
-		/// 
+		/// 优惠券id
 		/// </summary>
 		public string PromotionId { get; set; }
         
 		/// <summary>
-		/// 
+		/// 优惠阶梯id
 		/// </summary>
 		public string PromotionladderId { get; set; }
         
 		/// <summary>
-		/// 
+		/// 配送学校id
 		/// </summary>
 		public int SchoolId { get; set; }
         
 		/// <summary>
-		/// 
+		/// 配送地址
 		/// </summary>
 		public string Deliveryaddress { get; set; }
         
 		/// <summary>
-		/// 
+		/// 备注
 		/// </summary>
 		public string Remark { get; set; }
         
 		/// <summary>
-		/// 
+		/// 订单状态
 		/// </summary>
 		public int Status { get; set; }
         

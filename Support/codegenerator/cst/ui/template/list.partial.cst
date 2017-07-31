@@ -29,7 +29,7 @@ Description:
     <%foreach(ColumnSchema column in SourceTable.Columns) { %>    
     <div class="form-group">
         @Html.LabelFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "form-control<%=GetSearchInputCssName(column) %>", placeholder = "请输入<%=FirstLetterToPascal(column.Name) %>" })
+        @Html.TextBoxFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "form-control<%=GetSearchInputCssName(column) %>", placeholder = "请输入<%=column.Description %>" })
     </div>
     <%} %>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
@@ -41,7 +41,7 @@ Description:
     <thead>
     <tr role="row">
         <%foreach(ColumnSchema column in SourceTable.Columns) { %>      
-        <th class="sorting_asc" data-data="<%=FirstLetterToPascal(column.Name) %>" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"><%=FirstLetterToPascal(column.Name) %></th>
+        <th class="sorting_asc" data-data="<%=FirstLetterToPascal(column.Name) %>" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"><%=column.Description %></th>
         <%} %>
         <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">操作</th>
     </tr>

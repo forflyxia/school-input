@@ -10,39 +10,39 @@
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
     <div class="form-group">
         @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Id" })
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入订单详情id主键" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.OrderId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.OrderId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入OrderId" })
+        @Html.TextBoxFor(m => m.OrderId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入订单id" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ProductId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.ProductId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入ProductId" })
+        @Html.TextBoxFor(m => m.ProductId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入商品id" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ProductsizeId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.ProductsizeId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入ProductsizeId" })
+        @Html.TextBoxFor(m => m.ProductsizeId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入商品规格id" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Unitprice, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Unitprice, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Unitprice" })
+        @Html.TextBoxFor(m => m.Unitprice, new { @class = "form-control my-input-searchcondition", placeholder = "请输入单价" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Quantity, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Quantity" })
+        @Html.TextBoxFor(m => m.Quantity, new { @class = "form-control my-input-searchcondition", placeholder = "请输入购买数量" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Status, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-searchcondition", placeholder = "请输入Status" })
+        @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-searchcondition", placeholder = "请输入订单状态" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入Createtime" })
+        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入Updatetime" })
+        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入" })
     </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
@@ -52,15 +52,15 @@
 <table id="tableOrderDetail" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
     <thead>
     <tr role="row">
-        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Id</th>
-        <th class="sorting_asc" data-data="OrderId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">OrderId</th>
-        <th class="sorting_asc" data-data="ProductId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">ProductId</th>
-        <th class="sorting_asc" data-data="ProductsizeId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">ProductsizeId</th>
-        <th class="sorting_asc" data-data="Unitprice" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Unitprice</th>
-        <th class="sorting_asc" data-data="Quantity" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Quantity</th>
-        <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Status</th>
-        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Createtime</th>
-        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Updatetime</th>
+        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">订单详情id主键</th>
+        <th class="sorting_asc" data-data="OrderId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">订单id</th>
+        <th class="sorting_asc" data-data="ProductId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">商品id</th>
+        <th class="sorting_asc" data-data="ProductsizeId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">商品规格id</th>
+        <th class="sorting_asc" data-data="Unitprice" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">单价</th>
+        <th class="sorting_asc" data-data="Quantity" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">购买数量</th>
+        <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">订单状态</th>
+        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"></th>
+        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"></th>
         <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">操作</th>
     </tr>
     </thead>
