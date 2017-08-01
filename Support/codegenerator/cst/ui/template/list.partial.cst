@@ -26,11 +26,13 @@ Description:
 @model <%=Namespace %>.Model.<%=GetTablePrefix(SourceTable, true) %>.<%=GetClassName(SourceTable) %>Model
 
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
-    <%foreach(ColumnSchema column in SourceTable.Columns) { %>    
-    <div class="form-group">
-        @Html.LabelFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "form-control<%=GetSearchInputCssName(column) %>", placeholder = "请输入<%=column.Description %>" })
-    </div>
+    <%foreach(ColumnSchema column in SourceTable.Columns) { %>
+        <%if(IsQuery(column)) { %>
+        <div class="form-group">
+            @Html.LabelFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "form-control<%=GetSearchInputCssName(column) %>", placeholder = "请输入<%=GetDescription(column) %>" })
+        </div>
+        <%} %>
     <%} %>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
@@ -40,8 +42,10 @@ Description:
 <table id="table<%=GetClassName(SourceTable) %>" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
     <thead>
     <tr role="row">
-        <%foreach(ColumnSchema column in SourceTable.Columns) { %>      
-        <th class="sorting_asc" data-data="<%=FirstLetterToPascal(column.Name) %>" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"><%=column.Description %></th>
+        <%foreach(ColumnSchema column in SourceTable.Columns) { %>  
+        <%if(IsShowList(column)) { %>
+        <th class="sorting_asc" data-data="<%=FirstLetterToPascal(column.Name) %>" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"><%=GetDescription(column) %></th>
+        <%} %>
         <%} %>
         <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">操作</th>
     </tr>

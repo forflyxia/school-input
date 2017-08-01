@@ -182,17 +182,6 @@ public TableSchema GetForigenKeyTableSchema(ColumnSchema column)
     return null;
 }
 
-public string FirstLetterToPascal(string s)
-{
-    string str = s.Substring(0, 1).ToUpper() + s.Substring(1);
-    return KeyWordsReplace(str);
-}
-
-public string FirstLetterToCamel(string s)
-{
-    return s.Substring(0, 1).ToLower() + s.Substring(1);
-}
-
 public string GetSearchInputCssName(ColumnSchema column)
 {
     string csharpType = GetCSharpVariableType(column);
@@ -221,6 +210,56 @@ public string GetEditInputCssName(ColumnSchema column)
     return "";
 }
 
+/// <summary>
+/// 获取10个代码号（0000000000;1：可编辑；2：可查询；3：列表显示；4：富文本；5：外键；其他待定）
+/// </summary>
+/// <param name="column"></param>
+/// <returns></returns>
+public static string GetTargetNumber(ColumnSchema column)
+{
+    string description = column.Description;
+    Match match = Regex.Match(description, @"\d{10}");
+    string numbers = match.Groups[0].Value;
+    if(!string.IsNullOrWhiteSpace(numbers))
+    {
+        return numbers;
+    }
+    return "1111111111";
+}
+
+/// <summary>
+/// 获取说明
+/// </summary>
+/// <param name="column"></param>
+/// <returns></returns>
+public static string GetDescription(ColumnSchema column)
+{
+    string description = column.Description;
+    description = Regex.Replace(description, @"\d{10}", "");
+    return string.IsNullOrWhiteSpace(description) ? column.Description : description;
+}
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="s"></param>
+/// <returns></returns>
+public string FirstLetterToPascal(string s)
+{
+    string str = s.Substring(0, 1).ToUpper() + s.Substring(1);
+    return KeyWordsReplace(str);
+}
+
+/// <summary>
+/// 
+/// </summary>
+/// <param name="s"></param>
+/// <returns></returns>
+public string FirstLetterToCamel(string s)
+{
+    return s.Substring(0, 1).ToLower() + s.Substring(1);
+}
+
 public string KeyWordsReplace(string s)
 {
     string str = s;
@@ -234,28 +273,39 @@ public string KeyWordsReplace(string s)
     return str;
 }
 
-/// <summary>
-/// 获取10个代码号（0000000000-1：可编辑；2：可查询；3：列表显示；4：富文本；5：外键；其他待定）
-/// </summary>
-/// <param name="column"></param>
-/// <returns></returns>
-public static string GetTargetNumber(ColumnSchema column)
+public bool CanGenerated(TableSchema sourceTable, string requestTablePrefix, string specifyTableName) 
 {
-    string description = column.Description;
-    Match match = Regex.Match(description, @"\d{10}");
-    return match.Groups[0].Value;
+    if (!string.IsNullOrWhiteSpace(specifyTableName))
+	{
+	    return string.Equals(sourceTable.Name, specifyTableName, StringComparison.OrdinalIgnoreCase);
+	}
+    
+    if (!string.IsNullOrWhiteSpace(requestTablePrefix))
+	{
+        string tablePrefix = GetTablePrefix(sourceTable);
+        return string.Equals(tablePrefix, requestTablePrefix, StringComparison.OrdinalIgnoreCase);
+	}
+    return true;    
 }
 
 /// <summary>
-/// 获取说明
+/// 是否外键
 /// </summary>
 /// <param name="column"></param>
 /// <returns></returns>
-public static string GetDescription(ColumnSchema column)
+public bool IsForeignKey(ColumnSchema column) 
 {
-    string description = column.Description;
-    description = Regex.Replace(description, @"\d{10}", "");
-    return description;
+    string columnName = column.Name;
+    if (!columnName.Contains("Id"))
+	{
+		 return false;
+	}
+    string tableName = columnName.Replace("Id", "");
+    if (!column.Database.Tables.Contains(tableName))
+	{
+		 return false;
+	}
+    return true;
 }
 
 /// <summary>
@@ -295,7 +345,7 @@ public static bool IsEdit(ColumnSchema column)
 }
 
 /// <summary>
-/// 是否在列表显示里出现
+/// 是否在列表显示里出现（Repeater）
 /// </summary>
 /// <param name="column"></param>
 /// <returns></returns>
@@ -328,36 +378,6 @@ public static bool IsFCKeditor(ColumnSchema column)
     {
         return false;
     }
-}
-
-public bool CanGenerated(TableSchema sourceTable, string requestTablePrefix, string specifyTableName) 
-{
-    if (!string.IsNullOrWhiteSpace(specifyTableName))
-	{
-	    return string.Equals(sourceTable.Name, specifyTableName, StringComparison.OrdinalIgnoreCase);
-	}
-    
-    if (!string.IsNullOrWhiteSpace(requestTablePrefix))
-	{
-        string tablePrefix = GetTablePrefix(sourceTable);
-        return string.Equals(tablePrefix, requestTablePrefix, StringComparison.OrdinalIgnoreCase);
-	}
-    return true;    
-}
-
-public bool IsForeignKey(ColumnSchema column) 
-{
-    string columnName = column.Name;
-    if (!columnName.Contains("Id"))
-	{
-		 return false;
-	}
-    string tableName = columnName.Replace("Id", "");
-    if (!column.Database.Tables.Contains(tableName))
-	{
-		 return false;
-	}
-    return true;
 }
 
 </script>

@@ -35,16 +35,16 @@ Description:
             {
                 @Html.ValidationSummary(true)
                 <%foreach(ColumnSchema column in SourceTable.Columns) { %>  
-                <%if(column.IsPrimaryKeyMember) { %>
+                <%if(column.IsPrimaryKeyMember || !IsEdit(column)) { %>
                 <div class="form-group hidden">
-                    @Html.LabelFor(m => m.<%=FirstLetterToPascal(column.Name) %>, "<%=column.Description %>", new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.<%=FirstLetterToPascal(column.Name) %>, "<%=GetDescription(column) %>", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "form-control" })
                     </div>
                 </div>
                 <%} else { %>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.<%=FirstLetterToPascal(column.Name) %>, "<%=column.Description %>", new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.<%=FirstLetterToPascal(column.Name) %>, "<%=GetDescription(column) %>", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.<%=FirstLetterToPascal(column.Name) %>, new { @class = "form-control<%=GetEditInputCssName(column) %>" })
                     </div>
