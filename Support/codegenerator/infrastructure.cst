@@ -8,6 +8,7 @@ Description:
 <%@ Import Namespace="SchemaExplorer" %>
 <%@ Assembly Name="System.Data" %>
 <%@ Import Namespace="System.Collections.Generic" %>
+<%@ Import Namespace="System.Text.RegularExpressions" %>
 
 <script runat="template">
 
@@ -231,6 +232,102 @@ public string KeyWordsReplace(string s)
     	}		
 	}
     return str;
+}
+
+/// <summary>
+/// 获取10个代码号（0000000000-1：可编辑；2：可查询；3：列表显示；4：富文本；5：外键；其他待定）
+/// </summary>
+/// <param name="column"></param>
+/// <returns></returns>
+public static string GetTargetNumber(ColumnSchema column)
+{
+    string description = column.Description;
+    Match match = Regex.Match(description, @"\d{10}");
+    return match.Groups[0].Value;
+}
+
+/// <summary>
+/// 获取说明
+/// </summary>
+/// <param name="column"></param>
+/// <returns></returns>
+public static string GetDescription(ColumnSchema column)
+{
+    string description = column.Description;
+    description = Regex.Replace(description, @"\d{10}", "");
+    return description;
+}
+
+/// <summary>
+/// 是否可查询
+/// </summary>
+/// <param name="column"></param>
+/// <returns></returns>
+public static bool IsQuery(ColumnSchema column)
+{
+    string number = GetTargetNumber(column);
+    if (number[1] == '1')
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+/// <summary>
+/// 是否可编辑
+/// </summary>
+/// <param name="column"></param>
+/// <returns></returns>
+public static bool IsEdit(ColumnSchema column)
+{
+    string number = GetTargetNumber(column);
+    if (number[0] == '1')
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+/// <summary>
+/// 是否在列表显示里出现
+/// </summary>
+/// <param name="column"></param>
+/// <returns></returns>
+public static bool IsShowList(ColumnSchema column)
+{
+    string number = GetTargetNumber(column);
+    if (number[2] == '1')
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+/// <summary>
+/// 是否富文本形式出现
+/// </summary>
+/// <param name="column"></param>
+/// <returns></returns>
+public static bool IsFCKeditor(ColumnSchema column)
+{
+    string number = GetTargetNumber(column);
+    if (number[3] == '1')
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 public bool CanGenerated(TableSchema sourceTable, string requestTablePrefix, string specifyTableName) 
