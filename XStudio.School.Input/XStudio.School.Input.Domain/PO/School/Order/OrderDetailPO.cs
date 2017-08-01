@@ -20,23 +20,23 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class OrderDetailPO
     {
 		/// <summary>
-		/// 订单详情id主键
+		/// 订单详情ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 订单id
+		/// 订单ID
 		/// </summary>
 		public int OrderId { get; set; }
         
 		/// <summary>
-		/// 商品id
+		/// 商品ID
 		/// </summary>
 		public int ProductId { get; set; }
         
 		/// <summary>
-		/// 商品规格id
+		/// 商品规格ID
 		/// </summary>
 		public int ProductsizeId { get; set; }
         
@@ -56,12 +56,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

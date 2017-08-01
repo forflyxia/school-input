@@ -10,15 +10,15 @@
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
     <div class="form-group">
         @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入学校新闻主键" })
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入学校新闻ID" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.SchoolId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.SchoolId, new { @class = "form-control", placeholder = "请输入学校id" })
+        @Html.TextBoxFor(m => m.SchoolId, new { @class = "form-control", placeholder = "请输入学校ID" })
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Title, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Title, new { @class = "form-control", placeholder = "请输入新闻title" })
+        @Html.LabelFor(m => m.Newstitle, new { @class = "sr-only" })
+        @Html.TextBoxFor(m => m.Newstitle, new { @class = "form-control", placeholder = "请输入新闻标题" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.News, new { @class = "sr-only" })
@@ -30,11 +30,11 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入" })
+        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入创建时间" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入" })
+        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入修改时间" })
     </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
@@ -44,13 +44,13 @@
 <table id="tableSchoolNews" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
     <thead>
     <tr role="row">
-        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">学校新闻主键</th>
-        <th class="sorting_asc" data-data="SchoolId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">学校id</th>
-        <th class="sorting_asc" data-data="Title" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">新闻title</th>
+        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">学校新闻ID</th>
+        <th class="sorting_asc" data-data="SchoolId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">学校ID</th>
+        <th class="sorting_asc" data-data="Newstitle" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">新闻标题</th>
         <th class="sorting_asc" data-data="News" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">新闻</th>
         <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">状态</th>
-        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"></th>
-        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"></th>
+        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">创建时间</th>
+        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">修改时间</th>
         <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">操作</th>
     </tr>
     </thead>

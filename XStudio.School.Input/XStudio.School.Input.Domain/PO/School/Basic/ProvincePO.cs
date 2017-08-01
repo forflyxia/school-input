@@ -20,23 +20,23 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class ProvincePO
     {
 		/// <summary>
-		/// 省份信息主键
+		/// 省份ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 省份名称
+		/// 名称
 		/// </summary>
 		public string Name { get; set; }
         
 		/// <summary>
-		/// 省份英文名称
+		/// 英文名称
 		/// </summary>
 		public string Ename { get; set; }
         
 		/// <summary>
-		/// 所属国家id
+		/// 国家ID
 		/// </summary>
 		public int CountryId { get; set; }
         
@@ -46,12 +46,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

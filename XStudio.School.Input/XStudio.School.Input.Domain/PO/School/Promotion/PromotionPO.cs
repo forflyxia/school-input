@@ -20,18 +20,18 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class PromotionPO
     {
 		/// <summary>
-		/// 促销信息主键
+		/// 促销ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 促销名称
+		/// 名称
 		/// </summary>
 		public string Name { get; set; }
         
 		/// <summary>
-		/// 促销短名称
+		/// 短名称
 		/// </summary>
 		public string Shortname { get; set; }
         
@@ -41,7 +41,7 @@ namespace XStudio.School.Input.Domain.PO.School
 		public string Description { get; set; }
         
 		/// <summary>
-		/// 适用产品类别
+		/// 适用产品类别ID
 		/// </summary>
 		public string ProductcategoryId { get; set; }
         
@@ -56,7 +56,7 @@ namespace XStudio.School.Input.Domain.PO.School
 		public DateTime Expiredate { get; set; }
         
 		/// <summary>
-		/// 所属商户id
+		/// 所属商户ID
 		/// </summary>
 		public int MerchantId { get; set; }
         
@@ -76,12 +76,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

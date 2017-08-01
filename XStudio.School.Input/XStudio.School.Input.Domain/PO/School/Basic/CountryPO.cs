@@ -20,18 +20,18 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class CountryPO
     {
 		/// <summary>
-		/// 国家信息主键
+		/// 国家ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 国家名称
+		/// 名称
 		/// </summary>
 		public string Name { get; set; }
         
 		/// <summary>
-		/// 国家英文名称
+		/// 英文名称
 		/// </summary>
 		public string Ename { get; set; }
         
@@ -41,12 +41,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

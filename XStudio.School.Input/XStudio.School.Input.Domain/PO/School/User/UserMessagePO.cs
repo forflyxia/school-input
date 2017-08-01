@@ -20,13 +20,13 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class UserMessagePO
     {
 		/// <summary>
-		/// 用户消息主键
+		/// 用户消息ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 用户id
+		/// 用户ID
 		/// </summary>
 		public int UserId { get; set; }
         
@@ -41,12 +41,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

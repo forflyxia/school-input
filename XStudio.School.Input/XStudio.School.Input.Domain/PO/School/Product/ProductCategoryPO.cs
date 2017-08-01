@@ -20,18 +20,18 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class ProductCategoryPO
     {
 		/// <summary>
-		/// 产品类别信息主键
+		/// 类别ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 产品名称
+		/// 名称
 		/// </summary>
 		public string Name { get; set; }
         
 		/// <summary>
-		/// 所属父类
+		/// 父类ID
 		/// </summary>
 		public int ParentcategoryId { get; set; }
         
@@ -41,12 +41,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

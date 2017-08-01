@@ -16,7 +16,7 @@ using XStudio.School.Input.Model.Paging;
 namespace XStudio.School.Input.Repository.School.Product
 {
     /// <summary>
-    /// 
+    /// 产品价格信息
     /// </summary>
     public partial class ProductSizeRepository
     {
@@ -62,7 +62,7 @@ namespace XStudio.School.Input.Repository.School.Product
                 item = new ProductSizePO()
                 {
     				ProductId = 0,
-    				Size = 0,
+    				Size = "",
     				Unitprice = 0,
     				Status = 0,
     				Createtime = DateTime.Now,

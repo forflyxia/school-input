@@ -16,7 +16,7 @@ using XStudio.School.Input.Model.Paging;
 namespace XStudio.School.Input.Repository.School.Basic
 {
     /// <summary>
-    /// 
+    /// 行政区信息
     /// </summary>
     public partial class DistrictRepository
     {

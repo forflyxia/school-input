@@ -20,20 +20,20 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class ProductSizePO
     {
 		/// <summary>
-		/// 产品价格主键
+		/// 产品规格ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 产品id
+		/// 产品ID
 		/// </summary>
 		public int ProductId { get; set; }
         
 		/// <summary>
-		/// 产品尺寸
+		/// 规格
 		/// </summary>
-		public int Size { get; set; }
+		public string Size { get; set; }
         
 		/// <summary>
 		/// 单价
@@ -46,12 +46,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

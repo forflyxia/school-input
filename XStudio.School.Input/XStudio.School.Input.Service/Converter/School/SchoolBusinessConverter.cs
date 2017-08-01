@@ -25,8 +25,8 @@ namespace XStudio.School.Input.Service.Converter.School
             return new SchoolBusinessModel
             {
                 Id = item.Id,
-                Name = item.Name,
                 SchoolId = item.SchoolId,
+                Name = item.Name,
                 Status = item.Status,
                 Createtime = item.Createtime,
                 Updatetime = item.Updatetime,
@@ -42,8 +42,8 @@ namespace XStudio.School.Input.Service.Converter.School
             return new SchoolBusinessPO
             {
                 Id = item.Id,
-                Name = item.Name,
                 SchoolId = item.SchoolId,
+                Name = item.Name,
                 Status = item.Status,
                 Createtime = item.Createtime,
                 Updatetime = item.Updatetime,

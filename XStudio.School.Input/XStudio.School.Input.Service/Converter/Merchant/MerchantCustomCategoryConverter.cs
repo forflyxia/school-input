@@ -25,7 +25,7 @@ namespace XStudio.School.Input.Service.Converter.Merchant
             return new MerchantCustomCategoryModel
             {
                 Id = item.Id,
-                MerchantId = item.MerchantId,
+                MerchatId = item.MerchatId,
                 Categoryname = item.Categoryname,
                 Status = item.Status,
                 Createtime = item.Createtime,
@@ -42,7 +42,7 @@ namespace XStudio.School.Input.Service.Converter.Merchant
             return new MerchantCustomCategoryPO
             {
                 Id = item.Id,
-                MerchantId = item.MerchantId,
+                MerchatId = item.MerchatId,
                 Categoryname = item.Categoryname,
                 Status = item.Status,
                 Createtime = item.Createtime,

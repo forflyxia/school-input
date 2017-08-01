@@ -20,18 +20,18 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class PromotionLadderPO
     {
 		/// <summary>
-		/// 促销阶梯主键
+		/// 促销阶梯ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 促销阶梯名称
+		/// 阶梯名称
 		/// </summary>
 		public string Name { get; set; }
         
 		/// <summary>
-		/// 促销id
+		/// 促销ID
 		/// </summary>
 		public int PromotionId { get; set; }
         
@@ -51,12 +51,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

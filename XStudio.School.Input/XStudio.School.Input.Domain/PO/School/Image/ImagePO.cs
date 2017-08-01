@@ -20,18 +20,18 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class ImagePO
     {
 		/// <summary>
-		/// 图片信息主键
+		/// 图片ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 图片名称
+		/// 名称
 		/// </summary>
 		public string Name { get; set; }
         
 		/// <summary>
-		/// 图片url
+		/// Url
 		/// </summary>
 		public string Url { get; set; }
         
@@ -41,12 +41,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public string Introduction { get; set; }
         
 		/// <summary>
-		/// 商户id
+		/// 商户ID
 		/// </summary>
 		public int MerchantId { get; set; }
         
 		/// <summary>
-		/// 学校id
+		/// 学校ID
 		/// </summary>
 		public int SchoolId { get; set; }
         
@@ -56,12 +56,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

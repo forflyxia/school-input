@@ -24,7 +24,7 @@ namespace XStudio.School.Input.Controller.Areas.Merchant.Controllers
             var model = new MerchantCustomCategoryModel
             {
                  Id = GetParams<int>("id"),
-                 MerchantId = GetParams<int>("merchantid"),
+                 MerchatId = GetParams<int>("merchatid"),
                  Categoryname = GetParams<string>("categoryname"),
                  Status = GetParams<int>("status"),
                  Createtime = GetParams<DateTime>("createtime"),

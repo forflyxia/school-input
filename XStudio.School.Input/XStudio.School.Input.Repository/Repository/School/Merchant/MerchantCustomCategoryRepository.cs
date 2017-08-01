@@ -16,7 +16,7 @@ using XStudio.School.Input.Model.Paging;
 namespace XStudio.School.Input.Repository.School.Merchant
 {
     /// <summary>
-    /// 
+    /// 商户自定义类别信息
     /// </summary>
     public partial class MerchantCustomCategoryRepository
     {
@@ -61,7 +61,7 @@ namespace XStudio.School.Input.Repository.School.Merchant
             {
                 item = new MerchantCustomCategoryPO()
                 {
-    				MerchantId = 0,
+    				MerchatId = 0,
     				Categoryname = "",
     				Status = 0,
     				Createtime = DateTime.Now,

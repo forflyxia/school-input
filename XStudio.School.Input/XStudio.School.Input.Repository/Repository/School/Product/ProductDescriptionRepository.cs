@@ -16,7 +16,7 @@ using XStudio.School.Input.Model.Paging;
 namespace XStudio.School.Input.Repository.School.Product
 {
     /// <summary>
-    /// 
+    /// 产品描述信息
     /// </summary>
     public partial class ProductDescriptionRepository
     {

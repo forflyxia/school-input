@@ -20,23 +20,23 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class CityPO
     {
 		/// <summary>
-		/// 城市信息主键
+		/// 城市ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 城市名称
+		/// 名称
 		/// </summary>
 		public string Name { get; set; }
         
 		/// <summary>
-		/// 城市英文名称
+		/// 英文名称
 		/// </summary>
 		public string Ename { get; set; }
         
 		/// <summary>
-		/// 城市三字码
+		/// 三字码
 		/// </summary>
 		public string Citycode { get; set; }
         
@@ -46,12 +46,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public string Zipcode { get; set; }
         
 		/// <summary>
-		/// 所属省份id
+		/// 省份ID
 		/// </summary>
 		public int ProvinceId { get; set; }
         
 		/// <summary>
-		/// 所属国家id
+		/// 国家ID
 		/// </summary>
 		public int CountryId { get; set; }
         
@@ -61,12 +61,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

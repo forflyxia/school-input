@@ -20,18 +20,18 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class ProductImagePO
     {
 		/// <summary>
-		/// 产品图片主键
+		/// 产品图片ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 产品id
+		/// 产品ID
 		/// </summary>
 		public string ProductId { get; set; }
         
 		/// <summary>
-		/// 图片id
+		/// 图片ID
 		/// </summary>
 		public string ImageId { get; set; }
         
@@ -41,12 +41,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

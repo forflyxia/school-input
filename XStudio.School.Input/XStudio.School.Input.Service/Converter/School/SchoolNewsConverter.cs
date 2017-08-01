@@ -26,7 +26,7 @@ namespace XStudio.School.Input.Service.Converter.School
             {
                 Id = item.Id,
                 SchoolId = item.SchoolId,
-                Title = item.Title,
+                Newstitle = item.Newstitle,
                 News = item.News,
                 Status = item.Status,
                 Createtime = item.Createtime,
@@ -44,7 +44,7 @@ namespace XStudio.School.Input.Service.Converter.School
             {
                 Id = item.Id,
                 SchoolId = item.SchoolId,
-                Title = item.Title,
+                Newstitle = item.Newstitle,
                 News = item.News,
                 Status = item.Status,
                 Createtime = item.Createtime,

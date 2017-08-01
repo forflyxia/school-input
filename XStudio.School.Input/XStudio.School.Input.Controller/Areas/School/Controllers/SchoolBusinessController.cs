@@ -24,8 +24,8 @@ namespace XStudio.School.Input.Controller.Areas.School.Controllers
             var model = new SchoolBusinessModel
             {
                  Id = GetParams<int>("id"),
-                 Name = GetParams<string>("name"),
                  SchoolId = GetParams<string>("schoolid"),
+                 Name = GetParams<string>("name"),
                  Status = GetParams<int>("status"),
                  Createtime = GetParams<DateTime>("createtime"),
                  Updatetime = GetParams<DateTime>("updatetime"),

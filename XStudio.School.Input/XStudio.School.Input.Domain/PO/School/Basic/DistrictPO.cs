@@ -20,18 +20,18 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class DistrictPO
     {
 		/// <summary>
-		/// 城市信息主键
+		/// 行政区ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 城市名称
+		/// 名称
 		/// </summary>
 		public string Name { get; set; }
         
 		/// <summary>
-		/// 城市英文名称
+		/// 英文名称
 		/// </summary>
 		public string Ename { get; set; }
         
@@ -41,7 +41,7 @@ namespace XStudio.School.Input.Domain.PO.School
 		public string Zipcode { get; set; }
         
 		/// <summary>
-		/// 所属城市id
+		/// 城市ID
 		/// </summary>
 		public int CityId { get; set; }
         
@@ -51,12 +51,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

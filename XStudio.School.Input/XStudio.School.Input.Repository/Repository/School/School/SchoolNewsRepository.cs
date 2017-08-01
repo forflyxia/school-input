@@ -16,7 +16,7 @@ using XStudio.School.Input.Model.Paging;
 namespace XStudio.School.Input.Repository.School.School
 {
     /// <summary>
-    /// 
+    /// 学校新闻信息
     /// </summary>
     public partial class SchoolNewsRepository
     {
@@ -62,7 +62,7 @@ namespace XStudio.School.Input.Repository.School.School
                 item = new SchoolNewsPO()
                 {
     				SchoolId = "",
-    				Title = "",
+    				Newstitle = "",
     				News = "",
     				Status = 0,
     				Createtime = DateTime.Now,

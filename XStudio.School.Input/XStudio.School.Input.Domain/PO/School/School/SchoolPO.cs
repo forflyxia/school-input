@@ -20,18 +20,18 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class SchoolPO
     {
 		/// <summary>
-		/// 学校信息主键
+		/// 学校ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 学校名称
+		/// 名称
 		/// </summary>
 		public string Name { get; set; }
         
 		/// <summary>
-		/// 学校短名称
+		/// 短名称
 		/// </summary>
 		public string Shortname { get; set; }
         
@@ -41,7 +41,7 @@ namespace XStudio.School.Input.Domain.PO.School
 		public string Branchname { get; set; }
         
 		/// <summary>
-		/// 学校logo
+		/// Logo
 		/// </summary>
 		public string Logo { get; set; }
         
@@ -51,7 +51,7 @@ namespace XStudio.School.Input.Domain.PO.School
 		public string Introduction { get; set; }
         
 		/// <summary>
-		/// 行政区
+		/// 行政区ID
 		/// </summary>
 		public int DistrictId { get; set; }
         
@@ -76,12 +76,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

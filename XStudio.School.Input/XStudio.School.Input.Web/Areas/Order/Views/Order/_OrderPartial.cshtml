@@ -10,11 +10,11 @@
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
     <div class="form-group">
         @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入订单信息id主键" })
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入订单ID" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.UserId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.UserId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入用户id" })
+        @Html.TextBoxFor(m => m.UserId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入用户ID" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Contact, new { @class = "sr-only" })
@@ -42,15 +42,15 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.PromotionId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.PromotionId, new { @class = "form-control", placeholder = "请输入优惠券id" })
+        @Html.TextBoxFor(m => m.PromotionId, new { @class = "form-control", placeholder = "请输入优惠券ID" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.PromotionladderId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.PromotionladderId, new { @class = "form-control", placeholder = "请输入优惠阶梯id" })
+        @Html.TextBoxFor(m => m.PromotionladderId, new { @class = "form-control", placeholder = "请输入优惠阶梯ID" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.SchoolId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.SchoolId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入配送学校id" })
+        @Html.TextBoxFor(m => m.SchoolId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入配送学校ID" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Deliveryaddress, new { @class = "sr-only" })
@@ -66,11 +66,11 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入" })
+        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入创建时间" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入" })
+        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入修改时间" })
     </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
@@ -80,22 +80,22 @@
 <table id="tableOrder" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
     <thead>
     <tr role="row">
-        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">订单信息id主键</th>
-        <th class="sorting_asc" data-data="UserId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">用户id</th>
+        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">订单ID</th>
+        <th class="sorting_asc" data-data="UserId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">用户ID</th>
         <th class="sorting_asc" data-data="Contact" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">联系人</th>
         <th class="sorting_asc" data-data="Telphone" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">电话</th>
         <th class="sorting_asc" data-data="Mobliephone" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">手机</th>
         <th class="sorting_asc" data-data="Totalamount" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">总金额</th>
         <th class="sorting_asc" data-data="Reduction" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">减免金额</th>
         <th class="sorting_asc" data-data="AmountpaId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">实收金额</th>
-        <th class="sorting_asc" data-data="PromotionId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">优惠券id</th>
-        <th class="sorting_asc" data-data="PromotionladderId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">优惠阶梯id</th>
-        <th class="sorting_asc" data-data="SchoolId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">配送学校id</th>
+        <th class="sorting_asc" data-data="PromotionId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">优惠券ID</th>
+        <th class="sorting_asc" data-data="PromotionladderId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">优惠阶梯ID</th>
+        <th class="sorting_asc" data-data="SchoolId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">配送学校ID</th>
         <th class="sorting_asc" data-data="Deliveryaddress" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">配送地址</th>
         <th class="sorting_asc" data-data="Remark" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">备注</th>
         <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">订单状态</th>
-        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"></th>
-        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"></th>
+        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">创建时间</th>
+        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">修改时间</th>
         <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">操作</th>
     </tr>
     </thead>

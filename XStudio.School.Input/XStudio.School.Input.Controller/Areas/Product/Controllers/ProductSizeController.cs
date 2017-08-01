@@ -25,7 +25,7 @@ namespace XStudio.School.Input.Controller.Areas.Product.Controllers
             {
                  Id = GetParams<int>("id"),
                  ProductId = GetParams<int>("productid"),
-                 Size = GetParams<int>("size"),
+                 Size = GetParams<string>("size"),
                  Unitprice = GetParams<decimal>("unitprice"),
                  Status = GetParams<int>("status"),
                  Createtime = GetParams<DateTime>("createtime"),

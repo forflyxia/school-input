@@ -16,7 +16,7 @@ using XStudio.School.Input.Model.Paging;
 namespace XStudio.School.Input.Repository.School.Merchant
 {
     /// <summary>
-    /// 
+    /// 商户消息
     /// </summary>
     public partial class MerchantMessageRepository
     {

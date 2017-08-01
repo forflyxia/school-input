@@ -16,7 +16,7 @@ using XStudio.School.Input.Model.Paging;
 namespace XStudio.School.Input.Repository.School.Promotion
 {
     /// <summary>
-    /// 
+    /// 促销信息
     /// </summary>
     public partial class PromotionRepository
     {

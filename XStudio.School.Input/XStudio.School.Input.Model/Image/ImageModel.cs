@@ -12,52 +12,52 @@ using System.Web;
 namespace XStudio.School.Input.Model.Image
 {
     /// <summary>
-    /// 
+    /// 图片信息
     /// </summary>
     public partial class ImageModel
     {
 		/// <summary>
-		/// 
+		/// 图片ID
 		/// </summary>
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 
+		/// 名称
 		/// </summary>
 		public string Name { get; set; }
         
 		/// <summary>
-		/// 
+		/// Url
 		/// </summary>
 		public string Url { get; set; }
         
 		/// <summary>
-		/// 
+		/// 简介
 		/// </summary>
 		public string Introduction { get; set; }
         
 		/// <summary>
-		/// 
+		/// 商户ID
 		/// </summary>
 		public int MerchantId { get; set; }
         
 		/// <summary>
-		/// 
+		/// 学校ID
 		/// </summary>
 		public int SchoolId { get; set; }
         
 		/// <summary>
-		/// 
+		/// 状态
 		/// </summary>
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

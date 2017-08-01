@@ -10,19 +10,19 @@
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
     <div class="form-group">
         @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入订单详情id主键" })
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入订单详情ID" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.OrderId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.OrderId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入订单id" })
+        @Html.TextBoxFor(m => m.OrderId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入订单ID" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ProductId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.ProductId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入商品id" })
+        @Html.TextBoxFor(m => m.ProductId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入商品ID" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ProductsizeId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.ProductsizeId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入商品规格id" })
+        @Html.TextBoxFor(m => m.ProductsizeId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入商品规格ID" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Unitprice, new { @class = "sr-only" })
@@ -38,11 +38,11 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入" })
+        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入创建时间" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入" })
+        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入修改时间" })
     </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
@@ -52,15 +52,15 @@
 <table id="tableOrderDetail" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
     <thead>
     <tr role="row">
-        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">订单详情id主键</th>
-        <th class="sorting_asc" data-data="OrderId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">订单id</th>
-        <th class="sorting_asc" data-data="ProductId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">商品id</th>
-        <th class="sorting_asc" data-data="ProductsizeId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">商品规格id</th>
+        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">订单详情ID</th>
+        <th class="sorting_asc" data-data="OrderId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">订单ID</th>
+        <th class="sorting_asc" data-data="ProductId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">商品ID</th>
+        <th class="sorting_asc" data-data="ProductsizeId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">商品规格ID</th>
         <th class="sorting_asc" data-data="Unitprice" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">单价</th>
         <th class="sorting_asc" data-data="Quantity" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">购买数量</th>
         <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">订单状态</th>
-        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"></th>
-        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"></th>
+        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">创建时间</th>
+        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">修改时间</th>
         <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">操作</th>
     </tr>
     </thead>

@@ -16,7 +16,7 @@ using XStudio.School.Input.Model.Paging;
 namespace XStudio.School.Input.Repository.School.Product
 {
     /// <summary>
-    /// 
+    /// 产品信息
     /// </summary>
     public partial class ProductRepository
     {
@@ -64,9 +64,9 @@ namespace XStudio.School.Input.Repository.School.Product
     				Name = "",
     				Logo = "",
     				ProductcategoryId = 0,
-    				MerchantcustomcategoryId = 0,
     				Introduction = "",
     				MerchantId = 0,
+    				MerchantcustomcategoryId = 0,
     				SchoolId = 0,
     				Status = 0,
     				Createtime = DateTime.Now,

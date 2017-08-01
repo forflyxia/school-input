@@ -20,30 +20,25 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class ProductPO
     {
 		/// <summary>
-		/// 产品主键
+		/// 产品ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 产品名称
+		/// 名称
 		/// </summary>
 		public string Name { get; set; }
         
 		/// <summary>
-		/// 产品logo
+		/// Logo
 		/// </summary>
 		public string Logo { get; set; }
         
 		/// <summary>
-		/// 所属类别
+		/// 类别
 		/// </summary>
 		public int ProductcategoryId { get; set; }
-        
-		/// <summary>
-		/// 所属商户自定义类别id
-		/// </summary>
-		public int MerchantcustomcategoryId { get; set; }
         
 		/// <summary>
 		/// 简介
@@ -51,12 +46,17 @@ namespace XStudio.School.Input.Domain.PO.School
 		public string Introduction { get; set; }
         
 		/// <summary>
-		/// 所属商户
+		/// 商户ID
 		/// </summary>
 		public int MerchantId { get; set; }
         
 		/// <summary>
-		/// 学校id
+		/// 商户类别ID
+		/// </summary>
+		public int MerchantcustomcategoryId { get; set; }
+        
+		/// <summary>
+		/// 学校ID
 		/// </summary>
 		public int SchoolId { get; set; }
         
@@ -66,12 +66,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         

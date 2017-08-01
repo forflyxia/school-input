@@ -18,13 +18,13 @@
             {
                 @Html.ValidationSummary(true)
                 <div class="form-group hidden">
-                    @Html.LabelFor(m => m.Id, "订单信息id主键", new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Id, "订单ID", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Id, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.UserId, "用户id", new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.UserId, "用户ID", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.UserId, new { @class = "form-control my-input-edit" })
                     </div>
@@ -66,19 +66,19 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.PromotionId, "优惠券id", new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.PromotionId, "优惠券ID", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.PromotionId, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.PromotionladderId, "优惠阶梯id", new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.PromotionladderId, "优惠阶梯ID", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.PromotionladderId, new { @class = "form-control" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.SchoolId, "配送学校id", new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.SchoolId, "配送学校ID", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.SchoolId, new { @class = "form-control my-input-edit" })
                     </div>
@@ -102,13 +102,13 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Createtime, "", new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Createtime, "创建时间", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-datepicker" })
                     </div>
                 </div>
                 <div class="form-group">
-                    @Html.LabelFor(m => m.Updatetime, "", new { @class = "col-md-2 control-label" })
+                    @Html.LabelFor(m => m.Updatetime, "修改时间", new { @class = "col-md-2 control-label" })
                     <div class="col-md-10">
                         @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-datepicker" })
                     </div>

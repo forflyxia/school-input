@@ -25,7 +25,7 @@ namespace XStudio.School.Input.Controller.Areas.School.Controllers
             {
                  Id = GetParams<int>("id"),
                  SchoolId = GetParams<string>("schoolid"),
-                 Title = GetParams<string>("title"),
+                 Newstitle = GetParams<string>("newstitle"),
                  News = GetParams<string>("news"),
                  Status = GetParams<int>("status"),
                  Createtime = GetParams<DateTime>("createtime"),

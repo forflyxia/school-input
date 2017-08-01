@@ -10,11 +10,11 @@
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
     <div class="form-group">
         @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入用户信息主键" })
+        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入用户ID" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Username, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "请输入用户名称" })
+        @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "请输入名称" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Password, new { @class = "sr-only" })
@@ -22,7 +22,7 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Nickname, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Nickname, new { @class = "form-control", placeholder = "请输入用户昵称" })
+        @Html.TextBoxFor(m => m.Nickname, new { @class = "form-control", placeholder = "请输入昵称" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Email, new { @class = "sr-only" })
@@ -30,7 +30,7 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Usertype, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Usertype, new { @class = "form-control", placeholder = "请输入用户类型(用户还是商户)" })
+        @Html.TextBoxFor(m => m.Usertype, new { @class = "form-control", placeholder = "请输入用户类型" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Moblie, new { @class = "sr-only" })
@@ -42,7 +42,7 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.SchoolId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.SchoolId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入所属学校id" })
+        @Html.TextBoxFor(m => m.SchoolId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入所属学校ID" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Cash, new { @class = "sr-only" })
@@ -58,11 +58,11 @@
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入" })
+        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入创建时间" })
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入" })
+        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入修改时间" })
     </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
@@ -72,20 +72,20 @@
 <table id="tableUser" class="table table-bordered table-hover dataTable" role="grid" aria-describedby="example2_info">
     <thead>
     <tr role="row">
-        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">用户信息主键</th>
-        <th class="sorting_asc" data-data="Username" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">用户名称</th>
+        <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">用户ID</th>
+        <th class="sorting_asc" data-data="Username" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">名称</th>
         <th class="sorting_asc" data-data="Password" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">密码</th>
-        <th class="sorting_asc" data-data="Nickname" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">用户昵称</th>
+        <th class="sorting_asc" data-data="Nickname" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">昵称</th>
         <th class="sorting_asc" data-data="Email" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">邮箱</th>
-        <th class="sorting_asc" data-data="Usertype" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">用户类型(用户还是商户)</th>
+        <th class="sorting_asc" data-data="Usertype" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">用户类型</th>
         <th class="sorting_asc" data-data="Moblie" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">手机</th>
         <th class="sorting_asc" data-data="Sex" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">性别</th>
-        <th class="sorting_asc" data-data="SchoolId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">所属学校id</th>
+        <th class="sorting_asc" data-data="SchoolId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">所属学校ID</th>
         <th class="sorting_asc" data-data="Cash" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">现金</th>
         <th class="sorting_asc" data-data="Point" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">积分</th>
         <th class="sorting_asc" data-data="Status" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">状态</th>
-        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"></th>
-        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending"></th>
+        <th class="sorting_asc" data-data="Createtime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">创建时间</th>
+        <th class="sorting_asc" data-data="Updatetime" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">修改时间</th>
         <th class="sorting" tabindex="0" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">操作</th>
     </tr>
     </thead>

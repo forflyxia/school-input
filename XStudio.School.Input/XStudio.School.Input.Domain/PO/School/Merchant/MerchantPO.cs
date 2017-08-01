@@ -20,28 +20,28 @@ namespace XStudio.School.Input.Domain.PO.School
     public partial class MerchantPO
     {
 		/// <summary>
-		/// 主键
+		/// 商户ID
 		/// </summary>
 		[Key]
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 商户名称
+		/// 名称
 		/// </summary>
 		public string Name { get; set; }
         
 		/// <summary>
-		/// 商户短名称
+		/// 短名称
 		/// </summary>
 		public string Shortname { get; set; }
         
 		/// <summary>
-		/// 商户分店
+		/// 分店
 		/// </summary>
 		public string Branch { get; set; }
         
 		/// <summary>
-		/// 商户logo
+		/// Logo
 		/// </summary>
 		public string Logo { get; set; }
         
@@ -76,7 +76,7 @@ namespace XStudio.School.Input.Domain.PO.School
 		public string Legalperson { get; set; }
         
 		/// <summary>
-		/// 所属行政区
+		/// 行政区ID
 		/// </summary>
 		public int DistrictId { get; set; }
         
@@ -111,12 +111,12 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Status { get; set; }
         
 		/// <summary>
-		/// 
+		/// 创建时间
 		/// </summary>
 		public DateTime Createtime { get; set; }
         
 		/// <summary>
-		/// 
+		/// 修改时间
 		/// </summary>
 		public DateTime Updatetime { get; set; }
         
