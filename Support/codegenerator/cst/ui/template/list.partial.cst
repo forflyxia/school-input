@@ -85,13 +85,18 @@ Description:
                     return html;
                 }
             }
-            <%for(int i = 0; i < SourceTable.Columns.Count; i++) { 
-                string foreignKeyTable = GetTableNameByForeignKey(SourceTable.Columns[i].Name);
-                if(foreignKeyTable != "") {
-                    TableSchema foreignTable = SourceTable.Database.Tables[foreignKeyTable];
+            <%  int index = -1;
+                foreach(ColumnSchema column in SourceTable.Columns) { 
+                    if (!IsShowList(column)) {
+                        continue;
+                    }
+                    index++;
+            		string foreignKeyTableName = GetTableNameByForeignKey(column.Name);
+                    TableSchema foreignTable = GetForigenKeyTableSchema(SourceTable.Database, foreignKeyTableName);
+                    if (foreignTable != null) {
             %>
             ,{
-                targets: <%= i %>,
+                targets: <%= index %>,
                 width: "100px",
                 render: function (data, type, full, meta) {
                     var json = JSON.stringify(full);
@@ -99,9 +104,10 @@ Description:
                     return '<a href="' + url + '" target="_blank" role="button">'+ data +'</a>';
                 }
             }
-            <% } } %>
+            <%  } } %>
             ]
         });
+        
         $(".my-btn-search").on("click", function () {
             tables.draw();
         });

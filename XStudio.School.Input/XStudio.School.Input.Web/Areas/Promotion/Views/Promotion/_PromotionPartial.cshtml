@@ -8,58 +8,58 @@
 @model XStudio.School.Input.Model.Promotion.PromotionModel
 
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
-    <div class="form-group">
-        @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入促销ID" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Name, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "请输入名称" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Shortname, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Shortname, new { @class = "form-control", placeholder = "请输入短名称" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Description, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Description, new { @class = "form-control", placeholder = "请输入简介" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ProductcategoryId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.ProductcategoryId, new { @class = "form-control", placeholder = "请输入适用产品类别ID" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Effectdate, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Effectdate, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入生效日期" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Expiredate, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Expiredate, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入失效日期" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.MerchantId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.MerchantId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入所属商户ID" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Merchantundertake, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Merchantundertake, new { @class = "form-control my-input-searchcondition", placeholder = "请输入商户承担金额" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Platundertake, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Platundertake, new { @class = "form-control my-input-searchcondition", placeholder = "请输入平台承担金额" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Status, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-searchcondition", placeholder = "请输入状态" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入创建时间" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入修改时间" })
-    </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入促销ID" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Name, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "请输入名称" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Shortname, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Shortname, new { @class = "form-control", placeholder = "请输入短名称" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Description, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Description, new { @class = "form-control", placeholder = "请输入简介" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ProductcategoryId, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.ProductcategoryId, new { @class = "form-control", placeholder = "请输入适用产品类别ID" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Effectdate, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Effectdate, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入生效日期" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Expiredate, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Expiredate, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入失效日期" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.MerchantId, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.MerchantId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入所属商户ID" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Merchantundertake, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Merchantundertake, new { @class = "form-control my-input-searchcondition", placeholder = "请输入商户承担金额" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Platundertake, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Platundertake, new { @class = "form-control my-input-searchcondition", placeholder = "请输入平台承担金额" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Status, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-searchcondition", placeholder = "请输入状态" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入创建时间" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入修改时间" })
+        </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
 
@@ -122,6 +122,7 @@
             }
             ]
         });
+        
         $(".my-btn-search").on("click", function () {
             tables.draw();
         });

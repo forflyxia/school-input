@@ -26,7 +26,7 @@ namespace XStudio.School.Input.Domain.PO.School
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 名称
+		/// 名称:0000000000
 		/// </summary>
 		public string Name { get; set; }
         

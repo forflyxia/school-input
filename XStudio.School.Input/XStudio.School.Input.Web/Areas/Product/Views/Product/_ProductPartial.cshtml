@@ -8,50 +8,46 @@
 @model XStudio.School.Input.Model.Product.ProductModel
 
 <form class="form-inline" role="form" id="my-form-search" action="javascript:void(0)">
-    <div class="form-group">
-        @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入产品ID" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Name, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "请输入名称" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Logo, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Logo, new { @class = "form-control", placeholder = "请输入Logo" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ProductcategoryId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.ProductcategoryId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入类别" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Introduction, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Introduction, new { @class = "form-control", placeholder = "请输入简介" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.MerchantId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.MerchantId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入商户ID" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.MerchantcustomcategoryId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.MerchantcustomcategoryId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入商户类别ID" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.SchoolId, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.SchoolId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入学校ID" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Status, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-searchcondition", placeholder = "请输入状态" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入创建时间" })
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
-        @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入修改时间" })
-    </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Id, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Id, new { @class = "form-control my-input-searchcondition", placeholder = "请输入产品ID" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Logo, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Logo, new { @class = "form-control", placeholder = "请输入Logo" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.ProductcategoryId, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.ProductcategoryId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入类别" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Introduction, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Introduction, new { @class = "form-control", placeholder = "请输入简介" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.MerchantId, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.MerchantId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入商户ID" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.MerchantcustomcategoryId, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.MerchantcustomcategoryId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入商户类别ID" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.SchoolId, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.SchoolId, new { @class = "form-control my-input-searchcondition", placeholder = "请输入学校ID" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Status, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Status, new { @class = "form-control my-input-searchcondition", placeholder = "请输入状态" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Createtime, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Createtime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入创建时间" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Updatetime, new { @class = "sr-only" })
+            @Html.TextBoxFor(m => m.Updatetime, new { @class = "form-control my-input-searchcondition my-input-datepicker", placeholder = "请输入修改时间" })
+        </div>
     <button type="submit" class="btn btn-default my-btn-search">查询</button>
 </form>
 
@@ -61,7 +57,6 @@
     <thead>
     <tr role="row">
         <th class="sorting_asc" data-data="Id" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">产品ID</th>
-        <th class="sorting_asc" data-data="Name" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">名称</th>
         <th class="sorting_asc" data-data="Logo" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">Logo</th>
         <th class="sorting_asc" data-data="ProductcategoryId" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">类别</th>
         <th class="sorting_asc" data-data="Introduction" tabindex="0" rowspan="1" colspan="1" aria-sort="ascending">简介</th>
@@ -108,7 +103,7 @@
                 }
             }
             ,{
-                targets: 5,
+                targets: 4,
                 width: "100px",
                 render: function (data, type, full, meta) {
                     var json = JSON.stringify(full);
@@ -117,7 +112,7 @@
                 }
             }
             ,{
-                targets: 7,
+                targets: 6,
                 width: "100px",
                 render: function (data, type, full, meta) {
                     var json = JSON.stringify(full);
@@ -127,6 +122,7 @@
             }
             ]
         });
+        
         $(".my-btn-search").on("click", function () {
             tables.draw();
         });

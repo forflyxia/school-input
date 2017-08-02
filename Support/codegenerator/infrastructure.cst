@@ -165,21 +165,23 @@ public string GetColumnDefault(ColumnSchema column)
 	}
 }
 
-public TableSchema GetForigenKeyTableSchema(ColumnSchema column)
+/// <summary>
+/// 
+/// </summary>
+/// <param name="database"></param>
+/// <param name="forigenTableName"></param>
+/// <returns></returns>
+public TableSchema GetForigenKeyTableSchema(DatabaseSchema database, string forigenTableName)
 {
-    if (IsForeignKey(column))
+    if (string.IsNullOrWhiteSpace(forigenTableName))
 	{
-		string tableName = column.Name.Replace("Id", "");
-        foreach (var entry in moudlesConfigMap)
-    	{
-    		string fullTableName = string.Format("{0}_{1}", entry.Key, tableName);
-            if (column.Database.Tables.Contains(fullTableName))
-        	{
-                return column.Database.Tables[fullTableName];
-        	}
-    	}
+		 return null;
 	}
-    return null;
+    if (!database.Tables.Contains(forigenTableName))
+	{
+        return null;
+	}
+    return database.Tables[forigenTableName];
 }
 
 public string GetSearchInputCssName(ColumnSchema column)
@@ -345,7 +347,7 @@ public static bool IsEdit(ColumnSchema column)
 }
 
 /// <summary>
-/// 是否在列表显示里出现（Repeater）
+/// 是否在列表显示里出现
 /// </summary>
 /// <param name="column"></param>
 /// <returns></returns>

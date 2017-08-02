@@ -9,3 +9,4 @@ D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Do
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Domain\bin\Debug\EntityFramework.SqlServer.xml
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Domain\obj\Debug\XStudio.School.Input.Domain.dll
 D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Domain\obj\Debug\XStudio.School.Input.Domain.pdb
+D:\xstudio\code\school\input\source\XStudio.School.Input\XStudio.School.Input.Domain\obj\Debug\XStudio.School.Input.Domain.csprojResolveAssemblyReference.cache

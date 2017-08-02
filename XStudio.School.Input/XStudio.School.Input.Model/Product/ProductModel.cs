@@ -22,7 +22,7 @@ namespace XStudio.School.Input.Model.Product
 		public int Id { get; set; }
         
 		/// <summary>
-		/// 名称
+		/// 名称:0000000000
 		/// </summary>
 		public string Name { get; set; }
         
